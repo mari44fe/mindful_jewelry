@@ -11,6 +11,41 @@
 <body>
 
     <header>
+        <nav>
+            <label>
+                <input type="checkbox">
+                <span class="menu">
+                    <span class="hamburger"></span>
+                </span>
+                <ul class="hide">
+
+                    <li>
+                        <a href="index.html">Forside</a>
+                    </li>
+
+                    <li>
+                        <a href="smykker.html">Smykker</a>
+                    </li>
+
+                    <li class="logo">
+                        <a href="index.html"><img src="img/logo_sort-06.png" alt="logo"></a>
+                    </li>
+
+                    <li>
+                        <a href="om.html">Om os</a>
+                    </li>
+
+                    <li>
+                        <a href="kontakt.html">Kontakt os</a>
+                    </li>
+
+                </ul>
+            </label>
+        </nav>
+
+
+
+
         <picture class="splash">
             <source media="(min-width: 1024px)" srcset="">
             <source media="(min-width: 528px)" srcset="">
@@ -24,7 +59,47 @@
     </header>
 
 
-    <script></script>
+    <div class="forside1">
+        <h2 class="overskrift"></h2>
+        <p class="koncept"></p>
+        <div class="indhold">
+        </div>
+    </div>
+
+    <script>
+        let indhold;
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            async function getJson() {
+                let url = "http://mariacronehvidberg.dk/kea/eksamen/kode/wordpress/wp-json/wp/v2/pages/34"
+                let jsonData = await fetch(url);
+                indhold = await jsonData.json();
+
+                document.querySelector("label .menu").addEventListener("click", open);
+
+                visIndhold();
+            }
+
+            function visIndhold() {
+                document.querySelector(".indhold").innerHTML = indhold.content.rendered;
+            }
+
+
+            function open() {
+                let menu = document.querySelector("label ul");
+                // if (menu.style.display == "none") {
+                console.log(menu.classList);
+                menu.classList.toggle("hide");
+                // } else {
+                //     menu.style.display = "none";
+                // }
+            }
+
+
+            getJson();
+        }
+    </script>
 
 
 

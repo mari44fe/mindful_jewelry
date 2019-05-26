@@ -1,0 +1,343 @@
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        :root {
+            --color-darkestblue: #060314;
+            --color-darkblue: #090F26;
+            --color-midtblue: #101F38;
+
+            --color-lightblue: #365a84;
+            --color-container: rgba(16, 31, 56, 0.77);
+            --color-navigation: rgb(35, 64, 100);
+        }
+
+        img {
+            width: 100%;
+        }
+
+
+        /**GENERELLE STYLINGS**/
+
+        body {
+            font-family: 'Niramit', sans-serif;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            background-image: url(grafik/baggrund.png);
+            background-repeat: no-repeat;
+            margin: 0;
+        }
+
+        #splash img {
+            width: 375px;
+        }
+
+
+        /****BURGERMENU****/
+
+        nav a {
+            font-family: 'Niramit', sans-serif;
+            font-size: 1.5rem;
+            text-align: center;
+            padding-bottom: 0.5rem;
+        }
+
+        nav a:hover {
+            color: var(--color-lightblue);
+        }
+
+
+        label .menu {
+            position: fixed;
+            overflow: hidden;
+            top: 34.5rem;
+            left: 16rem;
+            z-index: 100;
+            width: 200px;
+            height: 200px;
+            background: var(--color-navigation);
+            border-radius: 50% 50% 50% 50%;
+            transition: 0.5s ease-in-out;
+            box-shadow: 0 0 0 0 var(--color-navigation), 0 0 0 0 var(--color-navigation);
+            cursor: pointer;
+
+        }
+
+        label .hamburger {
+            position: fixed;
+            top: 38.5rem;
+            left: 19.3rem;
+            width: 40px;
+            height: 3px;
+            background: white;
+            display: block;
+            transform-origin: center;
+            transition: 0.5s ease-in-out;
+        }
+
+        label .hamburger:after,
+        label .hamburger:before {
+            transition: 0.5s ease-in-out;
+            content: "";
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: white;
+        }
+
+        label .hamburger:before {
+            top: -0.6rem;
+        }
+
+        label .hamburger:after {
+            bottom: -0.6rem;
+        }
+
+        label input {
+            display: none;
+        }
+
+        label input:checked + .menu {
+            /*box-shadow: 0 0 0 100vw var(--color-navigation), 0 0 0 100vh var(--color-navigation);*/
+            box-shadow: 0 0 0 var(--color-navigation), 0 0 0 100vh var(--color-navigation);
+            border-radius: 0;
+        }
+
+        label input:checked + .menu .hamburger {
+            transform: rotate(45deg);
+        }
+
+        label input:checked + .menu .hamburger:after {
+            transform: rotate(90deg);
+            bottom: 0;
+        }
+
+        label input:checked + .menu .hamburger:before {
+            transform: rotate(90deg);
+            top: 0;
+        }
+
+        label input:checked + .menu + ul {
+            opacity: 2;
+        }
+
+        .logo img {
+            width: 50%;
+        }
+
+        label ul {
+            z-index: 200;
+            position: fixed;
+            width: 100%;
+            top: 20rem;
+            left: 10.5rem;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: 0.25s 0s ease-in-out;
+            list-style-type: none;
+
+        }
+
+        .hide {
+            display: none;
+        }
+
+        label a {
+            margin-bottom: 1em;
+            display: block;
+            color: white;
+            text-decoration: none;
+        }
+
+
+        /*****MEDIA Q iphone plus*******/
+        @media only screen and (min-width: 400px) {
+
+            #splash img {
+                width: 414px;
+            }
+
+            label .menu {
+                top: 38.5rem;
+                left: 18rem;
+            }
+
+            label .hamburger {
+                top: 43rem;
+                left: 21rem;
+                width: 50px;
+            }
+
+            label ul {
+                top: 22rem;
+                left: 12.5rem;
+            }
+        }
+
+        /*****MEDIA Q iphone 10*******/
+        @media only screen and (min-height: 812px) {
+
+            nav a {
+                font-size: 1.8rem;
+            }
+
+
+            label .menu {
+                top: 43rem;
+                left: 16rem;
+            }
+
+            label .hamburger {
+                top: 47rem;
+                left: 19.4rem;
+            }
+
+            label ul {
+                top: 25rem;
+            }
+        }
+
+
+        /*****MEDIA Q IPAD PORTRAIT*******/
+        @media only screen and (min-width:600px) {
+
+            #splash img {
+                width: 768px;
+            }
+
+            /****BURGERMENU****/
+
+            label a {
+                font-size: 2.5rem;
+            }
+
+            .logo img {
+                width: 40%;
+            }
+
+
+            label .menu {
+                overflow: hidden;
+                top: 54rem;
+                left: 38.5rem;
+                width: 15rem;
+                height: 15rem;
+
+            }
+
+            label .hamburger {
+                top: 59.5rem;
+                left: 42.7rem;
+                width: 50px;
+                height: 4px;
+            }
+
+
+
+            label ul {
+                top: 51%;
+                left: 48%;
+            }
+
+
+        }
+
+        /******MEDIA Q IPAD LANDSCAPE*****/
+
+        @media only screen and (min-width: 1024px) {
+
+            .logo img {
+                width: 45%;
+            }
+
+            label ul {
+                left: 32rem;
+                width: 50%;
+                padding-top: 3rem;
+                padding-bottom: 2rem;
+            }
+
+            label .menu {
+                top: 40rem;
+                left: 55rem;
+            }
+
+            label .hamburger {
+                top: 44.5rem;
+                left: 58.5rem;
+            }
+
+            label input:checked + .menu {
+                box-shadow: 0 0 0 150vh var(--color-navigation);
+            }
+
+        }
+
+
+
+
+        /*******MEDIE Q DESKTOP****/
+        @media only screen and (min-width:1025px) {
+
+            .splash img {
+                max-width: 1920px;
+            }
+
+            .logo img {
+                width: 20%;
+
+            }
+
+            nav a {
+                display: inline;
+                margin-left: 2rem;
+
+            }
+
+            label .menu {
+                display: none;
+
+            }
+
+            label .hamburger {
+                display: none;
+            }
+
+
+            label ul {
+                position: fixed;
+                transform: none;
+                opacity: 100;
+                transition: none;
+                list-style-type: none;
+            }
+
+
+            .hide {
+                display: inline-block;
+                position: fixed;
+                top: 10rem;
+                width: 100%;
+                margin-left: -33.5rem;
+                margin-top: -13rem
+            }
+
+
+            label li {
+                display: inline;
+                margin-top: 1rem;
+            }
+
+            label a {
+                display: inline;
+                margin-bottom: 1em;
+                color: white;
+                text-decoration: none;
+            }
+
+
+        }
