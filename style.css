@@ -34,6 +34,9 @@
         body {
             margin: 0;
             max-width: 1280px;
+            padding: 0;
+            margin: 0 auto;
+            background-color: white;
         }
 
         h1,
@@ -48,21 +51,24 @@
         }
 
         p {
-            font-family: 'Hind', sans-serif;
+            /* font-family: 'Hind', sans-serif; */
+            font-family: 'Titillium Web', sans-serif;
             color: white;
             margin-left: 1rem;
             margin-right: 1rem;
-            font-weight: 300;
+            font-weight: 200;
         }
 
         nav a {
             font-family: 'Titillium Web', sans-serif;
-            font-weight: 400;
+            font-weight: 300;
             color: white;
         }
 
         a {
-            font-family: 'Hind', sans-serif;
+            font-family: 'Titillium Web', sans-serif;
+            font-weight: 200;
+            /*font-family: 'Hind', sans-serif;*/
             color: white;
         }
 
@@ -822,7 +828,7 @@
                 position: fixed;
                 top: 1rem;
                 width: 100%;
-                margin-left: -31rem;
+                margin-left: -27rem;
                 margin-top: -13rem
             }
 
@@ -833,10 +839,11 @@
             }
 
             label a {
+                font-size: 2rem;
                 display: inline;
                 margin-bottom: 1em;
-                color: white;
                 text-decoration: none;
+                font-weight: 300;
             }
 
             /*********COVER BILLEDE*******/
@@ -849,8 +856,8 @@
 
             #cover .overskrift {
                 margin-top: -17rem;
-                font-size: 5rem;
-                font-weight: 400;
+                font-size: 4.5rem;
+                font-weight: 300;
             }
 
             #cover h2 {
@@ -873,26 +880,105 @@
                 padding: 1rem;
                 text-decoration: none;
                 border: 0.02px solid white;
-                margin-left: 20rem;
+                margin-left: 16rem;
                 margin-top: -15rem;
             }
 
-            /*****BLOK 1****/
+            /****BLOK 1****/
 
             .indhold1 {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
+                margin-top: 1rem;
             }
+
+            .indhold1 .blok1 {
+                padding-left: 2rem;
+                padding-right: 2rem;
+                padding-bottom: 2rem;
+                margin-left: 3rem;
+                margin-right: 3rem;
+            }
+
+            .indhold1 .blok1 h2 {
+                margin-top: 2rem;
+                font-size: 1.5rem;
+            }
+
+
+            .indhold1 p {
+                font-size: 1.2rem;
+                line-height: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            .indhold1 .blok1 a {
+                font-weight: 300;
+                font-size: 1.2rem;
+                margin-left: 6.5rem;
+
+            }
+
+            .indhold1 .blok2 img {
+                margin-top: -1.9rem;
+                width: 101%;
+            }
+
+            /*****BLOK 2******/
 
             .indhold2 {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
+                margin-top: -1rem;
             }
 
-            .indhold2 img {
-                height: 400px;
+            .indhold2 .blok2 {
+                margin-top: -0.5rem;
+
             }
 
+            .indhold2 h3 {
+                font-size: 2rem;
+            }
+
+            .indhold2 h4 {
+                font-size: 3rem;
+            }
+
+            .indhold2 h5 {
+                font-size: 2rem;
+            }
+
+            .indhold2 p {
+                margin-top: 0.5rem;
+                font-size: 1.2rem;
+            }
+
+            .indhold2 .knap {
+                font-size: 1.2rem;
+                font-weight: 200;
+                margin-top: 1rem;
+                margin-bottom: 2rem;
+                margin-left: 13rem;
+                margin-right: 13rem;
+            }
+
+            .indhold2 .blok1 img {
+                height: 350px;
+                width: 101%;
+                margin-left: 0rem;
+            }
+
+            /****FOOTER*****/
+
+            footer h1 {
+                font-size: 2rem;
+            }
+
+            footer p {
+                font-size: 1.3rem;
+            }
+
+            footer img {
+                width: 10%;
+                margin-left: 1.5rem;
+            }
 
 
         }
