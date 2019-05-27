@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mindful Jewellery</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700|Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -28,7 +30,7 @@
                     </li>
 
                     <li class="logo">
-                        <a href="index.html"><img src="img/logo_sort-06.png" alt="logo"></a>
+                        <a href="index.html"><img src="img/logo_hvid.svg" alt="logo"></a>
                     </li>
 
                     <li>
@@ -47,24 +49,46 @@
 
 
         <picture class="splash">
-            <source media="(min-width: 1024px)" srcset="">
+            <source media="(min-width: 1024px)" srcset="img/woman-1149911_1920.jpg" alt="Mindful Jewellery">
             <source media="(min-width: 528px)" srcset="">
-            <img src="img/woman-1149911_1920.jpg" alt="Mindful Jewellery">
+            <img src="img/mobil.jpg">
         </picture>
 
-        <h1 class="overskrift"> Mindful Jewellery</h1>
-        <h2 class="tagline"> Når smykker ikke bare er smykker </h2>
-        <p class="webshop_info"> Webshoppen åbner efteråret 2019 </p>
-        <p class="kollektions_knap">Se vores kollektion her</p>
+        <section id="cover">
+            <h1 class="overskrift"> Mindful Jewellery</h1>
+            <h2> Når smykker ikke bare er smykker </h2>
+            <p> Webshoppen åbner efteråret 2019 </p>
+            <a href="smykker.html" class="kollektions_knap">Se vores kollektion her</a>
+        </section>
     </header>
 
 
-    <div class="forside1">
-        <h2 class="overskrift"></h2>
-        <p class="koncept"></p>
-        <div class="indhold">
+    <main>
+        <div class="forside1">
+            <div class="indhold1">
+                <section>
+                    <h2></h2>
+                    <p></p>
+                    <a href="smykker.html">Klik her for mere information omkring vores filosofi</a>
+                </section>
+                <section>
+                    <img src="" alt="">
+                </section>
+            </div>
+
+
+            <div class="indhold2">
+                <section>
+                    <img src="" alt="">
+                </section>
+                <section>
+                    <p></p>
+                    <p class="nyhedsbrev">Nyhedsbrev</p>
+                </section>
+
+            </div>
         </div>
-    </div>
+    </main>
 
     <script>
         let indhold;
@@ -72,19 +96,21 @@
 
         function start() {
             async function getJson() {
-                let url = "http://mariacronehvidberg.dk/kea/eksamen/kode/wordpress/wp-json/wp/v2/pages/34"
+                let url = "http://mariacronehvidberg.dk/kea/eksamen/kode/wordpress/wp-json/wp/v2/forside/50"
                 let jsonData = await fetch(url);
                 indhold = await jsonData.json();
-
                 document.querySelector("label .menu").addEventListener("click", open);
-
                 visIndhold();
             }
 
             function visIndhold() {
-                document.querySelector(".indhold").innerHTML = indhold.content.rendered;
-            }
+                document.querySelector(".indhold1 h2").textContent = indhold.overskrift;
+                document.querySelector(".indhold1 p").textContent = indhold.text;
+                document.querySelector(".indhold1 img").src = indhold.video.guid;
 
+                document.querySelector(".indhold2 img").src = indhold.billede.guid;
+                document.querySelector(".indhold2 p").textContent = indhold.nyhedsbrev_text;
+            }
 
             function open() {
                 let menu = document.querySelector("label ul");
@@ -95,8 +121,6 @@
                 //     menu.style.display = "none";
                 // }
             }
-
-
             getJson();
         }
     </script>

@@ -6,13 +6,14 @@
         }
 
         :root {
-            --color-darkestblue: #060314;
-            --color-darkblue: #090F26;
-            --color-midtblue: #101F38;
+            --color-mosegron: #a0aba2;
+            --color-gron: #6aa497;
+            --color-orange: #bf925a;
 
-            --color-lightblue: #365a84;
-            --color-container: rgba(16, 31, 56, 0.77);
-            --color-navigation: rgb(35, 64, 100);
+            --color-sand: #c2aa85;
+            --color-lyssand: #ddd8c4;
+            --text-mork: #333333;
+
         }
 
         img {
@@ -23,30 +24,53 @@
         /**GENERELLE STYLINGS**/
 
         body {
-            font-family: 'Niramit', sans-serif;
-            overflow-x: hidden;
-            overflow-y: hidden;
-            background-image: url(grafik/baggrund.png);
-            background-repeat: no-repeat;
             margin: 0;
         }
 
+        h1,
+        h2,
+        h3 {
+            font-family: 'Titillium Web', sans-serif;
+            font-weight: 300;
+            color: white;
+            margin-left: 1rem;
+        }
+
+        p {
+            font-family: 'Hind', sans-serif;
+            color: white;
+            margin-left: 1rem;
+        }
+
+        nav a {
+            font-family: 'Titillium Web', sans-serif;
+            font-weight: 400;
+            color: white;
+        }
+
+        a {
+            font-family: 'Hind', sans-serif;
+            color: white;
+        }
+
+        /******MOBIL*****/
+
         #splash img {
-            width: 375px;
+            max-width: 375px;
+
         }
 
 
         /****BURGERMENU****/
 
         nav a {
-            font-family: 'Niramit', sans-serif;
             font-size: 1.5rem;
             text-align: center;
             padding-bottom: 0.5rem;
         }
 
         nav a:hover {
-            color: var(--color-lightblue);
+            color: var(--color-orange);
         }
 
 
@@ -58,10 +82,10 @@
             z-index: 100;
             width: 200px;
             height: 200px;
-            background: var(--color-navigation);
+            background: var(--color-mosegron);
             border-radius: 50% 50% 50% 50%;
             transition: 0.5s ease-in-out;
-            box-shadow: 0 0 0 0 var(--color-navigation), 0 0 0 0 var(--color-navigation);
+            box-shadow: 0 0 0 0 var(--color-mosegron), 0 0 0 0 var(--color-mosegron);
             cursor: pointer;
 
         }
@@ -103,7 +127,7 @@
 
         label input:checked + .menu {
             /*box-shadow: 0 0 0 100vw var(--color-navigation), 0 0 0 100vh var(--color-navigation);*/
-            box-shadow: 0 0 0 var(--color-navigation), 0 0 0 100vh var(--color-navigation);
+            box-shadow: 0 0 0 var(--color-mosegron), 0 0 0 100vh var(--color-mosegron);
             border-radius: 0;
         }
 
@@ -154,9 +178,43 @@
         }
 
 
+        /*****COVER BILLEDE****/
+
+        #cover .overskrift {
+            margin-top: -10rem;
+            font-size: 2.3rem;
+            font-weight: 400;
+        }
+
+        #cover h2 {
+            font-size: 1.4rem;
+            font-weight: 200;
+            margin-top: -1rem;
+        }
+
+        #cover p {
+            font-size: 1.1rem;
+            font-family: 'Titillium Web', sans-serif;
+            font-weight: 200;
+            margin-top: -0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        #cover a {
+            font-family: 'Titillium Web', sans-serif;
+            font-weight: 200;
+            font-size: 1rem;
+            padding: 0.5rem;
+            text-decoration: none;
+            border: 0.02px solid white;
+            margin-left: 11.5rem;
+
+        }
+
         /*****MEDIA Q iphone plus*******/
         @media only screen and (min-width: 400px) {
 
+            /****BURGER****/
             #splash img {
                 width: 414px;
             }
@@ -175,6 +233,28 @@
             label ul {
                 top: 22rem;
                 left: 12.5rem;
+            }
+
+            /*****COVER BILLEDE****/
+
+            #cover .overskrift {
+                margin-top: -11rem;
+                font-size: 2.5rem;
+            }
+
+            #cover h2 {
+                font-size: 1.5rem;
+            }
+
+            #cover p {
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+            }
+
+            #cover a {
+                font-size: 1.1rem;
+                margin-left: 14rem;
+
             }
         }
 
@@ -243,12 +323,39 @@
                 left: 48%;
             }
 
+            /*****COVER BILLEDE****/
+
+            #cover .overskrift {
+                margin-top: -20rem;
+                font-size: 4.3rem;
+            }
+
+            #cover h2 {
+                font-size: 2.6rem;
+                margin-top: -1.7rem;
+            }
+
+            #cover p {
+                font-size: 1.8rem;
+                margin-top: -1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            #cover a {
+                font-size: 2.3rem;
+                padding: 0.7rem;
+                margin-left: 23rem;
+
+            }
+
 
         }
 
         /******MEDIA Q IPAD LANDSCAPE*****/
 
         @media only screen and (min-width: 1024px) {
+
+            /******BURGER*****/
 
             .logo img {
                 width: 45%;
@@ -275,26 +382,36 @@
                 box-shadow: 0 0 0 150vh var(--color-navigation);
             }
 
-        }
+            /*****COVER BILLEDE****/
 
+            #cover p {
+                margin-bottom: 1rem;
+            }
+
+            #cover a {
+                font-size: 2rem;
+                padding: 0.7rem;
+                margin-left: 23rem;
+
+            }
+
+        }
 
 
 
         /*******MEDIE Q DESKTOP****/
         @media only screen and (min-width:1025px) {
 
-            .splash img {
-                max-width: 1920px;
-            }
+            /*****NAVIGATION****/
 
             .logo img {
-                width: 20%;
+                width: 15%;
 
             }
 
             nav a {
                 display: inline;
-                margin-left: 2rem;
+                margin-left: 4rem;
 
             }
 
@@ -320,9 +437,9 @@
             .hide {
                 display: inline-block;
                 position: fixed;
-                top: 10rem;
+                top: 1rem;
                 width: 100%;
-                margin-left: -33.5rem;
+                margin-left: -31rem;
                 margin-top: -13rem
             }
 
@@ -338,6 +455,61 @@
                 color: white;
                 text-decoration: none;
             }
+
+            /*********COVER BILLEDE*******/
+
+
+            .splash img {
+                max-width: 1920px;
+                height: 550px;
+            }
+
+            #cover .overskrift {
+                margin-top: -17rem;
+                font-size: 5rem;
+                font-weight: 400;
+            }
+
+            #cover h2 {
+                font-size: 2.5rem;
+                font-weight: 200;
+                margin-top: -1.9rem;
+            }
+
+            #cover p {
+                font-size: 1.5rem;
+                font-family: 'Titillium Web', sans-serif;
+                font-weight: 200;
+                margin-top: -0.5rem
+            }
+
+            #cover a {
+                font-family: 'Titillium Web', sans-serif;
+                font-weight: 200;
+                font-size: 1.5rem;
+                padding: 1rem;
+                text-decoration: none;
+                border: 0.02px solid white;
+                margin-left: 20rem;
+                margin-top: -15rem;
+            }
+
+            /*****BLOK 1****/
+
+            .indhold1 {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .indhold2 {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .indhold2 img {
+                height: 400px;
+            }
+
 
 
         }
