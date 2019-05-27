@@ -16,37 +16,39 @@
         <span class="logo_mobil">
             <img src="img/logo_hvid.svg">
         </span>
-        <nav>
-            <label>
-                <input type="checkbox">
-                <span class="menu">
-                    <span class="hamburger"></span>
-                </span>
-                <ul class="hide">
+        <div class="navigation">
+            <nav>
+                <label>
+                    <input type="checkbox">
+                    <span class="menu">
+                        <span class="hamburger"></span>
+                    </span>
+                    <ul class="hide">
 
-                    <li>
-                        <a href="index.html">Forside</a>
-                    </li>
+                        <li>
+                            <a href="index.html">Forside</a>
+                        </li>
 
-                    <li>
-                        <a href="smykker.html">Smykker</a>
-                    </li>
+                        <li>
+                            <a href="smykker.html">Smykker</a>
+                        </li>
 
-                    <li class="logo">
-                        <a href="index.html"><img src="img/logo_hvid.svg" alt="logo"></a>
-                    </li>
+                        <li class="logo">
+                            <a href="index.html"><img src="img/logo_hvid.svg" alt="logo"></a>
+                        </li>
 
-                    <li>
-                        <a href="om.html">Om os</a>
-                    </li>
+                        <li>
+                            <a href="om.html">Om os</a>
+                        </li>
 
-                    <li>
-                        <a href="kontakt.html">Kontakt os</a>
-                    </li>
+                        <li>
+                            <a href="kontakt.html">Kontakt os</a>
+                        </li>
 
-                </ul>
-            </label>
-        </nav>
+                    </ul>
+                </label>
+            </nav>
+        </div>
 
 
 
@@ -106,6 +108,7 @@
         </div>
 
         <div class="some">
+            <h1>Sociale medier</h1>
             <img src="img/facebook.svg" alt="">
             <img src="img/instagram.svg" alt="">
         </div>
@@ -117,7 +120,24 @@
 
     <script>
         let indhold;
-        document.addEventListener("DOMContentLoaded", start);
+        document.addEventListener("DOMContentLoaded", navi);
+        let bodyTag = document.querySelector("body");
+        let minNav = document.querySelector(".navigation");
+
+
+        function navi() {
+            let scrolled = () => {
+                let dec = scrollY / (bodyTag.scrollHeight - innerHeight);
+                return Math.floor(dec * 2000);
+            }
+
+            addEventListener('scroll', () => {
+                minNav.style.setProperty('background-color', scrolled() > 50 ? "var(--color-scroll)" : "");
+            })
+
+            start();
+
+        }
 
         function start() {
             async function getJson() {
@@ -127,6 +147,7 @@
                 document.querySelector("label .menu").addEventListener("click", open);
                 visIndhold();
             }
+
 
             function visIndhold() {
                 document.querySelector(".indhold1 h2").textContent = indhold.overskrift;

@@ -12,7 +12,8 @@
 
             --color-sand: #c2aa85;
             --color-lyssand: #ddd8c4;
-            --text-mork: #333333;
+            --color-text_mork: #333333;
+            --color-scroll: rgba(255, 255, 255, 0.51);
 
         }
 
@@ -32,6 +33,7 @@
 
         body {
             margin: 0;
+            max-width: 1280px;
         }
 
         h1,
@@ -301,6 +303,12 @@
         }
 
         .indhold2 img {
+            display: none;
+        }
+
+        /*****FOOTER****/
+
+        footer .some h1 {
             display: none;
         }
 
@@ -587,6 +595,12 @@
                 padding-bottom: 4rem;
             }
 
+            footer .some h1 {
+                display: block;
+                text-align: center;
+                margin-top: 1rem;
+            }
+
             .kontakt_footer {
                 margin-top: 1rem;
             }
@@ -607,7 +621,7 @@
             footer img {
                 text-align: center;
                 width: 15%;
-                margin-top: 1.5rem;
+                margin-top: -1rem;
                 margin-left: 1.5rem;
             }
 
@@ -763,9 +777,19 @@
 
             /*****NAVIGATION****/
 
+            .logo_mobil img {
+                display: none;
+            }
+
             .logo img {
                 width: 15%;
 
+            }
+
+            .navigation {
+                position: fixed;
+                height: 8rem;
+                width: 100%;
             }
 
             nav a {
