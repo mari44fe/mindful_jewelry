@@ -66,29 +66,49 @@
     <main>
         <div class="forside1">
             <div class="indhold1">
-                <section>
+                <section class="blok1">
                     <h2></h2>
                     <p></p>
-                    <a href="smykker.html">Klik her for mere information omkring vores filosofi</a>
+                    <a class="knap" href="smykker.html">Klik hvis du vil høre mere om vores filosofi</a>
                 </section>
-                <section>
+                <section class="blok2">
                     <img src="" alt="">
                 </section>
             </div>
 
 
             <div class="indhold2">
-                <section>
+                <section class="blok1">
                     <img src="" alt="">
                 </section>
-                <section>
+                <section class="blok2">
+                    <h3></h3>
+                    <h4></h4>
+                    <h5></h5>
                     <p></p>
-                    <p class="nyhedsbrev">Nyhedsbrev</p>
+                    <p class="knap">Nyhedsbrev</p>
                 </section>
 
             </div>
         </div>
     </main>
+
+
+    <footer>
+        <div class="kontakt_footer">
+            <h1>Mindful Jewellery</h1>
+            <p>Telefon: xxxxxxxx</p>
+            <p>Email: xxxxxxx</p>
+            <p>Man-fre: xxxxxxx</p>
+        </div>
+
+        <div class="some">
+            <img src="img/facebook.svg" alt="">
+            <img src="img/instagram.svg" alt="">
+        </div>
+
+        <p class="knap">Søg</p>
+    </footer>
 
     <script>
         let indhold;
@@ -109,7 +129,10 @@
                 document.querySelector(".indhold1 img").src = indhold.video.guid;
 
                 document.querySelector(".indhold2 img").src = indhold.billede.guid;
-                document.querySelector(".indhold2 p").textContent = indhold.nyhedsbrev_text;
+                document.querySelector(".indhold2 h3").textContent = indhold.nyhedsbrev_text1;
+                document.querySelector(".indhold2 h4").textContent = indhold.nyhedsbrev_text2;
+                document.querySelector(".indhold2 h5").textContent = indhold.nyhedsbrev_text3;
+                document.querySelector(".indhold2 p").textContent = indhold.webshop_felt;
             }
 
             function open() {

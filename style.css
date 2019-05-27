@@ -20,6 +20,13 @@
             width: 100%;
         }
 
+        .knap {
+            text-decoration: none;
+            border: 0.5px white solid;
+            padding: 0.5rem;
+            text-align: center;
+        }
+
 
         /**GENERELLE STYLINGS**/
 
@@ -29,7 +36,9 @@
 
         h1,
         h2,
-        h3 {
+        h3,
+        h4,
+        h5 {
             font-family: 'Titillium Web', sans-serif;
             font-weight: 300;
             color: white;
@@ -40,6 +49,8 @@
             font-family: 'Hind', sans-serif;
             color: white;
             margin-left: 1rem;
+            margin-right: 1rem;
+            font-weight: 300;
         }
 
         nav a {
@@ -52,6 +63,12 @@
             font-family: 'Hind', sans-serif;
             color: white;
         }
+
+        footer {
+            background-color: var(--color-lyssand);
+        }
+
+
 
         /******MOBIL*****/
 
@@ -180,6 +197,11 @@
 
         /*****COVER BILLEDE****/
 
+        .logo_mobil img {
+            position: absolute;
+            width: 35%;
+        }
+
         #cover .overskrift {
             margin-top: -10rem;
             font-size: 2.3rem;
@@ -209,6 +231,109 @@
             border: 0.02px solid white;
             margin-left: 11.5rem;
 
+        }
+
+
+        /****BLOK 1****/
+
+        .indhold1 {
+            background-color: var(--color-mosegron);
+            padding-top: 3rem;
+        }
+
+        .indhold1 .blok1 {
+            padding-bottom: 1rem;
+            border: 1px solid white;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .indhold1 h2 {
+            margin-top: 1rem;
+        }
+
+        .indhold1 p {
+            margin-bottom: 0.5rem;
+        }
+
+        .indhold1 .blok1 a {
+            font-size: 0.7rem;
+            margin-left: 7rem;
+        }
+
+        /*****BLOK 2******/
+
+        .indhold2 {
+            background-color: var(--color-sand);
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+            margin-top: -0.5rem;
+        }
+
+        .indhold2 h3 {
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .indhold2 h4 {
+            font-size: 3rem;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .indhold2 h5 {
+            font-size: 2.2rem;
+            text-align: center;
+        }
+
+        .indhold2 p {
+            font-size: 1.4rem;
+            text-align: center;
+        }
+
+        .indhold2 .knap {
+            font-size: 1.5rem;
+            margin-left: 5rem;
+            margin-right: 5rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .indhold2 img {
+            display: none;
+        }
+
+        footer {
+            text-align: center;
+            padding-top: 1rem;
+            padding-bottom: 0.1rem;
+        }
+
+        footer h1 {
+            font-size: 1.8rem;
+            font-weight: 200;
+            margin: 0;
+        }
+
+        footer p {
+            margin-top: -0.5rem;
+        }
+
+        footer img {
+            text-align: center;
+            width: 10%;
+            margin-top: 0.5rem;
+            margin-left: 0.3rem;
+        }
+
+        footer .sog p {
+            font-size: 1rem;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            margin-right: 11rem;
+            padding: 0rem 0rem 0rem 0.5rem;
+            text-align: left;
         }
 
         /*****MEDIA Q iphone plus*******/
@@ -325,6 +450,10 @@
 
             /*****COVER BILLEDE****/
 
+            .logo_mobil img {
+                width: 30%;
+            }
+
             #cover .overskrift {
                 margin-top: -20rem;
                 font-size: 4.3rem;
@@ -379,10 +508,14 @@
             }
 
             label input:checked + .menu {
-                box-shadow: 0 0 0 150vh var(--color-navigation);
+                box-shadow: 0 0 0 150vh var(--color-mosegron);
             }
 
             /*****COVER BILLEDE****/
+
+            .logo_mobil img {
+                width: 20%;
+            }
 
             #cover p {
                 margin-bottom: 1rem;
