@@ -350,6 +350,44 @@
             text-align: left;
         }
 
+
+
+        /****KONTAKT******/
+        form {
+            margin-top: 50px;
+            transition: all 4s ease-in-out;
+        }
+
+        .tabel_kontrol {
+            width: 600px;
+            background: transparent;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid white;
+            color: white;
+            font-size: 18px;
+            margin-bottom: 16px;
+
+        }
+
+        input {
+            height: 45px;
+        }
+
+        form .submit .knap {
+            text-align: left;
+        }
+
+        form .submit:hover {
+            background-color: var(--color-orange);
+            cursor: pointer;
+        }
+
+
+
+
+
+
         /*****MEDIA Q iphone plus*******/
         @media only screen and (min-width: 400px) {
 

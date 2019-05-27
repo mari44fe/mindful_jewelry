@@ -4,19 +4,85 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt</title>
-    <link rel="stylesheet" href="">
+    <title>Mindful Jewellery</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700|Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
+
+    <style>
+
+        body {
+        background-color: dodgerblue
+    }
+
+    </style>
 </head>
 
 <body>
 
-    <main>
+    <header>
+        <span class="logo_mobil">
+            <img src="img/logo_hvid.svg">
+        </span>
+        <div class="navigation">
+            <nav>
+                <label>
+                    <input type="checkbox">
+                    <span class="menu">
+                        <span class="hamburger"></span>
+                    </span>
+                    <ul class="hide">
+
+                        <li>
+                            <a href="index.html">Forside</a>
+                        </li>
+
+                        <li>
+                            <a href="smykker.html">Smykker</a>
+                        </li>
+
+                        <li class="logo">
+                            <a href="index.html"><img src="img/logo_hvid.svg" alt="logo"></a>
+                        </li>
+
+                        <li>
+                            <a href="om.html">Om os</a>
+                        </li>
+
+                        <li>
+                            <a href="kontakt.html">Kontakt os</a>
+                        </li>
+
+                    </ul>
+                </label>
+            </nav>
+        </div>
+    </header>
+
+    <section id="tabel">
+        <div class="kontakt_tabel">
+
+            <form id="kontakt_tabel" method="post" action="">
+                <input name="navn" type="text" class="tabel_kontrol" placeholder="Navn" required><br>
+
+                <input name="navn" type="text" class="tabel_kontrol" placeholder="Efternavn" required><br>
+
+                <input name="email" type="email" class="tabel_kontrol" placeholder="Email" required><br>
+
+                <textarea name="besked" class="tabel_kontrol" placeholder="Besked" rows="4" required></textarea><br>
+
+                <input type="submit" class="tabel_kontrol submit" value="Send">
+            </form>
+
+        </div>
+    </section>
+
+    <section id="kontakt_info">
         <div class="kontakt">
             <h1 class="overskrift"></h1>
             <div class="indhold">
             </div>
         </div>
-    </main>
+    </section>
 
     <script>
         let indhold;
