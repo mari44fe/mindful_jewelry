@@ -381,6 +381,27 @@
                 margin-left: 14rem;
 
             }
+
+
+            /****BLOK 1****/
+
+            .indhold1 {
+                padding-top: 3rem;
+            }
+
+            .indhold1 .blok1 {
+                padding-bottom: 1.5rem;
+            }
+
+            .indhold1 p {
+                margin-bottom: 1.3rem;
+            }
+
+            .indhold1 .blok1 a {
+                font-size: 0.8rem;
+            }
+
+
         }
 
         /*****MEDIA Q iphone 10*******/
@@ -404,6 +425,41 @@
             label ul {
                 top: 25rem;
             }
+
+
+            /****COVER****/
+
+            .logo_mobil img {
+                margin-top: 0rem;
+            }
+
+            /****BLOK 1****/
+
+            .indhold1 {
+                padding-top: 3rem;
+            }
+
+            .indhold1 .blok1 {
+                padding-bottom: 1.5rem;
+            }
+
+            .indhold1 p {
+                margin-bottom: 1.3rem;
+            }
+
+            .indhold1 .blok1 a {
+                font-size: 0.7rem;
+            }
+
+            footer .sog p {
+                font-size: 1rem;
+                margin-top: 1rem;
+                margin-bottom: 0.5rem;
+                margin-right: 11rem;
+                padding: 0rem 0rem 0rem 0.5rem;
+                text-align: left;
+            }
+
         }
 
 
@@ -477,6 +533,94 @@
 
             }
 
+            /****BLOK 1****/
+
+            .indhold1 {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                margin-top: 4rem;
+                padding: 2rem 0rem 2rem 0rem;
+            }
+
+
+            .indhold1 p {
+                margin-bottom: 1.4rem;
+            }
+
+            .indhold1 .blok1 a {
+                font-size: 0.8rem;
+                margin-left: 5rem;
+            }
+
+            .indhold1 .blok2 img {
+                margin-top: -1.8rem;
+                height: 118%;
+            }
+
+            /*****BLOK 2******/
+
+            .indhold2 {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                margin-top: 4rem;
+                padding-top: 3rem;
+                padding-bottom: 0rem;
+                margin-top: -0.5rem;
+            }
+
+            .indhold2 .blok1 img {
+                display: block;
+                margin-top: -3rem;
+                margin-left: -0.5rem;
+                width: 102%;
+            }
+
+            .indhold2 img {
+                display: none;
+            }
+
+            /****FOOTER*****/
+
+            footer {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                padding-bottom: 4rem;
+            }
+
+            .kontakt_footer {
+                margin-top: 1rem;
+            }
+
+            footer h1 {
+                text-align: left;
+                margin-left: 2rem;
+                ;
+                margin-bottom: 1rem;
+            }
+
+            footer p {
+                text-align: left;
+                margin-top: -0.5rem;
+                margin-left: 2rem;
+            }
+
+            footer img {
+                text-align: center;
+                width: 15%;
+                margin-top: 1.5rem;
+                margin-left: 1.5rem;
+            }
+
+            footer .sog p {
+                font-size: 1.2rem;
+                margin-top: 1.5rem;
+                margin-bottom: 0.5rem;
+                margin-right: 1rem;
+                padding: 0rem 0rem 0rem 0.5rem;
+                text-align: left;
+            }
+
+
 
         }
 
@@ -526,6 +670,88 @@
                 padding: 0.7rem;
                 margin-left: 23rem;
 
+            }
+
+            /****BLOK 1****/
+
+            .indhold1 {
+                margin-top: 3rem;
+                padding: 4rem 1rem 2rem 0.5rem;
+            }
+
+            .indhold1 .blok1 {
+                margin: 1rem;
+                padding: 0.5rem;
+                padding-bottom: 1.5rem;
+            }
+
+            .indhold1 .blok1 h2 {
+                font-size: 2rem;
+                margin-bottom: 0.5rem;
+            }
+
+
+            .indhold1 p {
+                font-size: 1.3rem;
+                ;
+                margin-bottom: 1rem;
+            }
+
+            .indhold1 .blok1 a {
+                font-size: 1rem;
+                margin-left: 9rem;
+            }
+
+            .indhold1 .blok2 img {
+                margin-top: -1.8rem;
+                height: 113%;
+                width: 110%;
+                margin-left: 0.5rem;
+            }
+
+            /*****BLOK 2******/
+            .indhold2 .blok2 {
+                margin-top: 3rem;
+
+            }
+
+            .indhold2 h3 {
+                font-size: 2.5rem;
+            }
+
+            .indhold2 h4 {
+                font-size: 3.5rem;
+            }
+
+            .indhold2 h5 {
+                font-size: 2.5rem;
+            }
+
+            .indhold2 p {
+                margin-top: 0.5rem;
+                font-size: 1.7rem;
+            }
+
+            .indhold2 .knap {
+                font-size: 1.7rem;
+            }
+
+            /****FOOTER*****/
+
+            footer h1 {
+                font-size: 2rem;
+            }
+
+            footer p {
+                font-size: 1.2rem;
+            }
+
+            footer img {
+                margin-left: 1rem;
+            }
+
+            footer .sog p {
+                font-size: 1.5rem;
             }
 
         }
