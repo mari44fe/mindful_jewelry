@@ -1,44 +1,211 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Om os</title>
-    <link rel="stylesheet" href="">
-</head>
+    <title>Mindful Jewellery</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700|Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
 
+    <style>
+
+        body {
+            background-color: var(--color-mosegron);
+        }
+
+        .logo_mobil img {
+            position: static;
+        }
+
+
+
+        /*****MEDIA Q iphone plus*******/
+        @media only screen and (min-width: 400px) {
+
+
+
+        }
+
+        /*****MEDIA Q iphone 10*******/
+        @media only screen and (min-height: 812px) {
+
+
+
+        }
+
+
+        /*****MEDIA Q IPAD PORTRAIT*******/
+        @media only screen and (min-width:600px) {
+
+
+        }
+
+        /******MEDIA Q IPAD LANDSCAPE*****/
+
+        @media only screen and (min-width: 1024px) {
+
+        }
+
+
+        /*******MEDIE Q DESKTOP****/
+        @media only screen and (min-width:1025px) {
+
+            .hide {
+                margin-top: -25rem;
+            }
+
+    }
+
+    </style>
+</head>
 
 
 <body>
 
-    <main>
-        <div class="forside">
-            <h1 class="overskrift"></h1>
+    <header>
+        <span class="logo_mobil">
+            <img src="img/logo_hvid.svg">
+        </span>
+        <div class="navigation">
+            <nav>
+                <label>
+                    <input type="checkbox">
+                    <span class="menu">
+                        <span class="hamburger"></span>
+                    </span>
+                    <ul class="hide">
+
+                        <li>
+                            <a href="index.html">Forside</a>
+                        </li>
+
+                        <li>
+                            <a href="smykker.html">Smykker</a>
+                        </li>
+
+                        <li class="logo">
+                            <a href="index.html"><img src="img/logo_hvid.svg" alt="logo"></a>
+                        </li>
+
+                        <li>
+                            <a href="om.html">Om os</a>
+                        </li>
+
+                        <li>
+                            <a href="kontakt.html">Kontakt os</a>
+                        </li>
+
+                    </ul>
+                </label>
+            </nav>
+        </div>
+        <!--
+        <picture class="splash">
+            <source media="(min-width: 1024px)" srcset="img/woman-1149911_1920.jpg" alt="Mindful Jewellery">
+            <source media="(min-width: 528px)" srcset="">
+            <img src="img/mobil.jpg">
+        </picture> -->
+    </header>
+
+    <section id="cover">
+        <img src="" alt="">
+        <h1></h1>
+        <p></p>
+    </section>
+
+    <!--  <template>
+        <div id="popup">
             <div class="indhold">
+                <div id="luk">
+                    <button>&#10005;</button>
+                </div>
             </div>
         </div>
-    </main>
+    </template>
+     -->
+    <section id="filosofi">
+        <h2></h2>
+        <p></p>
+    </section>
 
+
+    <footer>
+        <div class="kontakt_footer">
+            <h1>Mindful Jewellery</h1>
+            <p>Telefon: xxxxxxxx</p>
+            <p>Email: xxxxxxx</p>
+            <p>Man-fre: xxxxxxx</p>
+        </div>
+
+        <div class="some">
+            <h1>Sociale medier</h1>
+            <img src="img/facebook.svg" alt="">
+            <img src="img/instagram.svg" alt="">
+        </div>
+
+        <section class="sog">
+            <p class="knap">Søg</p>
+        </section>
+    </footer>
 
     <script>
         let indhold;
         document.addEventListener("DOMContentLoaded", start);
+        // let bodyTag = document.querySelector("body");
+        //let minNav = document.querySelector(".navigation");
+
+
+        /*function navi() {
+            let scrolled = () => {
+                let dec = scrollY / (bodyTag.scrollHeight - innerHeight);
+                return Math.floor(dec * 2000);
+            }
+
+            addEventListener('scroll', () => {
+                minNav.style.setProperty('background-color', scrolled() > 50 ? "var(--color-scroll)" : "");
+            })
+
+            start();
+
+        }*/
 
         function start() {
             async function getJson() {
-                let url = "http://mariacronehvidberg.dk/kea/eksamen/kode/wordpress/wp-json/wp/v2/pages/29"
+                let url = "http://mariacronehvidberg.dk/kea/eksamen/kode/wordpress/wp-json/wp/v2/om_os/65"
                 let jsonData = await fetch(url);
                 indhold = await jsonData.json();
+                document.querySelector("label .menu").addEventListener("click", open);
                 visIndhold();
+
             }
 
             function visIndhold() {
-                document.querySelector(".overskrift").textContent = indhold.title.rendered;
-                document.querySelector(".indhold").innerHTML = indhold.content.rendered;
+                document.querySelector("#cover img").src = indhold.cover_billede.guid;
+                document.querySelector("#cover h1").textContent = indhold.cover_overskrift_om_os;
+                document.querySelector("#cover p").textContent = indhold.cover_text_om_os;
+
+
+                document.querySelector("#filosofi h2").textContent = indhold.overskrift_vores_filosofi;
+                document.querySelector("#filosofi p").textContent = indhold.vores_filosofi_text;
+
+            }
+
+            function open() {
+                let menu = document.querySelector("label ul");
+                // if (menu.style.display == "none") {
+                console.log(menu.classList);
+                menu.classList.toggle("hide");
+                // } else {
+                //     menu.style.display = "none";
+                // }
             }
             getJson();
         }
     </script>
 
+
+
 </body>
+
 </html>

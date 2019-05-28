@@ -377,7 +377,7 @@
             }
 
                  .logo_mobil img {
-                position: fixed;
+                position: absolute;
                 width: 12%;
                 margin-left: 35rem;
             }
@@ -612,24 +612,24 @@
 
     <script>
         let indhold;
-        document.addEventListener("DOMContentLoaded", navi);
-        let bodyTag = document.querySelector("body");
-        let minNav = document.querySelector(".navigation");
+        document.addEventListener("DOMContentLoaded", start);
+        //let bodyTag = document.querySelector("body");
+        //let minNav = document.querySelector(".navigation");
 
 
-        function navi() {
-            let scrolled = () => {
-                let dec = scrollY / (bodyTag.scrollHeight - innerHeight);
-                return Math.floor(dec * 2000);
-            }
+        /* function navi() {
+             let scrolled = () => {
+                 let dec = scrollY / (bodyTag.scrollHeight - innerHeight);
+                 return Math.floor(dec * 2000);
+             }
 
-            addEventListener('scroll', () => {
-                minNav.style.setProperty('background-color', scrolled() > 50 ? "var(--color-scroll)" : "");
-            })
+             addEventListener('scroll', () => {
+                 minNav.style.setProperty('background-color', scrolled() > 50 ? "var(--color-scroll)" : "");
+             })
 
-            start();
+             start();
 
-        }
+         }*/
 
         function start() {
             async function getJson() {
@@ -664,6 +664,7 @@
             }
             getJson();
         }
+
     </script>
 
 

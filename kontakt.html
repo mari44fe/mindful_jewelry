@@ -145,6 +145,10 @@
         /*******MEDIE Q DESKTOP****/
         @media only screen and (min-width:1025px) {
 
+            .hide {
+                margin-top: -25rem;
+            }
+
        input.tabel_kontrol.submit {
                 margin-left: 0rem;
                 margin-right: 17.8rem;
@@ -257,12 +261,12 @@
 
     <script>
         let indhold;
-        document.addEventListener("DOMContentLoaded", navi);
-        let bodyTag = document.querySelector("body");
-        let minNav = document.querySelector(".navigation");
+        document.addEventListener("DOMContentLoaded", start);
+        // let bodyTag = document.querySelector("body");
+        //let minNav = document.querySelector(".navigation");
 
 
-        function navi() {
+        /*function navi() {
             let scrolled = () => {
                 let dec = scrollY / (bodyTag.scrollHeight - innerHeight);
                 return Math.floor(dec * 2000);
@@ -274,7 +278,7 @@
 
             start();
 
-        }
+        }*/
 
         function start() {
             async function getJson() {
