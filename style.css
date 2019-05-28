@@ -78,14 +78,6 @@
 
 
 
-        /******MOBIL*****/
-
-        #splash img {
-            max-width: 375px;
-
-        }
-
-
         /****BURGERMENU****/
 
         nav a {
@@ -203,114 +195,13 @@
         }
 
 
-        /*****COVER BILLEDE****/
+        /*****LOGO****/
 
         .logo_mobil img {
             position: absolute;
             width: 35%;
         }
 
-        #cover .overskrift {
-            margin-top: -10rem;
-            font-size: 2.3rem;
-            font-weight: 400;
-        }
-
-        #cover h2 {
-            font-size: 1.4rem;
-            font-weight: 200;
-            margin-top: -1rem;
-        }
-
-        #cover p {
-            font-size: 1.1rem;
-            font-family: 'Titillium Web', sans-serif;
-            font-weight: 200;
-            margin-top: -0.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        #cover a {
-            font-family: 'Titillium Web', sans-serif;
-            font-weight: 200;
-            font-size: 1rem;
-            padding: 0.5rem;
-            text-decoration: none;
-            border: 0.02px solid white;
-            margin-left: 11.5rem;
-
-        }
-
-
-        /****BLOK 1****/
-
-        .indhold1 {
-            background-color: var(--color-mosegron);
-            padding-top: 3rem;
-        }
-
-        .indhold1 .blok1 {
-            padding-bottom: 1rem;
-            border: 1px solid white;
-            margin-left: 1rem;
-            margin-right: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .indhold1 h2 {
-            margin-top: 1rem;
-        }
-
-        .indhold1 p {
-            margin-bottom: 0.5rem;
-        }
-
-        .indhold1 .blok1 a {
-            font-size: 0.7rem;
-            margin-left: 7rem;
-        }
-
-        /*****BLOK 2******/
-
-        .indhold2 {
-            background-color: var(--color-sand);
-            padding-top: 3rem;
-            padding-bottom: 3rem;
-            margin-top: -0.5rem;
-        }
-
-        .indhold2 h3 {
-            font-size: 2rem;
-            text-align: center;
-        }
-
-        .indhold2 h4 {
-            font-size: 3rem;
-            font-weight: 500;
-            text-align: center;
-        }
-
-        .indhold2 h5 {
-            font-size: 2.2rem;
-            text-align: center;
-        }
-
-        .indhold2 p {
-            font-size: 1.4rem;
-            text-align: center;
-        }
-
-        .indhold2 .knap {
-            font-size: 1.5rem;
-            margin-left: 5rem;
-            margin-right: 5rem;
-            text-align: center;
-            margin-top: 2rem;
-        }
-
-        .indhold2 img {
-            display: none;
-        }
 
         /*****FOOTER****/
 
@@ -352,49 +243,11 @@
 
 
 
-        /****KONTAKT******/
-        form {
-            margin-top: 50px;
-            transition: all 4s ease-in-out;
-        }
-
-        .tabel_kontrol {
-            width: 600px;
-            background: transparent;
-            border: none;
-            outline: none;
-            border-bottom: 1px solid white;
-            color: white;
-            font-size: 18px;
-            margin-bottom: 16px;
-
-        }
-
-        input {
-            height: 45px;
-        }
-
-        form .submit .knap {
-            text-align: left;
-        }
-
-        form .submit:hover {
-            background-color: var(--color-orange);
-            cursor: pointer;
-        }
-
-
-
-
-
 
         /*****MEDIA Q iphone plus*******/
         @media only screen and (min-width: 400px) {
 
             /****BURGER****/
-            #splash img {
-                width: 414px;
-            }
 
             label .menu {
                 top: 38.5rem;
@@ -411,48 +264,6 @@
                 top: 22rem;
                 left: 12.5rem;
             }
-
-            /*****COVER BILLEDE****/
-
-            #cover .overskrift {
-                margin-top: -11rem;
-                font-size: 2.5rem;
-            }
-
-            #cover h2 {
-                font-size: 1.5rem;
-            }
-
-            #cover p {
-                font-size: 1.2rem;
-                margin-bottom: 1rem;
-            }
-
-            #cover a {
-                font-size: 1.1rem;
-                margin-left: 14rem;
-
-            }
-
-
-            /****BLOK 1****/
-
-            .indhold1 {
-                padding-top: 3rem;
-            }
-
-            .indhold1 .blok1 {
-                padding-bottom: 1.5rem;
-            }
-
-            .indhold1 p {
-                margin-bottom: 1.3rem;
-            }
-
-            .indhold1 .blok1 a {
-                font-size: 0.8rem;
-            }
-
 
         }
 
@@ -479,29 +290,12 @@
             }
 
 
-            /****COVER****/
+            /****LOGO****/
 
             .logo_mobil img {
                 margin-top: 0rem;
             }
 
-            /****BLOK 1****/
-
-            .indhold1 {
-                padding-top: 3rem;
-            }
-
-            .indhold1 .blok1 {
-                padding-bottom: 1.5rem;
-            }
-
-            .indhold1 p {
-                margin-bottom: 1.3rem;
-            }
-
-            .indhold1 .blok1 a {
-                font-size: 0.7rem;
-            }
 
             footer .sog p {
                 font-size: 1rem;
@@ -517,10 +311,6 @@
 
         /*****MEDIA Q IPAD PORTRAIT*******/
         @media only screen and (min-width:600px) {
-
-            #splash img {
-                width: 768px;
-            }
 
             /****BURGERMENU****/
 
@@ -549,87 +339,17 @@
                 height: 4px;
             }
 
-
-
             label ul {
                 top: 51%;
                 left: 48%;
             }
 
-            /*****COVER BILLEDE****/
+            /*****LOGO****/
 
             .logo_mobil img {
                 width: 30%;
             }
 
-            #cover .overskrift {
-                margin-top: -20rem;
-                font-size: 4.3rem;
-            }
-
-            #cover h2 {
-                font-size: 2.6rem;
-                margin-top: -1.7rem;
-            }
-
-            #cover p {
-                font-size: 1.8rem;
-                margin-top: -1rem;
-                margin-bottom: 1.5rem;
-            }
-
-            #cover a {
-                font-size: 2.3rem;
-                padding: 0.7rem;
-                margin-left: 23rem;
-
-            }
-
-            /****BLOK 1****/
-
-            .indhold1 {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                margin-top: 4rem;
-                padding: 2rem 0rem 2rem 0rem;
-            }
-
-
-            .indhold1 p {
-                margin-bottom: 1.4rem;
-            }
-
-            .indhold1 .blok1 a {
-                font-size: 0.8rem;
-                margin-left: 5rem;
-            }
-
-            .indhold1 .blok2 img {
-                margin-top: -1.8rem;
-                height: 118%;
-            }
-
-            /*****BLOK 2******/
-
-            .indhold2 {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                margin-top: 4rem;
-                padding-top: 3rem;
-                padding-bottom: 0rem;
-                margin-top: -0.5rem;
-            }
-
-            .indhold2 .blok1 img {
-                display: block;
-                margin-top: -3rem;
-                margin-left: -0.5rem;
-                width: 102%;
-            }
-
-            .indhold2 img {
-                display: none;
-            }
 
             /****FOOTER*****/
 
@@ -713,87 +433,6 @@
                 box-shadow: 0 0 0 150vh var(--color-mosegron);
             }
 
-            /*****COVER BILLEDE****/
-
-            .logo_mobil img {
-                width: 20%;
-            }
-
-            #cover p {
-                margin-bottom: 1rem;
-            }
-
-            #cover a {
-                font-size: 2rem;
-                padding: 0.7rem;
-                margin-left: 23rem;
-
-            }
-
-            /****BLOK 1****/
-
-            .indhold1 {
-                margin-top: 3rem;
-                padding: 4rem 1rem 2rem 0.5rem;
-            }
-
-            .indhold1 .blok1 {
-                margin: 1rem;
-                padding: 0.5rem;
-                padding-bottom: 1.5rem;
-            }
-
-            .indhold1 .blok1 h2 {
-                font-size: 2rem;
-                margin-bottom: 0.5rem;
-            }
-
-
-            .indhold1 p {
-                font-size: 1.3rem;
-                ;
-                margin-bottom: 1rem;
-            }
-
-            .indhold1 .blok1 a {
-                font-size: 1rem;
-                margin-left: 9rem;
-            }
-
-            .indhold1 .blok2 img {
-                margin-top: -1.8rem;
-                height: 113%;
-                width: 110%;
-                margin-left: 0.5rem;
-            }
-
-            /*****BLOK 2******/
-            .indhold2 .blok2 {
-                margin-top: 3rem;
-
-            }
-
-            .indhold2 h3 {
-                font-size: 2.5rem;
-            }
-
-            .indhold2 h4 {
-                font-size: 3.5rem;
-            }
-
-            .indhold2 h5 {
-                font-size: 2.5rem;
-            }
-
-            .indhold2 p {
-                margin-top: 0.5rem;
-                font-size: 1.7rem;
-            }
-
-            .indhold2 .knap {
-                font-size: 1.7rem;
-            }
-
             /****FOOTER*****/
 
             footer h1 {
@@ -813,7 +452,6 @@
             }
 
         }
-
 
 
         /*******MEDIE Q DESKTOP****/
@@ -887,124 +525,6 @@
                 font-weight: 200;
             }
 
-            /*********COVER BILLEDE*******/
-
-
-            .splash img {
-                max-width: 1920px;
-                height: 550px;
-            }
-
-            #cover .overskrift {
-                margin-top: -17rem;
-                font-size: 4.5rem;
-                font-weight: 300;
-            }
-
-            #cover h2 {
-                font-size: 2.5rem;
-                font-weight: 200;
-                margin-top: -1.9rem;
-            }
-
-            #cover p {
-                font-size: 1.5rem;
-                font-family: 'Titillium Web', sans-serif;
-                font-weight: 200;
-                margin-top: -0.5rem
-            }
-
-            #cover a {
-                font-family: 'Titillium Web', sans-serif;
-                font-weight: 200;
-                font-size: 1.5rem;
-                padding: 1rem;
-                text-decoration: none;
-                border: 0.02px solid white;
-                margin-left: 16rem;
-                margin-top: -15rem;
-            }
-
-            /****BLOK 1****/
-
-            .indhold1 {
-                margin-top: 1rem;
-            }
-
-            .indhold1 .blok1 {
-                padding-left: 2rem;
-                padding-right: 2rem;
-                padding-bottom: 2rem;
-                margin-left: 3rem;
-                margin-right: 3rem;
-            }
-
-            .indhold1 .blok1 h2 {
-                margin-top: 2rem;
-                font-size: 1.5rem;
-            }
-
-
-            .indhold1 p {
-                font-size: 1.2rem;
-                line-height: 2rem;
-                margin-bottom: 2rem;
-            }
-
-            .indhold1 .blok1 a {
-                font-weight: 200;
-                font-size: 1.2rem;
-                margin-left: 7.5rem;
-
-            }
-
-            .indhold1 .blok2 img {
-                margin-top: -1.9rem;
-                width: 101%;
-            }
-
-            /*****BLOK 2******/
-
-            .indhold2 {
-                margin-top: -1rem;
-            }
-
-            .indhold2 .blok2 {
-                margin-top: -0.5rem;
-
-            }
-
-            .indhold2 h3 {
-                font-size: 2rem;
-            }
-
-            .indhold2 h4 {
-                font-size: 3rem;
-            }
-
-            .indhold2 h5 {
-                font-size: 2rem;
-            }
-
-            .indhold2 p {
-                margin-top: 0.5rem;
-                font-size: 1.2rem;
-            }
-
-            .indhold2 .knap {
-                font-size: 1.2rem;
-                font-weight: 200;
-                margin-top: 1rem;
-                margin-bottom: 2rem;
-                margin-left: 13rem;
-                margin-right: 13rem;
-            }
-
-            .indhold2 .blok1 img {
-                height: 350px;
-                width: 101%;
-                margin-left: 0rem;
-            }
 
             /****FOOTER*****/
 
@@ -1024,6 +544,5 @@
             footer .sog p {
                 padding: 0.5rem;
             }
-
 
         }
