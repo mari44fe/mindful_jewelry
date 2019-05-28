@@ -11,14 +11,32 @@
     <style>
 
         body {
-            background-color: aquamarine;
+            background-color: var(--color-mosegron);
         }
 
+        .logo_mobil img {
+            position: static;
+        }
 
         /****KONTAKT*****/
-        form {
+
+        #kontakt_info {
+            margin-top: 1rem;
+            margin-left: 1.5rem;
+        }
+
+        ::placeholder { /* Chrome*/
+            padding: 0.5rem;
+            font-family: "titillium web", sans-serif;
+            font-weight: 200;
+    color: white;
+}
+        #tabel {
+            text-align: center;
+        }
+
+       form {
             margin-top: 2rem;
-            margin-left: 2rem;
         }
 
         .tabel_kontrol {
@@ -32,21 +50,30 @@
         }
 
         input {
-            height: 2rem;
+            height: 2.5rem;
+            width: 80%;
+            color: white;
         }
+
+        textarea {
+            width: 80%;
+        }
+
 
         input.tabel_kontrol.submit {
+            margin-left: 8.5rem;
             padding-left: 2rem;
-            height: 1rem;
-            text-align: left;
+            padding-right: 2rem;
+            font-family: "titillium web", sans-serif;
+            font-weight: 200;
+            width: 40%;
         }
 
-        /*form .submit:hover {
+        form .submit:hover {
             background-color: var(--color-orange);
             cursor: pointer;
         }
 
-         */
 
 
         /*****MEDIA Q iphone plus*******/
@@ -67,6 +94,35 @@
         /*****MEDIA Q IPAD PORTRAIT*******/
         @media only screen and (min-width:600px) {
 
+            main {
+                display: grid;
+                grid-template-areas: "formular kontakt";
+                margin-top: 11rem;
+                grid-gap: 3rem;
+            }
+
+                  /****KONTAKT*****/
+
+        #kontakt_info {
+            font-size: 1.3rem;
+            grid-area: kontakt;
+        }
+
+            #tabel {
+                grid-area: formular;
+            }
+
+            input.tabel_kontrol.submit {
+                margin-left: 0.6rem;
+                margin-right: 8rem;
+            }
+
+            input, textarea {
+                width: 90%;
+                margin-left: 2rem;
+            }
+
+
 
         }
 
@@ -74,14 +130,25 @@
 
         @media only screen and (min-width: 1024px) {
 
+            main {
+                padding-bottom: 3rem;
+            }
 
+
+            input.tabel_kontrol.submit {
+                margin-left: 0rem;
+                margin-right: 12.5rem;
+            }
         }
 
 
         /*******MEDIE Q DESKTOP****/
         @media only screen and (min-width:1025px) {
 
-
+       input.tabel_kontrol.submit {
+                margin-left: 0rem;
+                margin-right: 17.8rem;
+            }
     }
 
 
@@ -140,32 +207,33 @@
         </picture> -->
     </header>
 
-    <section id="tabel">
-        <div class="kontakt_tabel">
-
-            <form id="kontakt_tabel" method="post" action="">
-                <input name="navn" type="text" class="tabel_kontrol" placeholder="Navn" required><br>
-
-                <input name="navn" type="text" class="tabel_kontrol" placeholder="Efternavn" required><br>
-
-                <input name="email" type="email" class="tabel_kontrol" placeholder="Email" required><br>
-
-                <textarea name="besked" class="tabel_kontrol" placeholder="Besked" rows="4" required></textarea><br>
-
-                <input type="submit" class="tabel_kontrol submit" value="Send">
-            </form>
-
-        </div>
-    </section>
-
-    <section id="kontakt_info">
-        <div class="kontakt">
-            <h1 class="overskrift"></h1>
-            <div class="indhold">
+    <main>
+        <section id="kontakt_info">
+            <div class="kontakt">
+                <h1 class="overskrift"></h1>
+                <div class="indhold">
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
+        <section id="tabel">
+            <div class="kontakt_tabel">
+
+                <form id="kontakt_tabel" method="post" action="">
+                    <input name="navn" type="text" class="tabel_kontrol" placeholder="Navn" required><br>
+
+                    <input name="navn" type="text" class="tabel_kontrol" placeholder="Efternavn" required><br>
+
+                    <input name="email" type="email" class="tabel_kontrol" placeholder="Email" required><br>
+
+                    <textarea name="besked" class="tabel_kontrol" placeholder="Besked" rows="4" required></textarea><br>
+
+                    <input type="submit" class="tabel_kontrol submit" value="Send">
+                </form>
+
+            </div>
+        </section>
+    </main>
 
 
     <footer>
@@ -235,6 +303,7 @@
             }
             getJson();
         }
+
     </script>
 
 
