@@ -18,6 +18,13 @@
             position: static;
         }
 
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+
+        }
+
 
 
         /*****MEDIA Q iphone plus*******/
@@ -111,6 +118,27 @@
         </picture> -->
     </header>
 
+    <section id="cover">
+        <h1>Kollektion</h1>
+        <p>Se vores smukke kollektion lige her</p>
+    </section>
+
+
+    <template class="temp">
+        <article>
+            <h2 class="overskrift"></h2>
+            <img src="" alt="">
+        </article>
+
+    </template>
+
+    <section class="container">
+
+    </section>
+
+
+
+
 
     <footer>
         <div class="kontakt_footer">
@@ -132,7 +160,8 @@
     </footer>
 
     <script>
-        let indhold;
+        let indhold = [];
+
         document.addEventListener("DOMContentLoaded", start);
         // let bodyTag = document.querySelector("body");
         //let minNav = document.querySelector(".navigation");
@@ -153,32 +182,43 @@
         }*/
 
         function start() {
-            async function getJson() {
-                let url = "http://mariacronehvidberg.dk/kea/eksamen/kode/wordpress/wp-json/wp/v2/pages/32"
-                let jsonData = await fetch(url);
-                indhold = await jsonData.json();
-                document.querySelector("label .menu").addEventListener("click", open);
-                visIndhold();
-
-            }
-
-            function visIndhold() {
-                document.querySelector(".overskrift").textContent = indhold.title.rendered;
-                document.querySelector(".indhold").innerHTML = indhold.content.rendered;
-
-            }
-
-            function open() {
-                let menu = document.querySelector("label ul");
-                // if (menu.style.display == "none") {
-                console.log(menu.classList);
-                menu.classList.toggle("hide");
-                // } else {
-                //     menu.style.display = "none";
-                // }
-            }
             getJson();
+
         }
+
+        async function getJson() {
+            let url = "http://mariacronehvidberg.dk/kea/eksamen/kode/wordpress/wp-json/wp/v2/jewels"
+            let jsonData = await fetch(url);
+            indhold = await jsonData.json();
+            console.log("indhold");
+            document.querySelector("label .menu").addEventListener("click", open);
+            visIndhold();
+
+        }
+
+        function visIndhold() {
+            let dest = document.querySelector(".container");
+            let temp = document.querySelector(".temp");
+            indhold.forEach(ind => {
+
+                let klon = temp.cloneNode(true).content;
+                klon.querySelector("img").src = ind.billede.guid;
+
+                klon.querySelector("h2").textContent = ind.navn;
+                dest.appendChild(klon);
+            });
+        }
+
+        function open() {
+            let menu = document.querySelector("label ul");
+            // if (menu.style.display == "none") {
+            console.log(menu.classList);
+            menu.classList.toggle("hide");
+            // } else {
+            //     menu.style.display = "none";
+            // }
+        }
+
     </script>
 
 
