@@ -10,35 +10,6 @@
 
     <style>
 
-        /****VIDEO POPUP , A PEN BY CAPTAIN ANONYMOUS, tilpasset af Maria*****/
-
-/*BAGGRUND PÅ VIDEO/POPUP*/
-    #fade {
-  display: none;
-  position: fixed;
-  top: 0%;
-  left: 0%;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  z-index: 1001;
-  opacity: .80;
-  filter: alpha(opacity=80);
-}
-
-/***PLACERING AF VIDEO***/
-#pop_video {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  max-width: 100%;
-  max-height: 100%;
-  margin-left: -300px;
-  margin-top: -180px;
-  z-index: 1002;
-  overflow: visible;
-}
 
 
         body {
@@ -74,6 +45,51 @@
             margin-left: 13rem;
             padding: 0.3rem 1.5rem;
         }
+
+        /****VIDEO POPUP , A PEN BY CAPTAIN ANONYMOUS, tilpasset af Maria*****/
+
+/*BAGGRUND PÅ VIDEO/POPUP*/
+    #fade {
+  display: none;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 1001;
+  opacity: .80;
+  filter: alpha(opacity=80);
+}
+
+/***PLACERING AF VIDEO***/
+#pop_video {
+  display: none;
+  position: fixed;
+       transform: rotate(90deg);
+  top: 20%;
+  left: 142%;
+    width: 10px;
+    height: 200px;
+  max-width: 100%;
+  max-height: 100%;
+  margin-left: -300px;
+  margin-top: -180px;
+  z-index: 1002;
+  overflow: visible;
+}
+
+
+            img.play{
+                position: absolute;
+                width: 14rem;
+                top: 6rem;
+                left: 4.5rem;
+                z-index: 50;
+            }
+
+        /*****FILOSOFI BLOK*****/
+
 
         #filosofi {
             padding: 0.5rem;
@@ -111,6 +127,18 @@
                     font-size: 1.2rem;
                     margin-left: 14rem;
         }
+
+                    /****POP UP VIDEO****/
+
+            #pop_video {
+  top: 23%;
+  left: 134%;
+
+}
+
+            img.play{
+                left: 5.5rem;
+            }
 
         }
 
@@ -158,6 +186,22 @@
             font-size: 1.3rem;
             line-height: 1.9rem;
         }
+/****POP UP VIDEO****/
+#pop_video {
+transform: none;
+top: 40%;
+left: 43.5%;
+}
+
+video {
+width: 700px;
+}
+
+img.play{
+width: 20rem;
+top: 10rem;
+left: 13rem;
+}
 
         }
 
@@ -184,6 +228,22 @@
             #cover a {
                     margin-left: 20rem;
         }
+
+                        /****POP UP VIDEO****/
+            #pop_video {
+  top: 40%;
+  left: 36%;
+}
+
+            video {
+                width: 900px;
+            }
+
+                     img.play{
+                         width: 25rem;
+                         top: 12rem;
+                left: 19rem;
+            }
 
         #filosofi {
             padding: 1.5rem;
@@ -243,20 +303,21 @@
             line-height: 1.9rem;
         }
 
-            /****POP UP VIDEO****/
+                        /****POP UP VIDEO****/
+            #pop_video {
+  top: 35%;
+  left: 36%;
+}
 
-            img.play{
-                position: absolute;
-                width: 25rem;
-                top: 10rem;
-                left: 27rem;
-                z-index: 1000;
+            video {
+                width: 1000px;
             }
 
-            #pop_video {
-              top: 40%;
-              left: 37%;
-}
+                     img.play{
+                         width: 20rem;
+                         top: 12rem;
+                left: 30rem;
+            }
 
     }
 
@@ -329,7 +390,7 @@
 
     <!----POP UP VIDEO---->
     <div id="pop_video">
-        <video id="mindful_video" width="950" controls>
+        <video id="mindful_video" width="550px" controls>
             <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
         </video>
     </div>
@@ -393,6 +454,8 @@
             document.querySelector("label .menu").addEventListener("click", open);
 
             document.querySelector("img.play").addEventListener("click", lightbox_open);
+            document.querySelector(".knap").addEventListener("click", lightbox_open);
+
             document.querySelector("#cover img").addEventListener("click", lightbox_open);
 
             visIndhold();
