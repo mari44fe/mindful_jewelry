@@ -10,6 +10,37 @@
 
     <style>
 
+        /****VIDEO POPUP , A PEN BY CAPTAIN ANONYMOUS, tilpasset af Maria*****/
+
+/*BAGGRUND PÅ VIDEO/POPUP*/
+    #fade {
+  display: none;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 1001;
+  opacity: .80;
+  filter: alpha(opacity=80);
+}
+
+/***PLACERING AF VIDEO***/
+#pop_video {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 100%;
+  max-height: 100%;
+  margin-left: -300px;
+  margin-top: -180px;
+  z-index: 1002;
+  overflow: visible;
+}
+
+
         body {
             background-color: var(--color-mosegron);
         }
@@ -179,6 +210,7 @@
             }
 
             #cover img {
+                position: relative;
             top: -12rem;
             height: 550px;
         }
@@ -210,6 +242,21 @@
             font-size: 1.3rem;
             line-height: 1.9rem;
         }
+
+            /****POP UP VIDEO****/
+
+            img.play{
+                position: absolute;
+                width: 25rem;
+                top: 10rem;
+                left: 27rem;
+                z-index: 1000;
+            }
+
+            #pop_video {
+              top: 40%;
+              left: 37%;
+}
 
     }
 
@@ -264,27 +311,30 @@
         </picture> -->
     </header>
 
+    <img class="play" src="img/play-thumb-two.png" alt="">
+
     <section id="cover">
         <img src="" alt="">
         <h1></h1>
         <p></p>
-        <a class="knap" href="">Se video her</a>
+        <div>
+            <a class="knap" href="#">Se video her</a>
+        </div>
     </section>
 
-    <!--  <template>
-        <div id="popup">
-            <div class="indhold">
-                <div id="luk">
-                    <button>&#10005;</button>
-                </div>
-            </div>
-        </div>
-    </template>
-     -->
     <section id="filosofi">
         <h2></h2>
         <p></p>
     </section>
+
+    <!----POP UP VIDEO---->
+    <div id="pop_video">
+        <video id="mindful_video" width="950" controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div id="fade"></div>
 
 
     <footer>
@@ -309,6 +359,7 @@
     <script>
         let indhold;
         document.addEventListener("DOMContentLoaded", start);
+
         // let bodyTag = document.querySelector("body");
         //let minNav = document.querySelector(".navigation");
 
@@ -328,36 +379,79 @@
         }*/
 
         function start() {
-            async function getJson() {
-                let url = "http://mariacronehvidberg.dk/kea/eksamen/kode/wordpress/wp-json/wp/v2/om_os/65"
-                let jsonData = await fetch(url);
-                indhold = await jsonData.json();
-                document.querySelector("label .menu").addEventListener("click", open);
-                visIndhold();
-
-            }
-
-            function visIndhold() {
-                document.querySelector("#cover img").src = indhold.cover_billede.guid;
-                document.querySelector("#cover h1").textContent = indhold.cover_overskrift_om_os;
-                document.querySelector("#cover p").textContent = indhold.cover_text_om_os;
 
 
-                document.querySelector("#filosofi h2").textContent = indhold.overskrift_vores_filosofi;
-                document.querySelector("#filosofi p").textContent = indhold.vores_filosofi_text;
 
-            }
-
-            function open() {
-                let menu = document.querySelector("label ul");
-                // if (menu.style.display == "none") {
-                console.log(menu.classList);
-                menu.classList.toggle("hide");
-                // } else {
-                //     menu.style.display = "none";
-                // }
-            }
             getJson();
+
+        }
+
+        async function getJson() {
+            let url = "http://mariacronehvidberg.dk/kea/eksamen/kode/wordpress/wp-json/wp/v2/om_os/65"
+            let jsonData = await fetch(url);
+            indhold = await jsonData.json();
+            document.querySelector("label .menu").addEventListener("click", open);
+
+            document.querySelector("img.play").addEventListener("click", lightbox_open);
+            document.querySelector("#cover img").addEventListener("click", lightbox_open);
+
+            visIndhold();
+        }
+
+
+        function lightbox_open() {
+            var lightBoxVideo = document.querySelector("#mindful_video");
+            window.scrollTo(0, 0);
+            document.querySelector('#pop_video').style.display = 'block';
+            document.querySelector('#fade').style.display = 'block';
+            lightBoxVideo.play();
+
+            document.querySelector("#fade").addEventListener("click", lightbox_close);
+
+        }
+
+        function lightbox_close() {
+            console.log("luk");
+            var lightBoxVideo = document.querySelector("#mindful_video");
+            document.querySelector('#pop_video').style.display = 'none';
+            document.querySelector('#fade').style.display = 'none';
+            lightBoxVideo.pause();
+        }
+
+
+
+        function visIndhold() {
+            document.querySelector("#cover img").src = indhold.cover_billede.guid;
+            document.querySelector("#cover h1").textContent = indhold.cover_overskrift_om_os;
+            document.querySelector("#cover p").textContent = indhold.cover_text_om_os;
+
+
+            document.querySelector("#filosofi h2").textContent = indhold.overskrift_vores_filosofi;
+            document.querySelector("#filosofi p").textContent = indhold.vores_filosofi_text;
+
+        }
+
+        function open() {
+            let menu = document.querySelector("label ul");
+            // if (menu.style.display == "none") {
+            console.log(menu.classList);
+            menu.classList.toggle("hide");
+            // } else {
+            //     menu.style.display = "none";
+            // }
+        }
+
+
+        //Fork fra A PEN BY CAPTAIN ANONYMOUS, tilpasset Maria
+        //funktion som gør at ved tast på keyboard lukker video
+        window.document.onkeydown = function(e) {
+            if (!e) {
+                e = event;
+            }
+            if (e.keyCode == 27) {
+                lightbox_close();
+            }
+
         }
     </script>
 
