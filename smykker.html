@@ -18,12 +18,59 @@
             position: static;
         }
 
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(8, 1fr);
-            grid-template-rows: repeat(5, 1fr);
+.column img {
+  width: 100%;
+  height: auto;
+}
 
+.container {
+    width: auto;
+    column-count: 1;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+    border: 0.5px solid white;
+    padding: 2rem;
         }
+
+
+/* hover styles */
+.column {
+  position: relative;
+    display: inline-block;
+    margin: 0 0 2rem;
+    width: 100%;
+}
+
+.overskrift_billede {
+  line-height: 0;
+  overflow: hidden;
+}
+
+
+.overskrift {
+  font-size: 1.5rem;
+    font-weight: 300;
+  text-decoration: none;
+  z-index: 1;
+  position: absolute;
+  height: 4rem;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+
+  background: var(--color-hover);
+  color: white;
+
+  /*Centrering af text*/
+    padding: 1rem;
+    padding-bottom: 1.rem;
+  display: flex;
+    text-align: center;
+  align-items: center;
+  justify-content: center;
+}
 
 
 
@@ -45,12 +92,21 @@
         /*****MEDIA Q IPAD PORTRAIT*******/
         @media only screen and (min-width:600px) {
 
-
+            .container {
+    column-count: 2;
+    column-gap: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding: 2.5rem;
+        }
         }
 
         /******MEDIA Q IPAD LANDSCAPE*****/
 
         @media only screen and (min-width: 1024px) {
+    .container {
+    column-count: 3;
+        }
 
         }
 
@@ -61,6 +117,69 @@
             .hide {
                 margin-top: -25rem;
             }
+
+            .container {
+    width: auto;
+    column-count: 6;
+    column-gap: 1rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-bottom: 2rem;
+    border: 0.5px solid white;
+    padding: 4rem;
+        }
+
+
+/* hover styles */
+.column {
+  position: relative;
+    display: inline-block;
+    margin: 0 0 1rem;
+    width: 100%;
+}
+
+.overskrift_billede {
+  line-height: 0;
+  overflow: hidden;
+}
+
+.overskrift_billede img {
+  filter: blur(0px);
+  transition: filter 0.3s ease-in;
+  transform: scale(1.1);
+}
+
+.overskrift {
+  font-size: 1rem;
+    font-weight: 300;
+  text-decoration: none;
+  z-index: 1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .5s;
+  background: var(--color-hover);
+  color: white;
+
+  /* position the text in t’ middle*/
+  display: flex;
+    text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.column:hover .overskrift {
+  opacity: 1;
+}
+
+.overskrift:hover .overskrift_billede img {
+  filter: blur(2px);
+}
+
+
 
     }
 
@@ -125,9 +244,11 @@
 
 
     <template class="temp">
-        <article>
-            <h2 class="overskrift"></h2>
-            <img src="" alt="">
+        <article class="column">
+            <a class="overskrift"></a>
+            <div class="overskrift_billede">
+                <img src="" alt="">
+            </div>
         </article>
 
     </template>
@@ -135,7 +256,6 @@
     <section class="container">
 
     </section>
-
 
 
 
@@ -163,23 +283,6 @@
         let indhold = [];
 
         document.addEventListener("DOMContentLoaded", start);
-        // let bodyTag = document.querySelector("body");
-        //let minNav = document.querySelector(".navigation");
-
-
-        /*function navi() {
-            let scrolled = () => {
-                let dec = scrollY / (bodyTag.scrollHeight - innerHeight);
-                return Math.floor(dec * 2000);
-            }
-
-            addEventListener('scroll', () => {
-                minNav.style.setProperty('background-color', scrolled() > 50 ? "var(--color-scroll)" : "");
-            })
-
-            start();
-
-        }*/
 
         function start() {
             getJson();
@@ -187,7 +290,7 @@
         }
 
         async function getJson() {
-            let url = "http://mariacronehvidberg.dk/kea/eksamen/kode/wordpress/wp-json/wp/v2/jewels"
+            let url = "http://mariacronehvidberg.dk/kea/eksamen/kode/wordpress/wp-json/wp/v2/jewels?per_page=16"
             let jsonData = await fetch(url);
             indhold = await jsonData.json();
             console.log("indhold");
@@ -204,10 +307,15 @@
                 let klon = temp.cloneNode(true).content;
                 klon.querySelector("img").src = ind.billede.guid;
 
-                klon.querySelector("h2").textContent = ind.navn;
+                klon.querySelector(".overskrift").textContent = ind.navn;
                 dest.appendChild(klon);
+
             });
+
         }
+
+
+
 
         function open() {
             let menu = document.querySelector("label ul");
@@ -218,7 +326,6 @@
             //     menu.style.display = "none";
             // }
         }
-
     </script>
 
 
