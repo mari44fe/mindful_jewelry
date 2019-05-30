@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+
+    body {
+        background-color: var(--color-mosegron);
+    }
+
+    h1, h2, a, p {
+        color: white;
+    }
+
+    /* Button used to open the contact form - fixed at the bottom of the page */
+.nyhedsbrev {
+    position: absolute;
+  background-color: transparent;
+    font-size: 1rem;
+  color: white;
+  padding: 0.5rem 2rem;
+  border: 0.5px solid white;
+  cursor: pointer;
+    top: 4rem;
+    left: 10rem;
+}
+
+/* The popup form - hidden by default */
+.popup {
+  display: none;
+  position: absolute;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.popup_form {
+  max-width: 80%;
+  padding: 1.5rem;
+background-color: #ddd8c4;
+}
+
+/* Full-width input fields */
+.popup_form input[type=text], .popup_form input[type=password] {
+  width: 80%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: 0.5px solid white;
+  background: none;
+}
+    ::placeholder {
+        color: white;
+            font-size: 0.8rem;
+    }
+
+/* When the inputs get focus, do something
+.popup_form input[type=text]:focus, .popup_form input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+} */
+
+/* ja tak knap*/
+.popup_form .ja {
+  background-color: transparent;
+    font-size: 0.8rem;
+  color: white;
+  padding: 0.5rem 2rem;
+  border: 0.5px solid white;
+  cursor: pointer;
+  width: 40%;
+  margin-bottom: 0.5rem;
+    margin-left: 10rem;
+}
+
+/* nej tak knap */
+.popup_form .nej {
+   background-color: transparent;
+    font-size: 0.8rem;
+  color: white;
+  padding: 0.5rem 2rem;
+  border: 0.5px solid white;
+  cursor: pointer;
+  width: 40%;
+  margin-bottom: 0.5rem;
+     margin-left: 10rem;
+}
+
+/* Add some hover effects to buttons */
+.popup_form .ja:hover, .nej:hover, .nyhedsbrev:hover {
+  background-color: var(--color-orange);
+}
+</style>
+
+<body>
+
+
+    <button class="nyhedsbrev">Nyhedsbrev</button>
+
+    <div class="popup" id="popup">
+        <form action="/action_page.php" class="popup_form">
+            <h1>Tilmeld dig nyhedsbrevet</h1>
+            <p class="rabat">& få 15%</p>
+            <p>ved dit første køb</p>
+
+            <p>Webshoppen åbner efteråret 2019, vær den første til at få besked</p>
+
+            <label for="email"></label>
+            <input type="text" placeholder="Email" name="email" required>
+
+            <button type="button" class="btn ja">Tilmeld mig</button>
+            <button type="button" class="btn nej">Nej tak</button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            console.log("start");
+
+            document.querySelector(".nyhedsbrev").addEventListener("click", openForm);
+
+        }
+
+        function openForm() {
+            console.log("åben");
+            document.querySelector("#popup").style.display = "block";
+
+            document.querySelector(".ja").addEventListener("click", closeForm);
+            document.querySelector(".nej").addEventListener("click", closeForm);
+
+        }
+
+        function closeForm() {
+            console.log("luk");
+            document.querySelector("#popup").style.display = "none";
+
+            start();
+        }
+    </script>
+
+</body>
+
+</html>
+
