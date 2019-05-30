@@ -40,6 +40,7 @@
     display: inline-block;
     margin: 0 0 2rem;
     width: 100%;
+    height: auto;
 }
 
 .overskrift_billede {
@@ -51,21 +52,12 @@
 .overskrift {
   font-size: 1.5rem;
     font-weight: 300;
-  text-decoration: none;
-  z-index: 1;
-  position: absolute;
-  height: 4rem;
+  height: auto;
   width: 100%;
-  bottom: 0;
-  left: 0;
-  opacity: 1;
-
   background: var(--color-hover);
-  color: white;
 
   /*Centrering af text*/
     padding: 1rem;
-    padding-bottom: 1.rem;
   display: flex;
     text-align: center;
   align-items: center;
@@ -245,10 +237,10 @@
 
     <template class="temp">
         <article class="column">
-            <a class="overskrift"></a>
             <div class="overskrift_billede">
                 <img src="" alt="">
             </div>
+            <a class="overskrift"></a>
         </article>
 
     </template>
