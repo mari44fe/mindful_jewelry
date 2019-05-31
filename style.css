@@ -6,8 +6,8 @@
         }
 
         :root {
-            --color-mosegron: #a0aba2;
-            --color-mosegron2: #a8b79e;
+            --color-morkgron: #a0aba2;
+            --color-mosegron: #a8b79e;
             --color-gron: #6aa497;
             --color-orange: #bf925a;
 
@@ -53,7 +53,7 @@
         h4,
         h5 {
             font-family: 'Titillium Web', sans-serif;
-            font-weight: 300;
+            font-weight: 200;
             color: white;
             margin-left: 1rem;
         }
@@ -623,13 +623,16 @@
             }
 
             #cover a {
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 0.8rem;
+                padding-left: 2em;
+                padding-right: 2rem;
+                margin-left: 1rem;
                 font-weight: 200;
                 font-size: 1.5rem;
-                padding: 1rem;
                 text-decoration: none;
                 border: 0.02px solid white;
-                margin-left: 16rem;
-                margin-top: -15rem;
             }
 
             /*****NAVIGATION****/

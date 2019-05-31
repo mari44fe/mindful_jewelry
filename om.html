@@ -93,7 +93,7 @@
 
         #filosofi {
             padding: 0.5rem;
-            margin: 4rem 1rem 2rem 1rem;
+            margin: 17rem 1rem 2rem 1rem;
             border: 0.5px solid white;
         }
 
@@ -277,29 +277,47 @@ left: 13rem;
                 margin-top: -25rem;
             }
 
+             #cover {
+                 margin-top: -1rem;
+                margin-left: 2.5rem;
+            }
+
             #cover img {
                 position: relative;
             top: -12rem;
             height: 550px;
         }
 
-         #cover h1 {
-             font-size: 4rem;
-            margin-top: -25rem;
-        }
+      #cover .overskrift {
+                margin-top: -17rem;
+                font-size: 4.5rem;
+                font-weight: 300;
+            }
 
-        #cover p {
-            font-size: 1.8rem;
-        }
+            #cover h2 {
+                font-size: 2.5rem;
+                font-weight: 200;
+                margin-top: -1.9rem;
+            }
 
-         #cover a {
-            font-size: 1.5rem;
-            margin-left: 18rem;
-        }
+            #cover p {
+                font-size: 1.5rem;
+                margin-top: -0.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            #cover a {
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 0.8rem;
+                padding-left: 2rem;
+                padding-right: 2rem;
+                margin-left: 1rem;
+            }
 
         #filosofi {
             padding: 4rem;
-            margin: 5.5rem 7rem 3rem 7rem;
+            margin: 5.5rem 3.5rem 3rem 3.5rem;
         }
 
         #filosofi h2 {
@@ -337,7 +355,7 @@ left: 13rem;
 
     <header>
         <span class="logo_mobil">
-            <img src="img/logo_hvid.svg">
+            <img src="img/logo%20f%C3%A6rdig%20hvid.svg">
         </span>
         <div class="navigation">
             <nav>
@@ -357,7 +375,7 @@ left: 13rem;
                         </li>
 
                         <li class="logo">
-                            <a href="index.html"><img src="img/logo_hvid.svg" alt="logo"></a>
+                            <a href="index.html"><img src="img/logo%20f%C3%A6rdig%20hvid.svg" alt="logo"></a>
                         </li>
 
                         <li>
@@ -383,7 +401,8 @@ left: 13rem;
     <img class="play" src="img/play-thumb-two.png" alt="">
 
     <section id="cover">
-        <h1></h1>
+        <h1 class="overskrift"></h1>
+        <h2></h2>
         <p></p>
         <div>
             <a class="knap" href="#">Se video her</a>
@@ -471,7 +490,8 @@ left: 13rem;
         function visIndhold() {
             //document.querySelector("#cover img").src = indhold.cover_billede.guid;
             document.querySelector("#cover h1").textContent = indhold.cover_overskrift_om_os;
-            document.querySelector("#cover p").textContent = indhold.cover_text_om_os;
+            document.querySelector("#cover h2").textContent = indhold.cover_text_om_os;
+            document.querySelector("#cover p").textContent = indhold.om_os_linie3;
 
 
             document.querySelector("#filosofi h2").textContent = indhold.overskrift_vores_filosofi;

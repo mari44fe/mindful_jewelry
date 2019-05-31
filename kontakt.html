@@ -144,6 +144,14 @@
 
         /*******MEDIE Q DESKTOP****/
         @media only screen and (min-width:1025px) {
+                .logo_mobil img {
+                position: relative;
+            }
+
+
+            .splash img {
+                margin-top: -12.5rem;
+            }
 
             .hide {
                 margin-top: -25rem;
@@ -165,7 +173,7 @@
 
     <header>
         <span class="logo_mobil">
-            <img src="img/logo_hvid.svg">
+            <img src="img/logo%20f%C3%A6rdig%20hvid.svg">
         </span>
         <div class="navigation">
             <nav>
@@ -185,7 +193,7 @@
                         </li>
 
                         <li class="logo">
-                            <a href="index.html"><img src="img/logo_hvid.svg" alt="logo"></a>
+                            <a href="index.html"><img src="img/logo%20f%C3%A6rdig%20hvid.svg" alt="logo"></a>
                         </li>
 
                         <li>
@@ -201,20 +209,25 @@
             </nav>
         </div>
 
-
-
-        <!--
         <picture class="splash">
-            <source media="(min-width: 1024px)" srcset="img/woman-1149911_1920.jpg" alt="Mindful Jewellery">
+            <source media="(min-width: 1024px)" srcset="img/coverkontakt-ringe%20(1).jpg" alt="Mindful Jewellery">
             <source media="(min-width: 528px)" srcset="">
             <img src="img/mobil.jpg">
-        </picture> -->
+        </picture>
+
+        <section id="cover">
+            <h1 class="cover_overskrift"></h1>
+            <section id="kontakt">
+                <h2></h2>
+                <p></p>
+            </section>
+        </section>
     </header>
 
     <main>
         <section id="kontakt_info">
             <div class="kontakt">
-                <h1 class="overskrift"></h1>
+                <h1 class="kontakt_overskrift"></h1>
                 <div class="indhold">
                 </div>
             </div>
@@ -260,52 +273,62 @@
     </footer>
 
     <script>
+        let kontakt;
         let indhold;
         document.addEventListener("DOMContentLoaded", start);
-        // let bodyTag = document.querySelector("body");
-        //let minNav = document.querySelector(".navigation");
-
-
-        /*function navi() {
-            let scrolled = () => {
-                let dec = scrollY / (bodyTag.scrollHeight - innerHeight);
-                return Math.floor(dec * 2000);
-            }
-
-            addEventListener('scroll', () => {
-                minNav.style.setProperty('background-color', scrolled() > 50 ? "var(--color-scroll)" : "");
-            })
-
-            start();
-
-        }*/
 
         function start() {
-            async function getJson() {
-                let url = "http://mariacronehvidberg.dk/kea/eksamen/kode/wordpress/wp-json/wp/v2/pages/32"
-                let jsonData = await fetch(url);
-                indhold = await jsonData.json();
-                document.querySelector("label .menu").addEventListener("click", open);
-                visIndhold();
+            getJson1();
+            getJson2();
+        }
 
-            }
 
-            function visIndhold() {
-                document.querySelector(".overskrift").textContent = indhold.title.rendered;
-                document.querySelector(".indhold").innerHTML = indhold.content.rendered;
+        async function getJson1() {
+            let url = "http://mariacronehvidberg.dk/kea/eksamen/kode/wordpress/wp-json/wp/v2/kontakt"
+            let jsonData = await fetch(url);
+            kontakt = await jsonData.json();
+            console.log("kontakt");
 
-            }
 
-            function open() {
-                let menu = document.querySelector("label ul");
-                // if (menu.style.display == "none") {
-                console.log(menu.classList);
-                menu.classList.toggle("hide");
-                // } else {
-                //     menu.style.display = "none";
-                // }
-            }
-            getJson();
+            visCover();
+
+        }
+
+        function visCover() {
+            console.log("cover");
+            document.querySelector("#cover h1").textContent = kontakt.overskrift;
+            document.querySelector("#cover h2").textContent = kontakt.linje2;
+            document.querySelector("#cover p").textContent = kontakt.linje3;
+
+        }
+
+        async function getJson2() {
+            let url = "http://mariacronehvidberg.dk/kea/eksamen/kode/wordpress/wp-json/wp/v2/pages/32"
+            let jsonData = await fetch(url);
+            indhold = await jsonData.json();
+            console.log("indhold");
+
+
+            visIndhold();
+
+        }
+
+        function visIndhold() {
+            document.querySelector(".kontakt_overskrift").textContent = indhold.title.rendered;
+            document.querySelector(".indhold").innerHTML = indhold.content.rendered;
+
+        }
+
+
+
+        function open() {
+            let menu = document.querySelector("label ul");
+            // if (menu.style.display == "none") {
+            console.log(menu.classList);
+            menu.classList.toggle("hide");
+            // } else {
+            //     menu.style.display = "none";
+            // }
         }
 
     </script>
