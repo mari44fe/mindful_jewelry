@@ -18,25 +18,19 @@
         color: white;
     }
 
-    .popup h1 {
-        font-size: 2rem;
-        text-align: center;
-    }
-
-    .rabat{
-        text-align: center;
-        font-size: 2.5rem;
-    }
-
     p {
         text-align: center;
+        margin-top: 2rem;
         padding-bottom: 0.5rem;
         font-size: 1.5rem;
     }
 
     .webshop {
         text-align: center;
-        font-size: 1rem;
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+        padding: 1rem;
+        border: 0.2px solid var(--color-text_mork);
     }
 
     /* nyhedsbrev knap */
@@ -48,8 +42,6 @@
   padding: 0.5rem 2rem;
   border: 0.5px solid white;
   cursor: pointer;
-    top: 4rem;
-    left: 10rem;
 }
 
 /* pop up effekt*/
@@ -61,17 +53,20 @@
 
 /*pop up vindue */
 .popup_form {
-width: 25rem;
+    text-align: center;
+width: 20rem;
     height: 30rem;
-  padding: 1.5rem;
+  padding: 1rem;
 background-color: #ddd8c4;
+    margin-left: 20rem;
+    overflow: hidden;
 }
 
 /* input felter*/
 .popup_form input[type=text], .popup_form input[type=password] {
-  width: 80%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
+  width: 83%;
+  padding: 1rem;
+  margin: 1rem 0 1rem 0;
   border: 0.5px solid white;
   background: none;
 }
@@ -86,12 +81,12 @@ background-color: #ddd8c4;
   background-color: transparent;
     font-size: 0.8rem;
   color: white;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
   border: 0.5px solid white;
   cursor: pointer;
   width: 40%;
-  margin-bottom: 0.5rem;
-    margin-left: 10rem;
+    margin-right: 0.2rem;
+
 }
 
 /* nej tak knap */
@@ -103,14 +98,17 @@ background-color: #ddd8c4;
   border: 0.5px solid white;
   cursor: pointer;
   width: 40%;
+    margin-left: 0.2rem;
   margin-bottom: 0.5rem;
-     margin-left: 10rem;
 }
 
 /* hover effekter*/
 .popup_form .ja:hover, .nej:hover, .nyhedsbrev:hover {
   background-color: var(--color-orange);
+  background-color: var(--color-knap);
 }
+
+
 </style>
 
 <body>
@@ -120,18 +118,19 @@ background-color: #ddd8c4;
 
     <div class="popup" id="popup">
         <form action="/action_page.php" class="popup_form">
-            <h1>Tilmeld dig nyhedsbrevet</h1>
-            <p class="rabat">& få 15%</p>
-            <p>ved dit første køb</p>
+            <p>Tilmeld dig nyhedsbrevet <br> & få 15% <br>ved dit første køb</p>
 
-            <p class="webshop">Webshoppen åbner efteråret 2019, vær den første til at få besked</p>
+            <p class="webshop">Webshoppen åbner efteråret 2019,<br> vær den første til at få besked</p>
 
-            <label for="email"></label>
-            <input type="text" placeholder="Email" name="email" required>
+            <div class="udfyld">
+                <label for="email"></label>
+                <input type="text" placeholder="Email" name="email" required>
 
-            <button type="button" class="btn ja">Tilmeld mig</button>
-            <button type="button" class="btn nej">Nej tak</button>
+                <button type="button" class="btn ja">Tilmeld mig</button>
+                <button type="button" class="btn nej">Nej tak</button>
+            </div>
         </form>
+
     </div>
 
     <script>
@@ -159,9 +158,9 @@ background-color: #ddd8c4;
 
             start();
         }
+
     </script>
 
 </body>
 
 </html>
-
