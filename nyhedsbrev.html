@@ -18,7 +18,28 @@
         color: white;
     }
 
-    /* Button used to open the contact form - fixed at the bottom of the page */
+    .popup h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .rabat{
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    p {
+        text-align: center;
+        padding-bottom: 0.5rem;
+        font-size: 1.5rem;
+    }
+
+    .webshop {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    /* nyhedsbrev knap */
 .nyhedsbrev {
     position: absolute;
   background-color: transparent;
@@ -31,21 +52,21 @@
     left: 10rem;
 }
 
-/* The popup form - hidden by default */
+/* pop up effekt*/
 .popup {
   display: none;
   position: absolute;
   z-index: 9;
 }
 
-/* Add styles to the form container */
+/*pop up vindue */
 .popup_form {
   max-width: 80%;
   padding: 1.5rem;
 background-color: #ddd8c4;
 }
 
-/* Full-width input fields */
+/* input felter*/
 .popup_form input[type=text], .popup_form input[type=password] {
   width: 80%;
   padding: 15px;
@@ -58,11 +79,6 @@ background-color: #ddd8c4;
             font-size: 0.8rem;
     }
 
-/* When the inputs get focus, do something
-.popup_form input[type=text]:focus, .popup_form input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-} */
 
 /* ja tak knap*/
 .popup_form .ja {
@@ -90,7 +106,7 @@ background-color: #ddd8c4;
      margin-left: 10rem;
 }
 
-/* Add some hover effects to buttons */
+/* hover effekter*/
 .popup_form .ja:hover, .nej:hover, .nyhedsbrev:hover {
   background-color: var(--color-orange);
 }
@@ -107,7 +123,7 @@ background-color: #ddd8c4;
             <p class="rabat">& få 15%</p>
             <p>ved dit første køb</p>
 
-            <p>Webshoppen åbner efteråret 2019, vær den første til at få besked</p>
+            <p class="webshop">Webshoppen åbner efteråret 2019, vær den første til at få besked</p>
 
             <label for="email"></label>
             <input type="text" placeholder="Email" name="email" required>

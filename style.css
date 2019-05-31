@@ -7,20 +7,26 @@
 
         :root {
             --color-mosegron: #a0aba2;
+            --color-mosegron2: #a8b79e;
             --color-gron: #6aa497;
             --color-orange: #bf925a;
 
             --color-sand: #c2aa85;
+            --color-sand2: #bcaf9b;
             --color-lyssand: #ddd8c4;
-            --color-text_mork: #333333;
+            --color-text_mork: #b2b2b2;
             --color-scroll: rgba(255, 255, 255, 0.24);
 
-        --color-hover: rgba(180, 128, 64, 0.71);
+            --color-hover: rgba(180, 128, 64, 0.71);
 
         }
 
         img {
             width: 100%;
+        }
+
+        #splash img {
+            background-size: cover;
         }
 
         .knap {
@@ -75,7 +81,60 @@
         }
 
         footer {
-            background-color: var(--color-lyssand);
+            background-color: white;
+        }
+
+        footer h1 {
+            color: #838383;
+            ;
+        }
+
+        footer p {
+            color: #838383;
+        }
+
+        footer .knap {
+            color: #838383;
+            border: 0.5px solid #838383;
+        }
+
+        /******MOBIL*****/
+
+        #splash img {
+            max-width: 375px;
+        }
+
+        /*****COVER BILLEDE****/
+
+        #cover .overskrift {
+            margin-top: -10rem;
+            font-size: 2.3rem;
+            font-weight: 400;
+        }
+
+        #cover h2 {
+            font-size: 1.4rem;
+            font-weight: 200;
+            margin-top: -1rem;
+        }
+
+        #cover p {
+            font-size: 1.1rem;
+            font-family: 'Titillium Web', sans-serif;
+            font-weight: 200;
+            margin-top: -0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        #cover a {
+            font-family: 'Titillium Web', sans-serif;
+            font-weight: 200;
+            font-size: 1rem;
+            padding: 0.5rem;
+            text-decoration: none;
+            border: 0.02px solid white;
+            margin-left: 11.5rem;
+
         }
 
 
@@ -249,6 +308,29 @@
         /*****MEDIA Q iphone plus*******/
         @media only screen and (min-width: 400px) {
 
+            /*****COVER BILLEDE****/
+
+            #cover .overskrift {
+                margin-top: -11rem;
+                font-size: 2.5rem;
+            }
+
+            #cover h2 {
+                font-size: 1.5rem;
+            }
+
+            #cover p {
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+            }
+
+            #cover a {
+                font-size: 1.1rem;
+                margin-left: 14rem;
+
+            }
+
+
             /****BURGER****/
 
             label .menu {
@@ -313,6 +395,37 @@
 
         /*****MEDIA Q IPAD PORTRAIT*******/
         @media only screen and (min-width:600px) {
+
+            #splash img {
+                width: 768px;
+            }
+
+
+            /*****COVER BILLEDE****/
+
+            #cover .overskrift {
+                margin-top: -20rem;
+                font-size: 4.3rem;
+            }
+
+            #cover h2 {
+                font-size: 2.6rem;
+                margin-top: -1.7rem;
+            }
+
+            #cover p {
+                font-size: 1.8rem;
+                margin-top: -1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            #cover a {
+                font-size: 2.3rem;
+                padding: 0.7rem;
+                margin-left: 23rem;
+
+            }
+
 
             /****BURGERMENU****/
 
@@ -407,6 +520,23 @@
         /******MEDIA Q IPAD LANDSCAPE*****/
 
         @media only screen and (min-width: 1024px) {
+            /*****COVER BILLEDE****/
+
+            .logo_mobil img {
+                width: 20%;
+            }
+
+            #cover p {
+                margin-bottom: 1rem;
+            }
+
+            #cover a {
+                font-size: 2rem;
+                padding: 0.7rem;
+                margin-left: 23rem;
+
+            }
+
 
             /******BURGER*****/
 
@@ -458,6 +588,49 @@
 
         /*******MEDIE Q DESKTOP****/
         @media only screen and (min-width:1025px) {
+
+            /*********COVER BILLEDE*******/
+
+
+            .splash img {
+                max-width: 1920px;
+                height: 550px;
+            }
+
+            .logo_mobil img {
+                position: absolute;
+                width: 12%;
+                margin-left: 35rem;
+            }
+
+
+            #cover .overskrift h1 {
+                margin-top: -17rem;
+                font-size: 4.5rem;
+                font-weight: 300;
+            }
+
+            #cover h2 {
+                font-size: 2.5rem;
+                font-weight: 200;
+                margin-top: -1.9rem;
+            }
+
+            #cover p {
+                font-size: 1.5rem;
+                font-weight: 200;
+                margin-top: -0.5rem
+            }
+
+            #cover a {
+                font-weight: 200;
+                font-size: 1.5rem;
+                padding: 1rem;
+                text-decoration: none;
+                border: 0.02px solid white;
+                margin-left: 16rem;
+                margin-top: -15rem;
+            }
 
             /*****NAVIGATION****/
 
@@ -530,12 +703,13 @@
 
             /****FOOTER*****/
 
+
             footer h1 {
-                font-size: 2rem;
+                font-size: 1.5rem;
             }
 
             footer p {
-                font-size: 1.3rem;
+                font-size: 1.2rem;
             }
 
             footer img {
@@ -544,6 +718,7 @@
             }
 
             footer .sog p {
+                font-size: 1.2rem;
                 padding: 0.5rem;
             }
 

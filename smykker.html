@@ -11,7 +11,7 @@
     <style>
 
         body {
-            background-color: var(--color-mosegron);
+            background-color: var(--color-sand2);
         }
 
         .logo_mobil img {
@@ -26,6 +26,7 @@
 .container {
     width: auto;
     column-count: 1;
+    margin-top: 4rem;
     margin-left: 1rem;
     margin-right: 1rem;
     margin-bottom: 2rem;
@@ -106,9 +107,45 @@
         /*******MEDIE Q DESKTOP****/
         @media only screen and (min-width:1025px) {
 
-            .hide {
-                margin-top: -25rem;
+                    /*********COVER BILLEDE*******/
+
+               .logo_mobil img {
+                position: absolute;
+                width: 12%;
+                margin-left: 35rem;
             }
+
+
+            .cover_overskrift {
+                margin-top: -17rem;
+                font-size: 4.5rem;
+                font-weight: 300;
+            }
+
+            #cover h2 {
+                font-size: 2.5rem;
+                font-weight: 200;
+                margin-top: -1.9rem;
+            }
+
+            #cover p {
+                font-size: 1.5rem;
+                font-family: 'Titillium Web', sans-serif;
+                font-weight: 200;
+                margin-top: -0.5rem
+            }
+
+            #cover a {
+                font-family: 'Titillium Web', sans-serif;
+                font-weight: 200;
+                font-size: 1.5rem;
+                padding: 1rem;
+                text-decoration: none;
+                border: 0.02px solid white;
+                margin-left: 16rem;
+                margin-top: -15rem;
+            }
+
 
             .container {
     width: auto;
@@ -138,7 +175,7 @@
 .overskrift_billede img {
   filter: blur(0px);
   transition: filter 0.3s ease-in;
-  transform: scale(1.1);
+  /*transform: scale(1.1);*/
 }
 
 .overskrift {
@@ -221,19 +258,19 @@
 
 
 
-        <!--
         <picture class="splash">
-            <source media="(min-width: 1024px)" srcset="img/woman-1149911_1920.jpg" alt="Mindful Jewellery">
+            <source media="(min-width: 1024px)" srcset="img/coversmykker.jpg" alt="Mindful Jewellery">
             <source media="(min-width: 528px)" srcset="">
             <img src="img/mobil.jpg">
-        </picture> -->
+        </picture>
+
+        <section id="cover">
+            <h1 class="cover_overskrift">Kollektion</h1>
+            <h2>Se vores smukke kollektion lige her</h2>
+            <p> Webshoppen åbner efteråret 2019 </p>
+            <a href="" class="nyhedsbrev">Nyhedsbrev</a>
+        </section>
     </header>
-
-    <section id="cover">
-        <h1>Kollektion</h1>
-        <p>Se vores smukke kollektion lige her</p>
-    </section>
-
 
     <template class="temp">
         <article class="column">
@@ -318,6 +355,7 @@
             //     menu.style.display = "none";
             // }
         }
+
     </script>
 
 

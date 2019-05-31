@@ -265,6 +265,14 @@ left: 13rem;
         /*******MEDIE Q DESKTOP****/
         @media only screen and (min-width:1025px) {
 
+            .logo_mobil img {
+                position: relative;
+            }
+
+            .splash img {
+                margin-top: -12.1rem;
+            }
+
             .hide {
                 margin-top: -25rem;
             }
@@ -364,18 +372,17 @@ left: 13rem;
                 </label>
             </nav>
         </div>
-        <!--
+
         <picture class="splash">
-            <source media="(min-width: 1024px)" srcset="img/woman-1149911_1920.jpg" alt="Mindful Jewellery">
+            <source media="(min-width: 1024px)" srcset="img/om-os-cover.jpg" alt="Mindful Jewellery">
             <source media="(min-width: 528px)" srcset="">
             <img src="img/mobil.jpg">
-        </picture> -->
+        </picture>
     </header>
 
     <img class="play" src="img/play-thumb-two.png" alt="">
 
     <section id="cover">
-        <img src="" alt="">
         <h1></h1>
         <p></p>
         <div>
@@ -421,28 +428,7 @@ left: 13rem;
         let indhold;
         document.addEventListener("DOMContentLoaded", start);
 
-        // let bodyTag = document.querySelector("body");
-        //let minNav = document.querySelector(".navigation");
-
-
-        /*function navi() {
-            let scrolled = () => {
-                let dec = scrollY / (bodyTag.scrollHeight - innerHeight);
-                return Math.floor(dec * 2000);
-            }
-
-            addEventListener('scroll', () => {
-                minNav.style.setProperty('background-color', scrolled() > 50 ? "var(--color-scroll)" : "");
-            })
-
-            start();
-
-        }*/
-
         function start() {
-
-
-
             getJson();
 
         }
@@ -455,8 +441,7 @@ left: 13rem;
 
             document.querySelector("img.play").addEventListener("click", lightbox_open);
             document.querySelector(".knap").addEventListener("click", lightbox_open);
-
-            document.querySelector("#cover img").addEventListener("click", lightbox_open);
+            document.querySelector(".splash").addEventListener("click", lightbox_open);
 
             visIndhold();
         }
@@ -484,7 +469,7 @@ left: 13rem;
 
 
         function visIndhold() {
-            document.querySelector("#cover img").src = indhold.cover_billede.guid;
+            //document.querySelector("#cover img").src = indhold.cover_billede.guid;
             document.querySelector("#cover h1").textContent = indhold.cover_overskrift_om_os;
             document.querySelector("#cover p").textContent = indhold.cover_text_om_os;
 
