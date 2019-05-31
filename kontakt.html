@@ -144,6 +144,17 @@
 
         /*******MEDIE Q DESKTOP****/
         @media only screen and (min-width:1025px) {
+
+                        li a:hover {
+                border-bottom: 0.1rem solid white;
+        border-top: 0.1rem solid white;
+    }
+            li.logo a:hover {
+                border-bottom: none;
+        border-top: none;
+
+            }
+
                 .logo_mobil img {
                 position: relative;
             }
@@ -161,6 +172,30 @@
                 margin-left: 0rem;
                 margin-right: 17.8rem;
             }
+
+
+             #cover {
+                margin-top: 0.5rem;
+                margin-left: 2.5rem;
+            }
+
+            .cover_overskrift {
+                font-size: 3.5rem;
+                margin-top: -15rem;
+                font-weight: 300;
+            }
+
+            #cover h2 {
+                font-size: 2rem;
+                font-weight: 200;
+                margin-top: -1.2rem;
+            }
+
+            #cover p {
+                font-size: 1.4rem;
+                margin-top: -0.3rem;
+                margin-bottom: 1.5rem;
+            }
     }
 
 
@@ -173,7 +208,7 @@
 
     <header>
         <span class="logo_mobil">
-            <img src="img/logo%20f%C3%A6rdig%20hvid.svg">
+            <a href="index.html"><img src="img/logo%20f%C3%A6rdig%20hvid.svg"></a>
         </span>
         <div class="navigation">
             <nav>
@@ -201,7 +236,7 @@
                         </li>
 
                         <li>
-                            <a href="kontakt.html">Kontakt os</a>
+                            <a href="kontakt.html" style="font-size: 2.5rem;">Kontakt os</a>
                         </li>
 
                     </ul>
@@ -210,7 +245,7 @@
         </div>
 
         <picture class="splash">
-            <source media="(min-width: 1024px)" srcset="img/coverkontakt-ringe%20(1).jpg" alt="Mindful Jewellery">
+            <source media="(min-width: 1024px)" srcset="img/coverkontakt-ringe.jpg" alt="Mindful Jewellery">
             <source media="(min-width: 528px)" srcset="">
             <img src="img/mobil.jpg">
         </picture>
@@ -284,7 +319,7 @@
 
 
         async function getJson1() {
-            let url = "http://mariacronehvidberg.dk/kea/eksamen/kode/wordpress/wp-json/wp/v2/kontakt"
+            let url = "http://mariacronehvidberg.dk/kea/eksamen/kode/wordpress/wp-json/wp/v2/kontakt/151"
             let jsonData = await fetch(url);
             kontakt = await jsonData.json();
             console.log("kontakt");

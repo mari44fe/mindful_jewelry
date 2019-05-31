@@ -14,6 +14,10 @@
             background-color: var(--color-lyssand);
         }
 
+        .nyhedsbrev:hover {
+            background-color: var(--color-knap);
+        }
+
         .logo_mobil img {
             position: static;
         }
@@ -105,7 +109,17 @@
 
 
         /*******MEDIE Q DESKTOP****/
-        @media only screen and (min-width:1025px) {
+        @media only screen and (min-width:1025px) {           li a:hover {
+                border-bottom: 0.1rem solid white;
+        border-top: 0.1rem solid white;
+    }
+            li.logo a:hover {
+                border-bottom: none;
+        border-top: none;
+
+            }
+
+
 
                     /*********COVER BILLEDE*******/
 
@@ -115,35 +129,34 @@
                 margin-left: 35rem;
             }
 
-    #cover {
-                margin-left: 2.5rem;
-            }
+#cover {
+margin-left: 2.5rem;
+}
 
-            .cover_overskrift {
-                margin-top: -17rem;
-                font-size: 4.5rem;
-                font-weight: 300;
-            }
+.cover_overskrift {
+font-size: 3.5rem;
+margin-top: -15rem;
+font-weight: 300;
+}
 
-            #cover h2 {
-                font-size: 2.5rem;
-                font-weight: 200;
-                margin-top: -1.9rem;
-            }
+#cover h2 {
+font-size: 2rem;
+font-weight: 200;
+margin-top: -1.2rem;
+}
 
-            #cover p {
-                font-size: 1.5rem;
-                margin-top: -0.5rem;
-                margin-bottom: 1.5rem;
-            }
+#cover p {
+font-size: 1.4rem;
+margin-top: -0.3rem;
+margin-bottom: 1.5rem;
+}
 
-            #cover a {
-                font-size: 1.5rem;
-                padding: 1rem;
-                margin-left: 1rem;
-                margin-top: 2rem;
-            }
-
+#cover a {
+font-size: 1.2rem;
+padding: 0.8rem;
+margin-left: 1rem;
+margin-top: 2rem;
+}
             .container {
     width: auto;
     column-count: 6;
@@ -217,7 +230,7 @@
 
     <header>
         <span class="logo_mobil">
-            <img src="img/logo%20f%C3%A6rdig%20hvid.svg">
+            <a href="index.html"><img src="img/logo%20f%C3%A6rdig%20hvid.svg"></a>
         </span>
         <div class="navigation">
             <nav>
@@ -233,7 +246,7 @@
                         </li>
 
                         <li>
-                            <a href="smykker.html">Smykker</a>
+                            <a href="smykker.html" style="font-size: 2.5rem;">Smykker</a>
                         </li>
 
                         <li class="logo">
@@ -267,7 +280,7 @@
                 <h2></h2>
                 <p></p>
             </section>
-            <a href="" class="nyhedsbrev">Nyhedsbrev</a>
+            <a href="" class="nyhedsbrev">Vær den første til at få besked </a>
         </section>
     </header>
 

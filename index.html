@@ -16,6 +16,24 @@
             max-width: 375px;
         }
 
+          .kollektions_knap:hover {
+            background-color: var(--color-knap);
+        }
+          .knap:hover {
+            background-color: var(--color-knap);
+        }
+
+        /* for touch screen */
+    @media (hover: none) {
+       .kollektions_knap {
+            background-color: var(--color-knap);
+        }
+          .knap {
+            background-color: var(--color-knap);
+        }
+  }
+}
+
        /*****COVER BILLEDE****/
 
         #cover .overskrift {
@@ -368,6 +386,22 @@
         /*******MEDIE Q DESKTOP****/
         @media only screen and (min-width:1025px) {
 
+            .hide {
+               margin-top: -48rem;
+            }
+
+            li a:hover {
+                border-bottom: 0.1rem solid white;
+        border-top: 0.1rem solid white;
+    }
+            li.logo a:hover {
+                border-bottom: none;
+        border-top: none;
+
+            }
+
+            }
+
             /*********COVER BILLEDE*******/
 
                  .logo_mobil img {
@@ -381,26 +415,26 @@
             }
 
             #cover .overskrift {
-                margin-top: -17rem;
-                font-size: 4.5rem;
+                font-size: 3.5rem;
+                margin-top: -15rem;
                 font-weight: 300;
             }
 
             #cover h2 {
-                font-size: 2.5rem;
+                font-size: 2rem;
                 font-weight: 200;
-                margin-top: -1.9rem;
+                margin-top: -1.2rem;
             }
 
             #cover p {
-                font-size: 1.5rem;
-                margin-top: -0.5rem;
+                font-size: 1.2rem;
+                margin-top: -0.3rem;
                 margin-bottom: 1.5rem;
             }
 
             #cover a {
-                font-size: 1.5rem;
-                padding: 1rem;
+                font-size: 1.2rem;
+                padding: 0.8rem;
                 margin-left: 1rem;
                 margin-top: 2rem;
             }
@@ -412,36 +446,41 @@
             }
 
             .indhold1 .blok1 {
-                padding-left: 2rem;
-                padding-right: 2rem;
-                padding-bottom: 2rem;
-                margin-left: 3rem;
-                margin-right: 3rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                padding-bottom: 3rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
+                margin-top: -0.5rem;
             }
 
             .indhold1 .blok1 h2 {
                 margin-top: 2rem;
-                font-size: 1.5rem;
+                font-size: 2rem;
             }
 
 
             .indhold1 p {
                 font-size: 1.2rem;
                 line-height: 2rem;
-                margin-bottom: 2rem;
+                padding-bottom: 2.5rem;
+                margin-bottom: 1rem;
             }
 
             .indhold1 .blok1 a {
-                font-weight: 200;
                 font-size: 1.2rem;
-                margin-left: 7.5rem;
+                margin-left: 1rem;
+            }
+
+            .indhold1 .blok2 video {
+                overflow: hidden;
+                margin-top: -2.3rem;
+                margin-left: 0.3rem;
+                width: 102%;
+                margin-bottom: -3rem;
 
             }
 
-            .indhold1 .blok2 img {
-                margin-top: -1.9rem;
-                width: 101%;
-            }
 
             /*****BLOK 2******/
 
@@ -450,7 +489,7 @@
             }
 
             .indhold2 .blok2 {
-                margin-top: -0.5rem;
+                margin-top: 1.9rem;
 
             }
 
@@ -473,16 +512,11 @@
 
             .indhold2 .knap {
                 font-size: 1.2rem;
-                font-weight: 200;
-                margin-top: 1rem;
-                margin-bottom: 2rem;
-                margin-left: 13rem;
-                margin-right: 13rem;
+                margin: 1rem 13rem 2rem 13rem;
             }
 
             .indhold2 .blok1 img {
-                height: 350px;
-                width: 101%;
+                width: 100%;
                 margin-left: 0rem;
             }
 
@@ -498,7 +532,7 @@
 
     <header>
         <span class="logo_mobil">
-            <img src="img/logo%20f%C3%A6rdig%20hvid.svg">
+            <a href="index.html"><img src="img/logo%20f%C3%A6rdig%20hvid.svg"></a>
         </span>
         <div class="navigation">
             <nav>
@@ -510,7 +544,7 @@
                     <ul class="hide">
 
                         <li>
-                            <a href="index.html">Forside</a>
+                            <a href="index.html" style="font-size: 2.5rem;">Forside</a>
                         </li>
 
                         <li>
@@ -561,7 +595,10 @@
                     <a class="knap" href="om.html">Klik hvis du vil høre mere om vores filosofi</a>
                 </section>
                 <section class="blok2">
-                    <img src="" alt="">
+                    <video autoplay loop muted>
+                        <source src="video/Mindful_Jewellery_loop_2-.mp4" type="video/mp4">
+                    </video>
+
                 </section>
             </div>
 
@@ -586,9 +623,9 @@
     <footer>
         <div class="kontakt_footer">
             <h1>Mindful Jewellery</h1>
-            <p>Telefon: xxxxxxxx</p>
-            <p>Email: xxxxxxx</p>
-            <p>Man-fre: xxxxxxx</p>
+            <p>Telefon: 77 77 00 78</p>
+            <p>Email: kundeservice@mindfuljewellery.dk</p>
+            <p>Man-fre: kl.9.00 – 15.30</p>
         </div>
 
         <div class="some">
@@ -636,7 +673,7 @@
             function visIndhold() {
                 document.querySelector(".indhold1 h2").textContent = indhold.overskrift;
                 document.querySelector(".indhold1 p").textContent = indhold.text;
-                document.querySelector(".indhold1 img").src = indhold.video.guid;
+                //document.querySelector(".indhold1 img").src = indhold.video.guid;
 
                 document.querySelector(".indhold2 img").src = indhold.billede.guid;
                 document.querySelector(".indhold2 h3").textContent = indhold.nyhedsbrev_text1;

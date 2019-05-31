@@ -265,6 +265,16 @@ left: 13rem;
         /*******MEDIE Q DESKTOP****/
         @media only screen and (min-width:1025px) {
 
+                       li a:hover {
+                border-bottom: 0.1rem solid white;
+        border-top: 0.1rem solid white;
+    }
+            li.logo a:hover {
+                border-bottom: none;
+        border-top: none;
+
+            }
+
             .logo_mobil img {
                 position: relative;
             }
@@ -277,42 +287,39 @@ left: 13rem;
                 margin-top: -25rem;
             }
 
-             #cover {
-                 margin-top: -1rem;
-                margin-left: 2.5rem;
-            }
-
             #cover img {
                 position: relative;
             top: -12rem;
             height: 550px;
         }
 
-      #cover .overskrift {
-                margin-top: -17rem;
-                font-size: 4.5rem;
+            #cover {
+                margin-left: 2.5rem;
+            }
+
+            #cover .overskrift {
+                font-size: 3.5rem;
+                margin-top: -15rem;
                 font-weight: 300;
             }
 
             #cover h2 {
-                font-size: 2.5rem;
+                font-size: 2rem;
                 font-weight: 200;
-                margin-top: -1.9rem;
+                margin-top: -1.2rem;
             }
 
             #cover p {
-                font-size: 1.5rem;
-                margin-top: -0.5rem;
+                font-size: 1.4rem;
+                margin-top: -0.3rem;
                 margin-bottom: 1.5rem;
             }
 
             #cover a {
-                text-align: center;
-                font-size: 1.5rem;
+                font-size: 1.2rem;
                 padding: 0.8rem;
-                padding-left: 2rem;
-                padding-right: 2rem;
                 margin-left: 1rem;
+                margin-top: 2rem;
             }
 
         #filosofi {
@@ -355,7 +362,7 @@ left: 13rem;
 
     <header>
         <span class="logo_mobil">
-            <img src="img/logo%20f%C3%A6rdig%20hvid.svg">
+            <a href="index.html"><img src="img/logo%20f%C3%A6rdig%20hvid.svg"></a>
         </span>
         <div class="navigation">
             <nav>
@@ -379,7 +386,7 @@ left: 13rem;
                         </li>
 
                         <li>
-                            <a href="om.html">Om os</a>
+                            <a href="om.html" style="font-size: 2.5rem;">Om os</a>
                         </li>
 
                         <li>
@@ -521,6 +528,7 @@ left: 13rem;
             }
 
         }
+
     </script>
 
 
