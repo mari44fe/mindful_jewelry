@@ -4,17 +4,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mindful Jewellery</title>
+    <title>Mindful Jewellery | Smykker med betydning</title>
+    <meta name="description" content="Velkommen til Mindful Jewellery, hvor smykker ikke bare er smykker, men er bærer af minder og følelser. Vi har fokus på dig og naturen. Buy One Plant One.">
+    <meta name="keywords" content="Smykker,Halskæde,Ring,Øreringe,Hoop,Ørestikker,Perler,Fingerringe,Mindfulness,natursmykker,smykker med betydning,Sølv,Guld,Forgyldt,Sterling sølv,Følelser,Miljø,Minder,Bæredygtighed">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700|Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
 
     <style>
 
-        /******MOBIL*****/
-
-        #splash img {
-            max-width: 375px;
-        }
+        /******HOVER EFFEKTER & KNAPPER*****/
 
           .kollektions_knap:hover {
             background-color: var(--color-knap);
@@ -23,48 +21,27 @@
             background-color: var(--color-knap);
         }
 
-        /* for touch screen */
-    @media (hover: none) {
-       .kollektions_knap {
+        .nyhedsbrev:hover {
             background-color: var(--color-knap);
         }
-          .knap {
+
+        /* touch skærme */
+        @media (hover: none) {
+.        .kollektions_knap {
             background-color: var(--color-knap);
         }
-  }
-}
-
-       /*****COVER BILLEDE****/
-
-        #cover .overskrift {
-            margin-top: -10rem;
-            font-size: 2.3rem;
-            font-weight: 400;
+        .knap {
+            background-color: var(--color-knap);
         }
 
-        #cover h2 {
-            font-size: 1.4rem;
-            font-weight: 200;
-            margin-top: -1rem;
+        .nyhedsbrev {
+            background-color: var(--color-knap);
+        }
         }
 
-        #cover p {
-            font-size: 1.1rem;
-            font-family: 'Titillium Web', sans-serif;
-            font-weight: 200;
-            margin-top: -0.5rem;
-            margin-bottom: 0.5rem;
-        }
 
-        #cover a {
-            font-family: 'Titillium Web', sans-serif;
-            font-weight: 200;
-            font-size: 1rem;
-            padding: 0.5rem;
-            text-decoration: none;
-            border: 0.02px solid white;
-            margin-left: 11.5rem;
-
+        .kollektions_knap {
+            background-color: var(--color-knap);
         }
 
 
@@ -76,63 +53,59 @@
         }
 
         .indhold1 .blok1 {
-            padding-bottom: 1rem;
+            padding-bottom: 1.5rem;
             border: 1px solid white;
-            margin-left: 1rem;
-            margin-right: 1rem;
-            margin-bottom: 1rem;
+            margin: 0rem 1rem 1rem 1rem;
         }
 
         .indhold1 h2 {
+            font-size: 1.7rem;
             margin-top: 1rem;
         }
 
         .indhold1 p {
-            margin-bottom: 0.5rem;
+            margin-bottom: 1.1rem;
         }
 
         .indhold1 .blok1 a {
-            font-size: 0.7rem;
-            margin-left: 7rem;
+            font-size: 1rem;
+            margin-left: 1rem;
         }
+
+        .blok2 video {
+            width: 376px;
+        }
+
+
 
         /*****BLOK 2******/
 
         .indhold2 {
             background-color: var(--color-sand);
-            padding-top: 3rem;
-            padding-bottom: 3rem;
+            background-image: url(grafik/blad_bred.svg);
+            padding: 3rem 0rem 6rem 0rem;
             margin-top: -0.5rem;
         }
 
-
         .indhold2 h3 {
-            font-size: 2rem;
+            font-size: 1.7rem;
             text-align: center;
         }
 
         .indhold2 h4 {
-            font-size: 3rem;
-            font-weight: 500;
+            font-size: 2rem;
+            font-weight: 300;
             text-align: center;
         }
 
         .indhold2 h5 {
-            font-size: 2.2rem;
+            font-size: 1.7rem;
             text-align: center;
         }
 
         .indhold2 p {
-            font-size: 1.4rem;
+            font-size: 1.1rem;
             text-align: center;
-        }
-
-        .indhold2 .knap {
-            font-size: 1.5rem;
-            margin-left: 5rem;
-            margin-right: 5rem;
-            text-align: center;
-            margin-top: 2rem;
         }
 
         .indhold2 img {
@@ -140,33 +113,161 @@
         }
 
 
+        .nyhedsbrev {
+            font-size: 1.3rem;
+            margin-top: 1.3rem;
+            margin-left: 6.8rem;
+        }
+
+
+        /****INSTAGRAM****/
+
+        #instagram {
+            margin-bottom: 2rem;
+        }
+
+        .slider img {
+            width: 100%;
+        }
+
+        #instagram h1 {
+            color: var(--color-text_mork);
+            font-size: 1.7rem;
+            text-align: center;
+            margin: 1rem 1rem 1rem 0rem;
+        }
+
+        #instagram .slider {
+            display: grid;
+            grid-template-columns: repeat(2, 6rem);
+            justify-content: center;
+            grid-gap: 1.5rem;
+        }
+
+        .venstre, .hojre {
+            position: absolute;
+            top: 88rem;
+            width: 4%;
+        }
+
+        .venstre {
+            left: 1rem;
+        }
+
+        .hojre {
+            right: 1rem;
+        }
+
+
+
+        /****POP UP NYHEDSBREV****/
+
+        /* baggrund til pop up*/
+            .popup {
+              display: none;
+              position: fixed;
+              z-index: 100;
+              top: 0%;
+              left: 0%;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(255, 255, 255, 0.77);
+}
+
+            /*pop up vindue */
+           .popup_form {
+               background-image: url(grafik/blad_lang_nyhed.svg);
+               background-repeat: no-repeat;
+                text-align: center;
+                width: 20rem;
+                height: 30rem;
+                padding: 0rem;
+                padding-top: 4rem;
+                background-color: var(--color-sand);
+                margin-left: 1.7rem;
+                margin-top: 4rem;
+        }
+
+            .popup_form p {
+         font-size: 1.7rem;
+            margin-bottom: 1rem;
+        }
+
+            p.webshop {
+            font-size: 1.1rem;
+            padding: 0.5rem;
+            border: 0.5px solid var(--color-lyssand);
+        }
+
+            /* input felter, skrivefelter*/
+            .popup_form input[type=text], .popup_form input[type=password] {
+              width: 90%;
+              padding: 1rem;
+              margin: 0.5rem 0 1.2rem 0;
+              border: 0.5px solid white;
+              background: none;
+            }
+
+        /****teksten inde i input felterne***/
+            ::placeholder {
+                font-family: 'Titillium Web', sans-serif;
+                color: white;
+                font-size: 1rem;
+                font-weight: 200;
+            }
+
+
+            /* ja tak knap*/
+            .popup_form .ja {
+                font-family: 'Titillium Web', sans-serif;
+                  border: 0.5px solid white;
+                  background-color: var(--color-knap);
+                  color: white;
+                  font-size: 1rem;
+                  font-weight: 200;
+                width: 40%;
+                padding: 0.5rem 1rem;
+                margin-right: 0.3rem;
+                cursor: pointer;
+}
+
+            /* nej tak knap */
+            .popup_form .nej {
+                font-family: 'Titillium Web', sans-serif;
+              border: 0.5px solid white;
+                  background-color: var(--color-knap);
+                  color: white;
+                  font-size: 1rem;
+                  font-weight: 200;
+                width: 40%;
+                padding: 0.5rem 1rem;
+                margin-right: 0.3rem;
+                cursor: pointer;
+}
 
 
         /*****MEDIA Q iphone plus*******/
         @media only screen and (min-width: 400px) {
 
+            /****COVER BILLEDE****/
 
-            /*****COVER BILLEDE****/
+             #cover a {
+            background-color: var(--color-knap);
+            margin-left: 1rem;
+        }
 
             #cover .overskrift {
                 margin-top: -11rem;
-                font-size: 2.5rem;
             }
 
-            #cover h2 {
+            button.nyhedsbrev {
                 font-size: 1.5rem;
+                margin-left: 7.8rem;
             }
 
-            #cover p {
-                font-size: 1.2rem;
-                margin-bottom: 1rem;
-            }
-
-            #cover a {
-                font-size: 1.1rem;
-                margin-left: 14rem;
-
-            }
+                   .venstre, .hojre {
+            top: 91rem;
+        }
 
 
             /****BLOK 1****/
@@ -176,41 +277,48 @@
             }
 
             .indhold1 .blok1 {
-                padding-bottom: 1.5rem;
+                padding-bottom: 2rem;
             }
 
             .indhold1 p {
-                margin-bottom: 1.3rem;
+                margin-bottom: 1.5rem;
             }
 
-            .indhold1 .blok1 a {
-                font-size: 0.8rem;
+            .indhold1 video {
+                width: 415px;
             }
 
+            /****BLOK 2****/
+
+            .nyhedsbrev {
+            margin-left: 8.5rem;
+        }
+
+
+
+            /****POP UP NYHEDSBREV****/
+
+            /*pop up vindue */
+            .popup_form {
+                width: 22rem;
+                margin-left: 1.9rem;
+                margin-top: 5rem;
+            }
 
         }
 
         /*****MEDIA Q iphone 10*******/
         @media only screen and (min-height: 812px) {
 
+            .popup_form {
+            margin-top: 7rem;
+        }
 
-            /****BLOK 1****/
-
-            .indhold1 {
-                padding-top: 3rem;
+                 button.nyhedsbrev {
+                font-size: 1.4rem;
+                margin-left: 6.6rem;
             }
 
-            .indhold1 .blok1 {
-                padding-bottom: 1.5rem;
-            }
-
-            .indhold1 p {
-                margin-bottom: 1.3rem;
-            }
-
-            .indhold1 .blok1 a {
-                font-size: 0.7rem;
-            }
 
         }
 
@@ -218,58 +326,50 @@
         /*****MEDIA Q IPAD PORTRAIT*******/
         @media only screen and (min-width:600px) {
 
-            #splash img {
-                width: 768px;
+            /****COVER BILLEDE***/
+
+
+           .splash img {
+                margin-top: -18.3rem;
             }
-
-
-            /*****COVER BILLEDE****/
 
             #cover .overskrift {
-                margin-top: -20rem;
-                font-size: 4.3rem;
-            }
-
-            #cover h2 {
-                font-size: 2.6rem;
-                margin-top: -1.7rem;
-            }
-
-            #cover p {
-                font-size: 1.8rem;
-                margin-top: -1rem;
-                margin-bottom: 1.5rem;
+                margin-top: -18rem;
             }
 
             #cover a {
-                font-size: 2.3rem;
-                padding: 0.7rem;
-                margin-left: 23rem;
-
+                margin-left: 1rem;
+                font-size: 1.7rem;
             }
+
 
             /****BLOK 1****/
 
             .indhold1 {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
-                margin-top: 4rem;
-                padding: 2rem 0rem 2rem 0rem;
+                margin-top: 2rem;
+                padding: 2rem 0rem 0rem 0rem;
+                 overflow-x: hidden;
+            }
+
+            .indhold1 .blok1 {
+                padding-bottom: 1.5rem;
+                margin-bottom: 2rem;
             }
 
 
             .indhold1 p {
-                margin-bottom: 1.4rem;
+                margin-bottom: 1.5rem;
             }
 
             .indhold1 .blok1 a {
-                font-size: 0.8rem;
-                margin-left: 5rem;
+                margin-left: 1rem;
             }
 
-            .indhold1 .blok2 img {
-                margin-top: -1.8rem;
-                height: 118%;
+            .indhold1 .blok2 video {
+                margin-top: -0.9rem;
+                width: 124.5%;
             }
 
             /*****BLOK 2******/
@@ -277,8 +377,6 @@
             .indhold2 {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
-                margin-top: 4rem;
-                padding-top: 3rem;
                 padding-bottom: 0rem;
                 margin-top: -0.5rem;
             }
@@ -287,99 +385,210 @@
                 display: block;
                 margin-top: -3rem;
                 margin-left: -0.5rem;
-                width: 102%;
+                width: 102.3%;
             }
 
-            .indhold2 img {
-                display: none;
+            .indhold2 .blok2 {
+                margin-top: -1.7rem;
+            }
+
+            button.nyhedsbrev {
+                font-size: 1.2rem;
+                margin-top: 0.8rem;
+                margin-left: 7.3rem;
+            }
+
+            /*****INSTAGRAM****/
+
+            #instagram {
+            margin-bottom: 3rem;
+        }
+
+            #instagram h1 {
+            font-size: 2rem;
+            margin: 1.5rem 1rem 2rem 0rem;
+        }
+
+            #instagram .slider {
+            grid-template-columns: repeat(4, 6rem);
+            grid-gap: 4rem;
+        }
+
+            .venstre, .hojre {
+                width: 2.5%;
+            top: 93rem;
+        }
+
+
+        /****POP UP NYHEDSBREV****/
+
+        /*pop up vindue */
+            .popup_form {
+                width: 35rem;
+                height: 45rem;
+                padding: 1rem;
+                padding-top: 5rem;
+                margin-top: 7rem;
+                margin-left: 7rem;
+                }
+
+        .popup_form p {
+            font-size: 2.6rem;
+            margin-bottom: 1.5rem;
+        }
+
+        p.webshop {
+            font-size: 1.8rem;
+            padding: 1rem;
+        }
+
+        /* input felter*/
+        .popup_form input[type=text], .popup_form input[type=password] {
+          padding: 1.8rem;
+}
+        ::placeholder {
+        color: white;
+            font-size: 1.2rem;
+    }
+
+
+        /* ja tak knap*/
+            .popup_form .ja {
+                font-size: 1.2rem;
+                padding: 1rem 1rem;
+                margin-right: 0.5rem;
+            }
+
+            /* nej tak knap */
+            .popup_form .nej {
+                font-size: 1.2rem;
+                padding: 1rem 1rem;
+                margin-right: 0.5rem;
             }
 
         }
 
         /******MEDIA Q IPAD LANDSCAPE*****/
+         @media only screen and (min-width: 1024px) {
 
-        @media only screen and (min-width: 1024px) {
+             /******COVER BILLEDE****/
 
-            /*****COVER BILLEDE****/
-
-            .logo_mobil img {
-                width: 20%;
+            .splash img {
+                margin-top: -13.3rem;
             }
 
-            #cover p {
-                margin-bottom: 1rem;
+            #cover .overskrift {
+                margin-top: -20rem;
+            }
+
+           .logo_mobil img {
+                width: 16%;
             }
 
             #cover a {
-                font-size: 2rem;
-                padding: 0.7rem;
-                margin-left: 23rem;
-
+                font-size: 1.2rem;
             }
 
-            /****BLOK 1****/
+
+             /****BLOK 1****/
 
             .indhold1 {
-                margin-top: 3rem;
-                padding: 4rem 1rem 2rem 0.5rem;
+               margin-top: 1.7rem;
             }
 
-            .indhold1 .blok1 {
-                margin: 1rem;
-                padding: 0.5rem;
-                padding-bottom: 1.5rem;
+            .indhold1 h2 {
+                font-size: 2.2rem;
             }
-
-            .indhold1 .blok1 h2 {
-                font-size: 2rem;
-                margin-bottom: 0.5rem;
-            }
-
 
             .indhold1 p {
                 font-size: 1.3rem;
-                ;
-                margin-bottom: 1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .indhold1 .blok1 {
+                padding-bottom: 2.4rem;
+                margin-bottom: 2rem;
             }
 
             .indhold1 .blok1 a {
-                font-size: 1rem;
-                margin-left: 9rem;
+                font-size: 1.2rem;
+                margin-left: 1rem;
             }
 
-            .indhold1 .blok2 img {
-                margin-top: -1.8rem;
-                height: 113%;
-                width: 110%;
-                margin-left: 0.5rem;
+            .indhold1 .blok2 video {
+                margin-top: -2rem;
+                width: 113%;
+                margin-left: 0.2rem;
             }
 
             /*****BLOK 2******/
-            .indhold2 .blok2 {
-                margin-top: 3rem;
 
-            }
+             .indhold2 {
+                 background-repeat: no-repeat;
+             }
 
             .indhold2 h3 {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
             }
 
             .indhold2 h4 {
-                font-size: 3.5rem;
-            }
-
-            .indhold2 h5 {
                 font-size: 2.5rem;
             }
 
-            .indhold2 p {
-                margin-top: 0.5rem;
-                font-size: 1.7rem;
+            .indhold2 h5 {
+                font-size: 2.2rem;
             }
 
-            .indhold2 .knap {
-                font-size: 1.7rem;
+            .indhold2 p {
+                font-size: 1.5rem;
             }
+
+
+            .indhold2 .blok2 {
+               margin-top: -0.5rem;
+            }
+
+            button.nyhedsbrev {
+                font-size: 1.7rem;
+                margin-left: 10rem;
+                margin-top: 1rem;
+            }
+
+
+             /*****INSTAGRAM****/
+
+        #instagram h1 {
+            font-size: 2.2rem;
+        }
+
+        #instagram .slider {
+            grid-template-columns: repeat(4, 9rem);
+        }
+
+            .venstre, .hojre {
+                top: 82.5rem;
+            }
+
+            /****POP UP NYHEDSBREV****/
+
+            /*pop up vindue */
+                .popup_form {
+                    width: 30rem;
+                    height: 40rem;
+                    padding: 0.5rem;
+                    padding-top: 5rem;
+                    margin-left: 16rem;
+                    margin-top: 5em;
+}
+
+                .popup_form p {
+                font-size: 2.2rem;
+                }
+
+                p.webshop {
+                font-size: 1.5rem;
+                padding: 1rem;
+                }
 
         }
 
@@ -387,43 +596,36 @@
         /*******MEDIE Q DESKTOP****/
         @media only screen and (min-width:1025px) {
 
+            /*****NAVIGATION*****/
+
             .hide {
                margin-top: -48rem;
             }
 
-            li a:hover {
-                border-bottom: 0.1rem solid white;
-        border-top: 0.1rem solid white;
-    }
-            li.logo a:hover {
-                border-bottom: none;
-        border-top: none;
-
-            }
-
-            }
 
             /*********COVER BILLEDE*******/
 
-                 .logo_mobil img {
+            .splash img {
+                margin-top: 0rem;
+            }
+
+            .logo_mobil img {
                 position: absolute;
                 width: 12%;
-                margin-left: 35rem;
             }
 
             #cover {
+                margin-top: -6rem;
                 margin-left: 2.5rem;
             }
 
             #cover .overskrift {
                 font-size: 3.5rem;
                 margin-top: -15rem;
-                font-weight: 300;
             }
 
             #cover h2 {
                 font-size: 2rem;
-                font-weight: 200;
                 margin-top: -1.2rem;
             }
 
@@ -438,34 +640,38 @@
                 padding: 0.8rem;
                 margin-left: 1rem;
                 margin-top: 2rem;
+                background-color: transparent;
+            }
+
+            #cover a:hover {
+                background-color: var(--color-knap);
             }
 
             /****BLOK 1****/
 
             .indhold1 {
-                margin-top: 1rem;
+                margin-top: 2.5rem;
+                margin-bottom: -0.3rem;
+
             }
 
             .indhold1 .blok1 {
-                padding-left: 1rem;
-                padding-right: 1rem;
-                padding-bottom: 3rem;
-                margin-left: 1rem;
-                margin-right: 1rem;
-                margin-top: -0.5rem;
+                padding: 0rem 1rem 0rem 1rem;
+                margin: 1rem 3.4rem 3rem 3.4rem;
             }
 
             .indhold1 .blok1 h2 {
-                margin-top: 2rem;
-                font-size: 2rem;
+                margin-top: 1rem;
+                padding-top: 1rem;
+                margin-bottom: 0.5rem;
             }
 
 
             .indhold1 p {
                 font-size: 1.2rem;
-                line-height: 2rem;
-                padding-bottom: 2.5rem;
-                margin-bottom: 1rem;
+                line-height: 1.8rem;
+                padding-bottom: 2rem;
+                margin-bottom: 0rem;
             }
 
             .indhold1 .blok1 a {
@@ -475,22 +681,22 @@
 
             .indhold1 .blok2 video {
                 overflow: hidden;
-                margin-top: -2.3rem;
-                margin-left: 0.3rem;
+                margin-top: -1.8rem;
+                margin-left: -0rem;
                 width: 102%;
-                margin-bottom: -3rem;
-
             }
 
 
             /*****BLOK 2******/
 
             .indhold2 {
-                margin-top: -1rem;
+                margin-top: 0rem;
             }
 
             .indhold2 .blok2 {
-                margin-top: 1.9rem;
+                margin-top: 1.5rem;
+                background-image: url(grafik/blad_bred.svg);
+                background-repeat: no-repeat;
 
             }
 
@@ -511,9 +717,9 @@
                 font-size: 1.2rem;
             }
 
-            .indhold2 .knap {
-                font-size: 1.2rem;
-                margin: 1rem 13rem 2rem 13rem;
+            button.nyhedsbrev {
+                font-size: 1.6rem;
+                margin: 1.5rem 3rem 2rem 14.5rem;
             }
 
             .indhold2 .blok1 img {
@@ -521,112 +727,78 @@
                 margin-left: 0rem;
             }
 
-        .indhold2 .grafik {
-            display: block;
-            position: absolute;
-            width: 22rem;
-            opacity: 0.5;
-            top: 62rem;
-            z-index: 9;
+
+        /****INSTAGRAM****/
+
+        #instagram .slider {
+            grid-template-columns: repeat(6, 9rem);
+            margin-left: 26rem;
         }
 
-        #popup {
-            margin-top: -80rem;
+              .venstre, .hojre {
+                  width: 1.5%;
+            top: 98rem;
         }
 
+            .venstre {
+                left: 7rem;
+            }
 
-           .webshop p {
-        text-align: center;
-        margin-top: 2rem;
-        padding-bottom: 0.5rem;
-        font-size: 1.5rem;
-    }
+            .hojre {
+                right: 7rem;
+            }
 
-    .webshop {
-        text-align: center;
-        font-size: 0.9rem;
-        margin-top: 0.5rem;
-        padding: 1rem;
-        border: 0.2px solid var(--color-text_mork);
-    }
+            /****POP UP NYHEDSBREV****/
 
-    /* nyhedsbrev knap */
-.nyhedsbrev {
-    position: absolute;
-  background-color: transparent;
-    font-size: 1rem;
-  color: white;
-    font-weight: 300;
-  padding: 0.5rem 2rem;
-  border: 0.5px solid white;
-  cursor: pointer;
-    margin-left: 15rem;
-    margin-top: 2rem;
-}
+            /*pop up vindue */
+            .popup_form {
+            width: 25rem;
+            height: 35rem;
+            padding: 1rem;
+            padding-top: 4rem;
+            margin-left: 27rem;
+            margin-top: 2rem;
+            }
 
-/* pop up effekt*/
-.popup {
-  display: none;
-  position: absolute;
-  z-index: 9;
-}
+            .popup_form p {
+            font-size: 1.8rem;
+            }
 
-/*pop up vindue */
-.popup_form {
-    text-align: center;
-width: 20rem;
-    height: 30rem;
-  padding: 1rem;
-background-color: #ddd8c4;
-    margin-left: 20rem;
-    overflow: hidden;
-}
+            p.webshop {
+            font-size: 1.1rem;
+            padding: 1rem;
+            }
 
-/* input felter*/
-.popup_form input[type=text], .popup_form input[type=password] {
-  width: 83%;
-  padding: 1rem;
-  margin: 1rem 0 1rem 0;
-  border: 0.5px solid white;
-  background: none;
-}
-    ::placeholder {
-        color: white;
-            font-size: 0.8rem;
-    }
+            /* input felter*/
+            .popup_form input[type=text], .popup_form input[type=password] {
+              padding: 1.2rem;
+            }
+
+            ::placeholder {
+            font-size: 1.1rem;
+            }
 
 
-/* ja tak knap*/
-.popup_form .ja {
-  background-color: transparent;
-    font-size: 0.8rem;
-  color: white;
-  padding: 0.5rem 1rem;
-  border: 0.5px solid white;
-  cursor: pointer;
-  width: 40%;
-    margin-right: 0.2rem;
+            /* ja tak knap*/
+            .popup_form .ja {
+                background-color: transparent;
+                font-size: 1.1rem;
+                margin-right: 0.5rem;
 
-}
+            }
 
-/* nej tak knap */
-.popup_form .nej {
-   background-color: transparent;
-    font-size: 0.8rem;
-  color: white;
-  padding: 0.5rem 2rem;
-  border: 0.5px solid white;
-  cursor: pointer;
-  width: 40%;
-    margin-left: 0.2rem;
-  margin-bottom: 0.5rem;
-}
+            /* nej tak knap */
+            .popup_form .nej {
+                font-size: 1.1rem;
+              padding: 1rem 1rem;
+                margin-right: 0.5rem;
+                  background-color: transparent;
+            }
 
-/* hover effekter*/
-.popup_form .ja:hover, .nej:hover, .nyhedsbrev:hover {
-  background-color: var(--color-orange);
-  background-color: var(--color-knap);
-}
+            /* hover effekter*/
+            .popup_form .ja:hover, .nej:hover, .nyhedsbrev:hover {
+              background-color: var(--color-knap);
+            }
 
     }
 
@@ -639,12 +811,16 @@ background-color: #ddd8c4;
 <body>
 
     <header>
+        <!--NAVIGATION-->
+
+        <!---SPLASH BILLEDE--->
         <span class="logo_mobil">
-            <a href="index.html"><img src="img/logo%20f%C3%A6rdig%20hvid.svg"></a>
+            <a href="index.html"><img src="img/logo%20f%C3%A6rdig%20hvid.svg" alt="mindful jewellery logo"></a>
         </span>
         <div class="navigation">
             <nav>
                 <label>
+                    <!--BURGERMENU IKON OG "FOLD UD"-->
                     <input type="checkbox">
                     <span class="menu">
                         <span class="hamburger"></span>
@@ -652,7 +828,8 @@ background-color: #ddd8c4;
                     <ul class="hide">
 
                         <li>
-                            <a href="index.html" style="font-size: 2.5rem;">Forside</a>
+                            <a href="index.html" style=" border-bottom: 0.1px solid white;
+                border-top: 0.1px solid white;">Forside</a>
                         </li>
 
                         <li>
@@ -660,7 +837,7 @@ background-color: #ddd8c4;
                         </li>
 
                         <li class="logo">
-                            <a href="index.html"><img src="img/logo%20f%C3%A6rdig%20hvid.svg" alt="logo"></a>
+                            <a href="index.html"><img src="img/logo%20f%C3%A6rdig%20hvid.svg" alt="mindful jewellery logo"></a>
                         </li>
 
                         <li>
@@ -677,14 +854,13 @@ background-color: #ddd8c4;
         </div>
 
 
-
-
         <picture class="splash">
-            <source media="(min-width: 1024px)" srcset="img/forsidebilledemodel.jpg" alt="Mindful Jewellery">
-            <source media="(min-width: 528px)" srcset="">
-            <img src="img/cover-forside-mobil.jpg">
+            <source media="(min-width: 1024px)" srcset="img/forsidebilledemodel.jpg">
+            <img src="img/cover-forside-mobil.jpg" alt="mindful jewellery forside smykker">
         </picture>
 
+
+        <!--COVER OVERSKRIFT-->
         <section id="cover">
             <h1 class="overskrift"> Mindful Jewellery</h1>
             <h2> Når smykker ikke bare er smykker </h2>
@@ -694,8 +870,10 @@ background-color: #ddd8c4;
     </header>
 
 
+    <!--FORSIDE BLOKKE-->
     <main>
         <div class="forside1">
+            <!--BLOK 1-->
             <div class="indhold1">
                 <section class="blok1">
                     <h2></h2>
@@ -710,10 +888,10 @@ background-color: #ddd8c4;
                 </section>
             </div>
 
-
+            <!--BLOK 2-->
             <div class="indhold2">
                 <section class="blok1">
-                    <img src="" alt="">
+                    <img src="" alt="blad halskæde mindful jewellery">
                 </section>
                 <section class="blok2">
                     <h3></h3>
@@ -725,8 +903,25 @@ background-color: #ddd8c4;
 
             </div>
         </div>
-    </main>
 
+        <!--INSTAGRAM-->
+        <section id="instagram">
+            <div class="overskrift">
+                <h1>Instagram</h1>
+            </div>
+            <img class="venstre" src="grafik/instagram_slider_pil_venstre.png" alt="mindful jewellery instagram">
+
+            <div class="slider">
+                <img src="instagram/ringe-model.jpg" alt="mindful jewellery ring guld natur smykke">
+                <img src="instagram/styletringene.jpg" alt="mindful jewellery ring sølv natur smykke">
+                <img src="instagram/Artboard%201.jpg" alt="mindful jewellery instagram mindfulness">
+                <img src="instagram/%C3%B8restikker-model.jpg" alt="mindful jewellery øreringe">
+            </div>
+
+            <img class="hojre" src="grafik/pil_h%C3%B8jre.svg" alt="mindful jewellery instagram">
+        </section>
+    </main>
+    <!--NYHEDSBREV POP UP VINDUE-->
     <div class="popup" id="popup">
         <form action="/action_page.php" class="popup_form">
             <p>Tilmeld dig nyhedsbrevet <br> & få 15% <br>ved dit første køb</p>
@@ -734,7 +929,6 @@ background-color: #ddd8c4;
             <p class="webshop">Webshoppen åbner efteråret 2019,<br> vær den første til at få besked</p>
 
             <div class="udfyld">
-                <label for="email"></label>
                 <input type="text" placeholder="Email" name="email" required>
 
                 <button type="button" class="btn ja">Tilmeld mig</button>
@@ -744,7 +938,7 @@ background-color: #ddd8c4;
 
     </div>
 
-
+    <!--FOOTER-->
     <footer>
         <div class="kontakt_footer">
             <h1>Mindful Jewellery</h1>
@@ -755,8 +949,10 @@ background-color: #ddd8c4;
 
         <div class="some">
             <h1>Sociale medier</h1>
-            <img src="img/facebook.svg" alt="">
-            <img src="img/instagram.svg" alt="">
+            <div class="ikon">
+                <img src="img/facebook.svg" alt="mindful jewellery facebook">
+                <img src="img/instagram.svg" alt="mindful jewellery instagram">
+            </div>
         </div>
 
         <section class="sog">
@@ -772,22 +968,28 @@ background-color: #ddd8c4;
             getJson();
         }
 
+        //HENTER VORES INDHOLD FRA WORDPRESS
         async function getJson() {
             let url = "http://mariacronehvidberg.dk/kea/eksamen/kode/wordpress/wp-json/wp/v2/forside/50"
             let jsonData = await fetch(url);
             indhold = await jsonData.json();
 
+            //åbning af burgermenu
             document.querySelector("label .menu").addEventListener("click", open);
+
+            //åbning af nyhedsbrev
             document.querySelector(".nyhedsbrev").addEventListener("click", openForm);
             visIndhold();
         }
 
 
         function visIndhold() {
+            //blok 1
             document.querySelector(".indhold1 h2").textContent = indhold.overskrift;
             document.querySelector(".indhold1 p").textContent = indhold.text;
             //document.querySelector(".indhold1 img").src = indhold.video.guid;
 
+            //blok 2
             document.querySelector(".indhold2 img").src = indhold.billede.guid;
             document.querySelector(".indhold2 h3").textContent = indhold.nyhedsbrev_text1;
             document.querySelector(".indhold2 h4").textContent = indhold.nyhedsbrev_text2;
@@ -795,6 +997,7 @@ background-color: #ddd8c4;
             document.querySelector(".indhold2 p").textContent = indhold.webshop_felt;
         }
 
+        //funktion der styrer vores burgermenu
         function open() {
             let menu = document.querySelector("label ul");
             console.log(menu.classList);
@@ -802,7 +1005,7 @@ background-color: #ddd8c4;
 
         }
 
-
+        //funktion som styrer vores nyhedsbrev pop up
         function openForm() {
             console.log("åben");
             document.querySelector("#popup").style.display = "block";
@@ -812,13 +1015,13 @@ background-color: #ddd8c4;
 
         }
 
+        //lukker pop up igen
         function closeForm() {
             console.log("luk");
             document.querySelector("#popup").style.display = "none";
 
             start();
         }
-
     </script>
 
 

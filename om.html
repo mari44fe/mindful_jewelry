@@ -4,10 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mindful Jewellery</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700|Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
 
+    <title>Om vores filosofi | Mindful Jewellery</title>
+    <meta name="description" content="Mindfulness, ro og naturen er inspirationskilder til Mindful Jewellery. Vi giver tilbage til naturen. Læs mere om Mindful Jewellery her.">
+    <meta name="keywords" content="Smykker,Halskæde,Ring,Øreringe,Hoop,Ørestikker,Perler,Fingerringe,Mindfulness,natursmykker,smykker med betydning,Sølv,Guld,Forgyldt,Sterling sølv,Følelser,Miljø,Minder,Bæredygtighed">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
     <style>
 
 
@@ -16,35 +19,17 @@
             background-color: var(--color-mosegron);
         }
 
-        .logo_mobil img {
-            position: static;
+           .knap:hover {
+            background-color: var(--color-knap);
         }
 
-        #cover img {
-            position: relative;
-            top: -12rem;
-            z-index: -10;
-            height: 370px;
+        /* for touch screen */
+        @media (hover: none) {
+          a.knap {
+            background-color: var(--color-knap);
         }
+  }
 
-         #cover h1 {
-            margin-top: -21rem;
-            font-size: 2.3rem;
-            font-weight: 400;
-            margin-left: 0.9rem;
-        }
-
-        #cover p {
-            font-size: 1.4rem;
-            font-weight: 200;
-            margin-top: -1rem;
-            margin-bottom: 1rem;
-        }
-
-        #cover a {
-            margin-left: 13rem;
-            padding: 0.3rem 1.5rem;
-        }
 
         /****VIDEO POPUP , A PEN BY CAPTAIN ANONYMOUS, tilpasset af Maria*****/
 
@@ -79,13 +64,14 @@
   overflow: visible;
 }
 
-
+/****PLAY KNAP****/
             img.play{
                 position: absolute;
-                width: 14rem;
-                top: 6rem;
-                left: 4.5rem;
+                width: 10rem;
+                top: 7.5rem;
+                left: 7.3rem;
                 z-index: 50;
+                opacity: 0.8;
             }
 
         /*****FILOSOFI BLOK*****/
@@ -93,7 +79,7 @@
 
         #filosofi {
             padding: 0.5rem;
-            margin: 17rem 1rem 2rem 1rem;
+            margin: 3rem 1rem 2rem 1rem;
             border: 0.5px solid white;
         }
 
@@ -103,7 +89,7 @@
         }
 
         #filosofi p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             padding-bottom: 1rem;
             line-height: 1.8rem;
         }
@@ -113,31 +99,31 @@
         /*****MEDIA Q iphone plus*******/
         @media only screen and (min-width: 400px) {
 
+            #cover .knap {
+                margin-left: 1rem;
+            }
+
             #filosofi h2 {
-                font-size: 2rem
+                font-size: 1.7rem
             }
 
 
               #filosofi p {
-                font-size: 1.4rem;
+                font-size: 1.2rem;
                   line-height: 1.9rem;
             }
 
-                #cover a {
-                    font-size: 1.2rem;
-                    margin-left: 14rem;
-        }
-
-                    /****POP UP VIDEO****/
+            /****POP UP VIDEO****/
 
             #pop_video {
-  top: 23%;
-  left: 134%;
+              top: 23%;
+              left: 134%;
 
-}
+            }
 
             img.play{
-                left: 5.5rem;
+                top: 8.5rem;
+                left: 9rem;
             }
 
         }
@@ -152,30 +138,22 @@
         /*****MEDIA Q IPAD PORTRAIT*******/
         @media only screen and (min-width:600px) {
 
-              #cover img {
-            top: -18rem;
-            height: 570px;
-        }
+            .splash img {
+                margin-top: -18.3rem;
+            }
 
-         #cover h1 {
-            margin-top: -32rem;
-            font-size: 4rem;
-        }
+            #cover .overskrift {
+                margin-top: -18rem;
+            }
 
-        #cover p {
-            font-size: 2rem;
-            margin-top: -1.5rem;
-            margin-bottom: 1rem;
-        }
+            #cover .knap {
+                font-size: 1.7rem;
+            }
 
-             #cover a {
-                    font-size: 2rem;
-                    margin-left: 20rem;
-        }
 
         #filosofi {
             padding: 0.7rem;
-            margin: 5.5rem 2rem 3rem 2rem;
+            margin: 5.5rem 1rem 3rem 1rem;
         }
 
         #filosofi h2 {
@@ -183,6 +161,7 @@
         }
 
         #filosofi p {
+            column-count: 2;
             font-size: 1.3rem;
             line-height: 1.9rem;
         }
@@ -198,9 +177,9 @@ width: 700px;
 }
 
 img.play{
-width: 20rem;
-top: 10rem;
-left: 13rem;
+width: 19rem;
+top: 14rem;
+left: 15em;
 }
 
         }
@@ -209,53 +188,46 @@ left: 13rem;
 
         @media only screen and (min-width: 1024px) {
 
-
-              #cover img {
-            top: -24rem;
-            height: 700px;
-        }
-
-         #cover h1 {
-            margin-top: -38rem;
-            font-size: 4.3rem;
-        }
-
-            #cover p {
-                font-size: 2.2rem;
-                margin-bottom: 1rem;
+                  .splash img {
+                margin-top: -12rem;
             }
 
-            #cover a {
-                    margin-left: 20rem;
-        }
+            #cover .overskrift {
+                margin-top: -20rem;
+            }
 
-                        /****POP UP VIDEO****/
+            #cover .knap {
+                font-size: 1.2rem;
+            }
+
+
+
+         /****POP UP VIDEO****/
             #pop_video {
-  top: 40%;
-  left: 36%;
-}
+                top: 40%;
+                left: 36%;
+            }
 
             video {
                 width: 900px;
             }
 
                      img.play{
-                         width: 25rem;
-                         top: 12rem;
-                left: 19rem;
+                         width: 15rem;
+                         top: 6.5rem;
+                left: 25rem;
             }
 
         #filosofi {
             padding: 1.5rem;
-            margin: 9rem 5rem 4rem 5rem;
         }
 
         #filosofi h2 {
-            font-size: 2.3rem;
+            font-size: 2.2rem;
         }
 
         #filosofi p {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             line-height: 2.2rem;
         }
 
@@ -265,22 +237,12 @@ left: 13rem;
         /*******MEDIE Q DESKTOP****/
         @media only screen and (min-width:1025px) {
 
-                       li a:hover {
-                border-bottom: 0.1rem solid white;
-        border-top: 0.1rem solid white;
-    }
-            li.logo a:hover {
-                border-bottom: none;
-        border-top: none;
-
-            }
-
             .logo_mobil img {
                 position: relative;
             }
 
             .splash img {
-                margin-top: -12.1rem;
+                margin-top: -12.2rem;
             }
 
             .hide {
@@ -317,29 +279,33 @@ left: 13rem;
 
             #cover a {
                 font-size: 1.2rem;
-                padding: 0.8rem;
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
                 margin-left: 1rem;
                 margin-top: 2rem;
             }
 
         #filosofi {
-            padding: 4rem;
-            margin: 5.5rem 3.5rem 3rem 3.5rem;
+            padding-left: 1rem;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+            margin: 5rem 3.5rem 3rem 3.5rem;
         }
 
         #filosofi h2 {
+            margin-top: -1rem;
             font-size: 2rem;
         }
 
-        #filosofi p {
+            #filosofi p {
             font-size: 1.3rem;
-            line-height: 1.9rem;
+            line-height: 2rem;
         }
 
                         /****POP UP VIDEO****/
             #pop_video {
   top: 35%;
-  left: 36%;
+  left: 34%;
 }
 
             video {
@@ -347,9 +313,16 @@ left: 13rem;
             }
 
                      img.play{
-                         width: 20rem;
+                         width: 15rem;
                          top: 12rem;
-                left: 30rem;
+                left: 32.5rem;
+                         cursor: pointer;
+            }
+
+            img.play:hover {
+                transform: scale(1.1);
+                transition: 1s ease-out;
+                opacity: 1;
             }
 
     }
@@ -362,7 +335,7 @@ left: 13rem;
 
     <header>
         <span class="logo_mobil">
-            <a href="index.html"><img src="img/logo%20f%C3%A6rdig%20hvid.svg"></a>
+            <a href="index.html"><img src="img/logo%20f%C3%A6rdig%20hvid.svg" alt="mindful jewllery logo"></a>
         </span>
         <div class="navigation">
             <nav>
@@ -382,11 +355,12 @@ left: 13rem;
                         </li>
 
                         <li class="logo">
-                            <a href="index.html"><img src="img/logo%20f%C3%A6rdig%20hvid.svg" alt="logo"></a>
+                            <a href="index.html"><img src="img/logo%20f%C3%A6rdig%20hvid.svg" alt="mindful jewllery logo"></a>
                         </li>
 
                         <li>
-                            <a href="om.html" style="font-size: 2.5rem;">Om os</a>
+                            <a href="om.html" style=" border-bottom: 0.1px solid white;
+                border-top: 0.1px solid white;">Om os</a>
                         </li>
 
                         <li>
@@ -400,12 +374,11 @@ left: 13rem;
 
         <picture class="splash">
             <source media="(min-width: 1024px)" srcset="img/om-os-cover.jpg" alt="Mindful Jewellery">
-            <source media="(min-width: 528px)" srcset="">
-            <img src="img/cover-om-mobil.jpg">
+            <img src="img/cover-om-mobil.jpg" alt="mindful jewellery om os">
         </picture>
     </header>
 
-    <img class="play" src="img/play-thumb-two.png" alt="">
+    <img class="play" src="img/play_knap.png" alt="mindful jewllery video natur bæredygtighed smykker">
 
     <section id="cover">
         <h1 class="overskrift"></h1>
@@ -423,8 +396,9 @@ left: 13rem;
 
     <!----POP UP VIDEO---->
     <div id="pop_video">
+        <!-- <iframe id="mindful_video" width="940" height="529" src="https://www.youtube.com/embed/xjEjAAEc9kY?autoplay=1&playlist=xjEjAAEc9kY&loop=1&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
         <video id="mindful_video" width="550px" controls>
-            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            <source src="video/mindful_jewellery_web.mp4" type="video/mp4">
         </video>
     </div>
 
@@ -434,15 +408,15 @@ left: 13rem;
     <footer>
         <div class="kontakt_footer">
             <h1>Mindful Jewellery</h1>
-            <p>Telefon: xxxxxxxx</p>
-            <p>Email: xxxxxxx</p>
-            <p>Man-fre: xxxxxxx</p>
+            <p>Telefon: 77 77 00 78</p>
+            <p>Email: kundeservice@mindfuljewellery.dk</p>
+            <p>Man-fre: kl.9.00 – 15.30</p>
         </div>
 
         <div class="some">
             <h1>Sociale medier</h1>
-            <img src="img/facebook.svg" alt="">
-            <img src="img/instagram.svg" alt="">
+            <img src="img/facebook.svg" alt="mindful jewellery facebook">
+            <img src="img/instagram.svg" alt="mindful jewellery instagram">
         </div>
 
         <section class="sog">

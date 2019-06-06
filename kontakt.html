@@ -4,9 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mindful Jewellery</title>
+    <title>Kontaktside | Mindful Jewellery</title>
+    <meta name="description" content=" Har du nogle spørgsmål så kontakt os endelig, vi er klar til at besvare telefonen eller mailen. ">
+    <meta name="keywords" content="Smykker,Halskæde,Ring,Øreringe,Hoop,Ørestikker,Perler,Fingerringe,Mindfulness,natursmykker,smykker med betydning,Sølv,Guld,Forgyldt,Sterling sølv,Følelser,Miljø,Minder,Bæredygtighed">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700|Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
 
     <style>
 
@@ -14,28 +16,51 @@
             background-color: var(--color-mosegron);
         }
 
-        .logo_mobil img {
-            position: static;
-        }
 
-        /****KONTAKT*****/
+        /* for touch screen */
+        @media (hover: none) {
+          .tabel_kontrol_submit {
+            background-color: var(--color-knap);
+        }
+  }
+
+       /****KONTAKT****/
+
+        main {
+                   background-image: url(grafik/blad_enkelt_bla.svg);
+                background-repeat: no-repeat;
+        }
 
         #kontakt_info {
-            margin-top: 1rem;
-            margin-left: 1.5rem;
+            margin-left: 0.5rem;
+            padding-bottom: 3rem;
         }
 
-        ::placeholder { /* Chrome*/
+        #kontakt_info h1 {
+            font-size: 1.7rem;
+        }
+
+        #kontakt_info p {
+            font-size: 1.2rem;
+        }
+
+
+        ::placeholder {
             padding: 0.5rem;
             font-family: "titillium web", sans-serif;
             font-weight: 200;
-    color: white;
-}
-        #tabel {
-            text-align: center;
+            color: white;
         }
 
-       form {
+        #tabel {
+              margin-top: 6rem;
+            margin-bottom: 2rem;
+            margin-left: -1rem;
+            text-align: center;
+
+        }
+
+               form {
             margin-top: 2rem;
         }
 
@@ -60,26 +85,30 @@
         }
 
 
-        input.tabel_kontrol.submit {
-            margin-left: 8.5rem;
+        .tabel_kontrol_submit {
+            margin-left: -13.4rem;
             padding-left: 2rem;
             padding-right: 2rem;
             font-family: "titillium web", sans-serif;
             font-weight: 200;
             width: 40%;
-        }
-
-        form .submit:hover {
-            background-color: var(--color-orange);
             cursor: pointer;
         }
-
-
 
         /*****MEDIA Q iphone plus*******/
         @media only screen and (min-width: 400px) {
 
+       .tabel_kontrol_submit {
+            margin-left: -15.7rem;
+        }
 
+            #tabel {
+                margin-left: -1.5rem;
+            }
+
+            #kontakt_info {
+                margin-left: 0.2rem;
+            }
 
         }
 
@@ -94,34 +123,67 @@
         /*****MEDIA Q IPAD PORTRAIT*******/
         @media only screen and (min-width:600px) {
 
+            .splash img {
+                margin-top: -18.3rem;
+            }
+
+            .cover_overskrift {
+                margin-top: -18rem;
+            }
+
             main {
-                display: grid;
-                grid-template-areas: "formular kontakt";
-                margin-top: 11rem;
-                grid-gap: 3rem;
+                margin-top: 8rem;
+                margin-right: 1rem;
+                padding-bottom: 2rem;
             }
 
                   /****KONTAKT*****/
 
         #kontakt_info {
-            font-size: 1.3rem;
-            grid-area: kontakt;
+                 border: 0.5px solid white;
+                margin: 4rem 0.5rem 1rem 1rem;
+                padding-left: 1rem;
+            padding-right: 2rem;
+                padding-top: 2rem;
+            padding-bottom: 3rem;
+
+        }
+
+          #kontakt_info h1 {
+             font-size: 2.6rem;
+        }
+
+        #kontakt_info p {
+              font-size: 1.7rem;
         }
 
             #tabel {
-                grid-area: formular;
+                margin-top: 11rem;
+                margin-left: -1rem;
             }
 
-            input.tabel_kontrol.submit {
-                margin-left: 0.6rem;
-                margin-right: 8rem;
+            .tabel_kontrol {
+                padding: 2rem;
+                padding-left: 0.5rem;
+            }
+
+            .tabel_kontrol_submit {
+            text-align: center;
+               font-size: 1.7rem;
+               margin-top: 0rem;
+               padding-top: 0.5rem;
+               padding-bottom: 0.5rem;
+               margin-left: -36rem;
             }
 
             input, textarea {
-                width: 90%;
-                margin-left: 2rem;
+                width: 94.5%;
+                margin-left: 1.5rem;
             }
 
+            ::placeholder {
+                font-size: 1.7rem;
+            }
 
 
         }
@@ -130,14 +192,55 @@
 
         @media only screen and (min-width: 1024px) {
 
+             .splash img {
+                margin-top: -12.3rem;
+            }
+
             main {
+                display: grid;
+                grid-template-areas: "formular kontakt";
+                margin-right: 1rem;
+                margin-top: 3rem;
                 padding-bottom: 3rem;
+                grid-gap: 7rem;
+            }
+
+            #kontakt_info {
+                 grid-area: kontakt;
+                margin-top: 1.5rem;
+                margin-left: 0rem;
+                margin-right: 0rem;
+            }
+
+            #tabel {
+                grid-area: formular;
+                margin-top: -0.4rem;
+            }
+
+            #kontakt_info h1 {
+                font-size: 2.2rem;
+                padding-bottom: 0.5rem;
+            }
+
+            #kontakt_info p {
+                font-size: 1.5rem;
+            }
+
+                input, textarea {
+                width: 100%;
+                margin-left: 2rem;
             }
 
 
-            input.tabel_kontrol.submit {
+            .tabel_kontrol_submit {
+                font-size: 1.5rem;
                 margin-left: 0rem;
-                margin-right: 12.5rem;
+                padding-right: 2rem;
+                margin-right: 15.5rem;
+            }
+
+            ::placeholder {
+                font-size: 1.5rem;
             }
         }
 
@@ -145,15 +248,6 @@
         /*******MEDIE Q DESKTOP****/
         @media only screen and (min-width:1025px) {
 
-                        li a:hover {
-                border-bottom: 0.1rem solid white;
-        border-top: 0.1rem solid white;
-    }
-            li.logo a:hover {
-                border-bottom: none;
-        border-top: none;
-
-            }
 
                 .logo_mobil img {
                 position: relative;
@@ -168,9 +262,14 @@
                 margin-top: -25rem;
             }
 
-       input.tabel_kontrol.submit {
+       .tabel_kontrol_submit {
                 margin-left: 0rem;
-                margin-right: 17.8rem;
+                margin-right: 26rem;
+            }
+
+
+       .tabel_kontrol_submit:hover {
+               background-color: var(--color-knap);
             }
 
 
@@ -196,6 +295,29 @@
                 margin-top: -0.3rem;
                 margin-bottom: 1.5rem;
             }
+
+            main {
+                margin-top: 12rem;
+                grid-gap: 9rem;
+            }
+
+            #tabel {
+                margin-top: -3.9rem;
+                margin-left: 1.5rem;
+            }
+
+            #kontakt_info {
+                margin-top: -2rem;
+                margin-right: 2.4rem;
+            }
+
+            #kontakt_info h1 {
+                font-size: 2rem
+            }
+
+            #kontakt_info p {
+                font-size: 1.4rem
+            }
     }
 
 
@@ -208,7 +330,7 @@
 
     <header>
         <span class="logo_mobil">
-            <a href="index.html"><img src="img/logo%20f%C3%A6rdig%20hvid.svg"></a>
+            <a href="index.html"><img src="img/logo%20f%C3%A6rdig%20hvid.svg" alt="mindful jewellery logo"></a>
         </span>
         <div class="navigation">
             <nav>
@@ -228,7 +350,7 @@
                         </li>
 
                         <li class="logo">
-                            <a href="index.html"><img src="img/logo%20f%C3%A6rdig%20hvid.svg" alt="logo"></a>
+                            <a href="index.html"><img src="img/logo%20f%C3%A6rdig%20hvid.svg" alt="mindful jewellery logo"></a>
                         </li>
 
                         <li>
@@ -236,7 +358,8 @@
                         </li>
 
                         <li>
-                            <a href="kontakt.html" style="font-size: 2.5rem;">Kontakt os</a>
+                            <a href="kontakt.html" style=" border-bottom: 0.1px solid white;
+                border-top: 0.1px solid white;">Kontakt os</a>
                         </li>
 
                     </ul>
@@ -245,9 +368,8 @@
         </div>
 
         <picture class="splash">
-            <source media="(min-width: 1024px)" srcset="img/coverkontakt-ringe.jpg" alt="Mindful Jewellery">
-            <source media="(min-width: 528px)" srcset="">
-            <img src="img/kontakt-cover-mobil.jpg">
+            <source media="(min-width: 1024px)" srcset="img/coverkontakt-ringe.jpg">
+            <img src="img/kontakt-cover-mobil.jpg" alt="mindful jewellery kontakt os">
         </picture>
 
         <section id="cover">
@@ -260,18 +382,10 @@
     </header>
 
     <main>
-        <section id="kontakt_info">
-            <div class="kontakt">
-                <h1 class="kontakt_overskrift"></h1>
-                <div class="indhold">
-                </div>
-            </div>
-        </section>
-
         <section id="tabel">
             <div class="kontakt_tabel">
 
-                <form id="kontakt_tabel" method="post" action="">
+                <form id="kontakt_tabel" method="post" action="#">
                     <input name="navn" type="text" class="tabel_kontrol" placeholder="Navn" required><br>
 
                     <input name="navn" type="text" class="tabel_kontrol" placeholder="Efternavn" required><br>
@@ -280,9 +394,18 @@
 
                     <textarea name="besked" class="tabel_kontrol" placeholder="Besked" rows="4" required></textarea><br>
 
-                    <input type="submit" class="tabel_kontrol submit" value="Send">
+                    <a href="kontakt.html" class="tabel_kontrol_submit knap">Send</a>
+                    <!-- <input type="submit" class="tabel_kontrol submit" value="Send"> -->
                 </form>
 
+            </div>
+        </section>
+
+        <section id="kontakt_info">
+            <div class="kontakt">
+                <h1 class="kontakt_overskrift"></h1>
+                <div class="indhold">
+                </div>
             </div>
         </section>
     </main>
@@ -291,21 +414,24 @@
     <footer>
         <div class="kontakt_footer">
             <h1>Mindful Jewellery</h1>
-            <p>Telefon: xxxxxxxx</p>
-            <p>Email: xxxxxxx</p>
-            <p>Man-fre: xxxxxxx</p>
+            <p>Telefon: 77 77 00 78</p>
+            <p>Email: kundeservice@mindfuljewellery.dk</p>
+            <p>Man-fre: kl.9.00 – 15.30</p>
         </div>
 
         <div class="some">
             <h1>Sociale medier</h1>
-            <img src="img/facebook.svg" alt="">
-            <img src="img/instagram.svg" alt="">
+            <div class="ikon">
+                <img src="img/facebook.svg" alt="mindful jewellery facebook">
+                <img src="img/instagram.svg" alt="mindful jewellery instagram">
+            </div>
         </div>
 
         <section class="sog">
             <p class="knap">Søg</p>
         </section>
     </footer>
+
 
     <script>
         let kontakt;
@@ -322,6 +448,9 @@
             let url = "http://mariacronehvidberg.dk/kea/eksamen/kode/wordpress/wp-json/wp/v2/kontakt/151"
             let jsonData = await fetch(url);
             kontakt = await jsonData.json();
+
+            document.querySelector("label .menu").addEventListener("click", open);
+
             console.log("kontakt");
 
 
@@ -364,6 +493,8 @@
             // } else {
             //     menu.style.display = "none";
             // }
+
+            start();
         }
 
     </script>

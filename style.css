@@ -6,18 +6,13 @@
         }
 
         :root {
-            --color-morkgron: #a0aba2;
             --color-mosegron: #a8b79e;
-            --color-gron: #6aa497;
-            --color-orange: #bf925a;
-
             --color-sand: #c2aa85;
-            --color-sand2: #bcaf9b;
             --color-lyssand: #ddd8c4;
-            --color-text_mork: #b2b2b2;
-            --color-scroll: rgba(255, 255, 255, 0.24);
 
-            --color-hover: rgba(180, 128, 64, 0.71);
+            --color-text_mork: #b2b2b2;
+            --color-footer: #d6d0b6;
+            --color-hover: rgba(180, 128, 64, 0.72);
             --color-knap: rgba(255, 255, 255, 0.09);
         }
 
@@ -25,22 +20,9 @@
             width: 100%;
         }
 
-        #splash img {
-            background-size: cover;
-        }
-
-        .knap {
-            text-decoration: none;
-            border: 0.5px white solid;
-            padding: 0.5rem;
-            text-align: center;
-        }
-
-
         /**GENERELLE STYLINGS**/
 
         body {
-            margin: 0;
             max-width: 1280px;
             padding: 0;
             margin: 0 auto;
@@ -59,7 +41,6 @@
         }
 
         p {
-            /* font-family: 'Hind', sans-serif; */
             font-family: 'Titillium Web', sans-serif;
             color: white;
             margin-left: 1rem;
@@ -69,28 +50,51 @@
 
         nav a {
             font-family: 'Titillium Web', sans-serif;
-            font-weight: 300;
+            padding-top: 0.2rem;
+            padding-bottom: 0.2rem;
+            font-weight: 200;
             color: white;
         }
 
         a {
             font-family: 'Titillium Web', sans-serif;
             font-weight: 200;
-            /*font-family: 'Hind', sans-serif;*/
             color: white;
         }
 
         footer {
-            background-color: var(--color-lyssand);
+            background-color: var(--color-footer);
         }
 
-        /******MOBIL*****/
 
-        #splash img {
-            max-width: 375px;
+        .knap {
+            text-decoration: none;
+            border: 0.5px white solid;
+            padding: 0.5rem;
+            text-align: center;
         }
+
+        /* nyhedsbrev knap */
+        .nyhedsbrev {
+            font-family: 'Titillium Web', sans-serif;
+            font-weight: 200;
+            position: absolute;
+            background-color: transparent;
+            font-size: 1.3rem;
+            color: white;
+            padding: 0.5rem 2rem;
+            border: 0.5px solid white;
+            cursor: pointer;
+            margin-left: 15rem;
+            margin-top: 2rem;
+        }
+
 
         /*****COVER BILLEDE****/
+
+        .splash img {
+            margin-top: -12.5rem;
+        }
 
         #cover .overskrift {
             margin-top: -10rem;
@@ -100,26 +104,55 @@
 
         #cover h2 {
             font-size: 1.4rem;
-            font-weight: 200;
-            margin-top: -1rem;
+            margin-top: -0.8rem;
         }
 
         #cover p {
             font-size: 1.1rem;
-            font-family: 'Titillium Web', sans-serif;
-            font-weight: 200;
             margin-top: -0.5rem;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+
+        #kontakt h1 {
+            font-size: 1.4rem;
+            margin-top: -0.8rem;
+        }
+
+        #kontakt p {
+            font-size: 1.1rem;
+            margin-top: -0.5rem;
+            margin-bottom: 0.8rem;
         }
 
         #cover a {
-            font-family: 'Titillium Web', sans-serif;
-            font-weight: 200;
             font-size: 1rem;
             padding: 0.5rem;
             text-decoration: none;
             border: 0.02px solid white;
-            margin-left: 11.5rem;
+            margin-left: 1rem;
+
+        }
+
+        /*****COVER BILLEDE****/
+
+        .cover_overskrift {
+            margin-top: -10rem;
+            font-size: 2.3rem;
+            font-weight: 400;
+        }
+
+        #indhold p {
+            margin-bottom: 1.2rem;
+        }
+
+
+        #cover .nyhedsbrev {
+            font-size: 1rem;
+            padding: 0.5rem;
+            text-decoration: none;
+            border: 0.02px solid white;
+            margin-left: 1rem;
 
         }
 
@@ -127,14 +160,14 @@
 
         /****BURGERMENU****/
 
-        nav a {
-            font-size: 1.5rem;
-            text-align: center;
-            padding-bottom: 0.5rem;
+        .logo img {
+            width: 50%;
         }
 
-        nav a:hover {
-            color: var(--color-orange);
+        nav a {
+            font-size: 1.7rem;
+            text-align: center;
+            padding-bottom: 0.5rem;
         }
 
 
@@ -218,10 +251,10 @@
         }
 
         label ul {
-            z-index: 200;
+            z-index: 100;
             position: fixed;
             width: 100%;
-            top: 20rem;
+            top: 21rem;
             left: 10.5rem;
             transform: translate(-50%, -50%);
             opacity: 0;
@@ -245,9 +278,11 @@
         /*****LOGO****/
 
         .logo_mobil img {
-            position: absolute;
-            width: 35%;
+            width: 42%;
+            position: relative;
+            z-index: 100;
         }
+
 
 
         /*****FOOTER****/
@@ -263,27 +298,30 @@
         }
 
         footer h1 {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: 200;
             margin: 0;
         }
 
         footer p {
+            font-size: 1rem;
             margin-top: -0.5rem;
         }
 
         footer img {
             text-align: center;
-            width: 10%;
+            width: 8%;
             margin-top: 0.5rem;
-            margin-left: 0.3rem;
+            margin-left: 0.5rem;
         }
+
 
         footer .sog p {
             font-size: 1rem;
             margin-top: 1rem;
             margin-bottom: 0.5rem;
-            margin-right: 11rem;
+            margin-right: 6rem;
+            margin-left: 6rem;
             padding: 0rem 0rem 0rem 0.5rem;
             text-align: left;
         }
@@ -295,6 +333,10 @@
         @media only screen and (min-width: 400px) {
 
             /*****COVER BILLEDE****/
+
+            .splash img {
+                margin-top: -13.8rem;
+            }
 
             #cover .overskrift {
                 margin-top: -11rem;
@@ -316,23 +358,29 @@
 
             }
 
+            #cover .knap {
+                font-size: 1.1rem;
+                margin-left: 14rem;
+
+            }
+
 
             /****BURGER****/
 
             label .menu {
-                top: 38.5rem;
+                top: 37.5rem;
                 left: 18rem;
             }
 
             label .hamburger {
-                top: 43rem;
+                top: 42rem;
                 left: 21rem;
                 width: 50px;
             }
 
             label ul {
                 top: 22rem;
-                left: 12.5rem;
+                left: 11.9rem;
             }
 
         }
@@ -357,23 +405,13 @@
 
             label ul {
                 top: 25rem;
+                left: 10.7rem;
             }
-
 
             /****LOGO****/
 
             .logo_mobil img {
                 margin-top: 0rem;
-            }
-
-
-            footer .sog p {
-                font-size: 1rem;
-                margin-top: 1rem;
-                margin-bottom: 0.5rem;
-                margin-right: 11rem;
-                padding: 0rem 0rem 0rem 0.5rem;
-                text-align: left;
             }
 
         }
@@ -382,14 +420,24 @@
         /*****MEDIA Q IPAD PORTRAIT*******/
         @media only screen and (min-width:600px) {
 
-            #splash img {
-                width: 768px;
-            }
 
 
             /*****COVER BILLEDE****/
+            .splash img {
+                margin-top: -25.3rem;
+            }
+
+            .logo_mobil img {
+                width: 35%;
+            }
+
 
             #cover .overskrift {
+                margin-top: -20rem;
+                font-size: 4.3rem;
+            }
+
+            .cover_overskrift {
                 margin-top: -20rem;
                 font-size: 4.3rem;
             }
@@ -406,17 +454,23 @@
             }
 
             #cover a {
-                font-size: 2.3rem;
+                font-size: 1.7rem;
                 padding: 0.7rem;
                 margin-left: 23rem;
 
             }
 
+            #cover .nyhedsbrev {
+                font-size: 1.7rem;
+                padding: 0.7rem;
+                margin-left: 1rem;
+
+            }
 
             /****BURGERMENU****/
 
             label a {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
 
             .logo img {
@@ -457,13 +511,14 @@
             footer {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
-                padding-bottom: 4rem;
+                padding-bottom: 2rem;
             }
 
             footer .some h1 {
+                font-size: 1.7rem;
                 display: block;
-                text-align: center;
                 margin-top: 1rem;
+                margin-left: 4.5rem;
             }
 
             .kontakt_footer {
@@ -471,23 +526,26 @@
             }
 
             footer h1 {
+                font-size: 1.7rem;
                 text-align: left;
-                margin-left: 2rem;
-                ;
-                margin-bottom: 1rem;
+                margin-left: 1rem;
+                margin-bottom: 0.1rem;
             }
 
             footer p {
+                font-size: 1.2rem;
                 text-align: left;
-                margin-top: -0.5rem;
-                margin-left: 2rem;
+                margin-left: 1rem;
             }
 
             footer img {
-                text-align: center;
                 width: 15%;
-                margin-top: -1rem;
-                margin-left: 1.5rem;
+                margin-top: 0.5rem;
+                margin-left: 0.5rem;
+            }
+
+            .some {
+                margin-left: -4rem;
             }
 
             footer .sog p {
@@ -495,6 +553,7 @@
                 margin-top: 1.5rem;
                 margin-bottom: 0.5rem;
                 margin-right: 1rem;
+                margin-left: 2rem;
                 padding: 0rem 0rem 0rem 0.5rem;
                 text-align: left;
             }
@@ -508,19 +567,33 @@
         @media only screen and (min-width: 1024px) {
             /*****COVER BILLEDE****/
 
+            .splash img {
+                margin-top: -13rem;
+            }
+
             .logo_mobil img {
-                width: 20%;
+                width: 15%;
+            }
+
+            #cover {
+                margin-top: 7rem;
+            }
+
+            #cover .overskrift {
+                font-size: 3.5rem;
+            }
+
+            #cover h2 {
+                font-size: 2.2rem;
             }
 
             #cover p {
+                font-size: 1.5rem;
                 margin-bottom: 1rem;
             }
 
             #cover a {
-                font-size: 2rem;
-                padding: 0.7rem;
-                margin-left: 23rem;
-
+                font-size: 1.2rem;
             }
 
 
@@ -536,6 +609,7 @@
                 padding-top: 3rem;
                 padding-bottom: 2rem;
             }
+
 
             label .menu {
                 top: 40rem;
@@ -557,12 +631,21 @@
                 font-size: 2rem;
             }
 
+            .some {
+                margin-left: -3rem;
+            }
+
+            footer .some h1 {
+                margin-left: 6.5rem;
+            }
+
             footer p {
                 font-size: 1.2rem;
             }
 
             footer img {
-                margin-left: 1rem;
+                width: 12%;
+                margin-left: 0.5rem;
             }
 
             footer .sog p {
@@ -575,13 +658,24 @@
         /*******MEDIE Q DESKTOP****/
         @media only screen and (min-width:1025px) {
 
+
+            li a:hover {
+                border-bottom: 0.1px solid white;
+                border-top: 0.1px solid white;
+            }
+
+            li.logo a:hover {
+                border-bottom: none;
+                border-top: none;
+
+            }
+
             /*********COVER BILLEDE*******/
 
-
             .splash img {
-                max-width: 1920px;
-                height: 550px;
+                margin-top: 0rem;
             }
+
 
             .logo_mobil img {
                 position: absolute;
@@ -590,20 +684,20 @@
             }
 
 
-            #cover {
-                margin-left: 2.5rem;
-            }
-
             #cover .overskrift {
                 font-size: 3.5rem;
                 margin-top: -15rem;
                 font-weight: 300;
             }
 
+            #cover {
+                margin-top: -6rem;
+                margin-left: 2.5rem;
+            }
+
             .cover_overskrift {
                 font-size: 3.5rem;
                 margin-top: -15rem;
-                font-weight: 300;
             }
 
             #cover h2 {
@@ -613,31 +707,31 @@
             }
 
             #cover p {
-                font-size: 1.4rem;
+                font-size: 1.2rem;
                 margin-top: -0.3rem;
                 margin-bottom: 1.5rem;
             }
 
-            #cover a {
-                text-align: center;
+            #cover .nyhedsbrev {
                 font-size: 1.2rem;
                 padding: 0.8rem;
-                padding-left: 2em;
-                padding-right: 2rem;
                 margin-left: 1rem;
                 margin-top: 2rem;
-                font-weight: 200;
-                font-size: 1.5rem;
-                text-decoration: none;
-                border: 0.02px solid white;
+                background-color: transparent;
             }
+
+            #cover a:hover {
+                background-color: var(--color-knap);
+            }
+
+
 
             /*****NAVIGATION****/
 
             .logo_mobil img {
                 position: absolute;
                 width: 12%;
-                margin-left: 35rem;
+                margin-left: 34.5rem;
             }
 
             .logo img {
@@ -654,7 +748,7 @@
 
             nav a {
                 display: inline;
-                margin-left: 6rem;
+                margin-left: 4rem;
 
             }
 
@@ -680,9 +774,9 @@
             .hide {
                 display: inline-block;
                 position: absolute;
-                top: 1rem;
+                top: 2.5rem;
                 width: 100%;
-                margin-left: -33rem;
+                margin-left: -26.5rem;
                 margin-top: -14rem
             }
 
@@ -705,21 +799,47 @@
 
 
             footer h1 {
-                font-size: 1.5rem;
+                font-size: 1.7rem;
+                margin-left: 3.4rem;
             }
 
             footer p {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
+                line-height: 2rem;
+                margin-left: 3.4rem;
+            }
+
+            footer .some h1 {
+                margin-left: 9rem;
+            }
+
+            footer .some {
+                margin-left: -1rem;
             }
 
             footer img {
                 width: 10%;
-                margin-left: 1.5rem;
+                margin-left: 0.5rem;
             }
 
             footer .sog p {
                 font-size: 1.2rem;
                 padding: 0.5rem;
+                margin-right: 3.5rem;
             }
 
+        }
+
+        /*******MEDIE Q DESKTOP over 1280px****/
+        @media only screen and (min-width:1026px) {
+
+            nav a,
+            .hide {
+                max-width: 1280px;
+            }
+
+            .logo_mobil img {
+                max-width: 640px;
+                max-height: 210px;
+            }
         }

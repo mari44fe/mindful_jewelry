@@ -4,22 +4,36 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mindful Jewellery</title>
+    <title>Smykkekollektionen | Mindful Jewellery</title>
+    <meta name="description" content="Smykkerne hos Mindful Jewellery er smykker med betydning, find en fin halskæde, ring eller øreringe i enten guld eller sølv.">
+    <meta name="keywords" content="Smykker,Halskæde,Ring,Øreringe,Hoop,Ørestikker,Perler,Fingerringe,Mindfulness,natursmykker,smykker med betydning,Sølv,Guld,Forgyldt,Sterling sølv,Følelser,Miljø,Minder,Bæredygtighed">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700|Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
 
     <style>
 
         body {
-            background-color: var(--color-lyssand);
+            background-color: var(--color-mosegron);
         }
 
-        .nyhedsbrev:hover {
+        #cover .nyhedsbrev:hover {
             background-color: var(--color-knap);
         }
 
-        .logo_mobil img {
-            position: static;
+        /* for touch screen */
+        @media (hover: none) {
+
+            #cover .nyhedsbrev {
+               background-color: var(--color-knap);
+            }
+
+          .tabel_kontrol.submit {
+            background-color: var(--color-knap);
+        }
+  }
+
+        #cover .nyhedsbrev {
+            margin-top: -1rem;
         }
 
 .column img {
@@ -27,17 +41,18 @@
   height: auto;
 }
 
-.container {
-    width: auto;
-    column-count: 1;
-    margin-top: 4rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin-bottom: 2rem;
+        /*****GALLERY****/
+
+main {
     border: 0.5px solid white;
-    padding: 2rem;
+    margin: 5rem 1rem 2rem 1rem;
         }
 
+.container, .container1, .container2 {
+    width: auto;
+    padding: 2rem;
+    padding-bottom: 0rem;
+        }
 
 /* hover styles */
 .column {
@@ -53,35 +68,147 @@
   overflow: hidden;
 }
 
+        .container h1, .container1 h1, .container2 h1 {
+            font-size: 1.5rem;
+            margin-left: -1rem;
+            margin-top: -0.5rem;
+        }
 
-.overskrift {
-  font-size: 1.5rem;
-    font-weight: 300;
+        .container p, .container1 p, .container2 p {
+            font-size: 1.1rem;
+            margin-left: -1rem;
+            margin-top: -0.5rem;
+            padding-bottom: 1rem;
+        }
+
+
+.overskrift_ringe, .overskrift_hals, .overskrift_ore {
+  font-size: 1.2rem;
+  font-weight: 300;
   height: auto;
   width: 100%;
   background: var(--color-hover);
 
   /*Centrering af text*/
-    padding: 1rem;
+  padding: 1rem;
   display: flex;
-    text-align: center;
+  text-align: center;
   align-items: center;
   justify-content: center;
 }
 
+
+ /****POP UP NYHEDSBREV****/
+
+/* pop up effekt*/
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.77);
+}
+
+/*pop up vindue */
+.popup_form {
+     background-image: url(grafik/blad_lang_nyhed.svg);
+    text-align: center;
+width: 20rem;
+    height: 30rem;
+  padding: 0rem;
+    padding-top: 4rem;
+background-color: var(--color-sand);
+    margin-left: 1.7rem;
+    margin-top: 4rem;
+}
+
+        .popup_form p {
+         font-size: 1.7rem;
+            margin-bottom: 1rem;
+        }
+
+        p.webshop {
+            font-size: 1.1rem;
+            padding: 0.5rem;
+            border: 0.5px solid var(--color-lyssand);
+        }
+
+/* input felter*/
+.popup_form input[type=text], .popup_form input[type=password] {
+  width: 90%;
+  padding: 1rem;
+  margin: 0.5rem 0 1.2rem 0;
+  border: 0.5px solid white;
+  background: none;
+}
+    ::placeholder {
+        font-family: 'Titillium Web', sans-serif;
+        color: white;
+            font-size: 1rem;
+        font-weight: 200;
+    }
+
+
+/* ja tak knap*/
+.popup_form .ja {
+    font-family: 'Titillium Web', sans-serif;
+  background-color: var(--color-knap);
+    font-size: 1rem;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: 0.5px solid white;
+  cursor: pointer;
+  width: 40%;
+    margin-right: 0.3rem;
+    font-weight: 200;
+    cursor: pointer;
+
+}
+
+/* nej tak knap */
+.popup_form .nej {
+    font-family: 'Titillium Web', sans-serif;
+   background-color: var(--color-knap);
+    font-size: 1rem;
+  color: white;
+  padding: 0.5rem 2rem;
+  border: 0.5px solid white;
+  cursor: pointer;
+  width: 40%;
+    margin-left: 0.3rem;
+  margin-bottom: 0.5rem;
+    font-weight: 200;
+    cursor: pointer;
+}
 
 
         /*****MEDIA Q iphone plus*******/
         @media only screen and (min-width: 400px) {
 
 
+            /***GALLERY****/
+            .overskrift_ringe, .overskrift_hals, .overskrift_ore {
+                font-size: 1.5rem;
+            }
+
+            /****POP UP****/
+            .popup_form {
+            width: 22rem;
+            margin-left: 1.9rem;
+            margin-top: 5rem;
+        }
 
         }
 
         /*****MEDIA Q iphone 10*******/
         @media only screen and (min-height: 812px) {
 
-
+           .popup_form {
+            margin-top: 7rem;
+        }
 
         }
 
@@ -89,20 +216,172 @@
         /*****MEDIA Q IPAD PORTRAIT*******/
         @media only screen and (min-width:600px) {
 
-            .container {
-    column-count: 2;
-    column-gap: 2rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    padding: 2.5rem;
+                   .splash img {
+                margin-top: -18.3rem;
+            }
+
+            .cover_overskrift {
+                margin-top: -18rem;
+            }
+
+            main {
+                margin-top: 10rem;
+                padding-bottom: 2rem;
+            }
+
+
+            .container, .container1, .container2 {
+                margin-left: 2rem;
+                margin-right: 2rem;
+                padding: 2.5rem;
+                padding-bottom: 0rem;
+                margin-top: 1rem;
+                        }
+
+            .container h1, .container1 h1, .container2 h1 {
+                font-size: 2.6rem;
+                margin-left: -2rem;
+            }
+
+            .container p, .container1 p, .container2 p {
+                font-size: 1.8rem;
+                margin-left: -2rem;
+                padding-bottom: 1.5rem;
+            }
+
+            .beholder, .beholder1, .beholder2 {
+                   column-count: 2;
+                column-gap: 2rem;
+            }
+
+                    /****POP UP NYHEDSBREV****/
+
+/*pop up vindue */
+.popup_form {
+width: 35rem;
+    height: 45rem;
+  padding: 1rem;
+    padding-top: 5rem;
+    margin-left: 7rem;
+    margin-top: 7rem;
+}
+
+        .popup_form p {
+         font-size: 2.6rem;
+            margin-bottom: 1.5rem;
         }
+
+        p.webshop {
+            font-size: 1.8rem;
+            padding: 1rem;
+        }
+
+/* input felter*/
+.popup_form input[type=text], .popup_form input[type=password] {
+  padding: 1.8rem;
+}
+    ::placeholder {
+        color: white;
+            font-size: 1.2rem;
+    }
+
+
+/* ja tak knap*/
+.popup_form .ja {
+    font-size: 1.2rem;
+  padding: 1rem 1rem;
+    margin-right: 0.5rem;
+
+}
+
+/* nej tak knap */
+.popup_form .nej {
+    font-size: 1.2rem;
+  padding: 1rem 1rem;
+    margin-right: 0.5rem;
+}
+
         }
 
         /******MEDIA Q IPAD LANDSCAPE*****/
 
         @media only screen and (min-width: 1024px) {
-    .container {
-    column-count: 3;
+
+            .splash img {
+                margin-top: -12.3rem;
+            }
+
+            .cover_overskrift {
+                margin-top: -21rem;
+            }
+
+            #cover .nyhedsbrev {
+                font-size: 1.2rem;
+            }
+
+/******GALLERY***/
+            main {
+                margin-top: 7rem;
+            }
+
+    .container, .container1, .container2 {
+        margin-top: 1.5rem;
+        }
+
+            .container h1, .container1 h1, .container2 h1{
+        font-size: 2.2rem;
+                margin-top: -1rem;
+        }
+
+    .container p, .container1 p, .container2 p {
+        font-size: 1.3rem;
+        padding-bottom: 1.5rem;
+        }
+
+
+            .beholder {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                width: 110%;
+                margin-left: -2.5rem;
+            }
+
+
+            .beholder2 {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                width: 110%;
+                margin-left: -2.5rem;
+            }
+
+            .beholder1{
+                   column-count: 3;
+                column-gap: 2rem;
+            }
+
+            .container1 h1, .container2 h1 {
+                margin-top: -1rem;
+            }
+
+                        /****POP UP NYHEDSBREV****/
+
+/*pop up vindue */
+.popup_form {
+width: 30rem;
+    height: 40rem;
+  padding: 0.5rem;
+    padding-top: 5rem;
+    margin-left: 16rem;
+    margin-top: 5em;
+}
+
+        .popup_form p {
+         font-size: 2.2rem;
+        }
+
+        p.webshop {
+            font-size: 1.5rem;
+            padding: 1rem;
         }
 
         }
@@ -113,8 +392,8 @@
 
             /****NAVIGATION****/
             li a:hover {
-                border-bottom: 0.1rem solid white;
-        border-top: 0.1rem solid white;
+                border-bottom: 0.1px solid white;
+        border-top: 0.1px solid white;
     }
             li.logo a:hover {
                 border-bottom: none;
@@ -126,59 +405,55 @@
                 margin-top: -48rem;
             }
 
-
-
-                    /*********COVER BILLEDE*******/
-
-               .logo_mobil img {
-                position: absolute;
-                width: 12%;
-                margin-left: 35rem;
+     /*********COVER BILLEDE*******/
+            #cover .nyhedsbrev {
+                margin-top: -1rem;
             }
 
-#cover {
-margin-left: 2.5rem;
-}
+            .splash img {
+                margin-top: 0rem;
+            }
 
-.cover_overskrift {
-font-size: 3.5rem;
-margin-top: -15rem;
-font-weight: 300;
-}
-
-#cover h2 {
-font-size: 2rem;
-font-weight: 200;
-margin-top: -1.2rem;
-}
-
-#cover p {
-font-size: 1.4rem;
-margin-top: -0.3rem;
-margin-bottom: 1.5rem;
-}
-
-#cover a {
-font-size: 1.2rem;
-padding: 0.8rem;
-margin-left: 1rem;
-margin-top: 2rem;
-}
+            .cover_overskrift {
+                margin-top: -15rem;
+            }
 
 
-   /********MASON GALLERY*****/
-    .container {
-    width: auto;
-    column-count: 6;
-    column-gap: 1rem;
-                margin-top: 9rem;
-    margin-left: 3.5rem;
-    margin-right: 3.5rem;
-    margin-bottom: 2rem;
-    border: 0.5px solid white;
-    padding: 4rem;
+  /******GALLERY***/
+            main {
+                margin-left: 3.5rem;
+                margin-right: 3.5rem;
+            }
+
+    .container, .container1, .container2 {
+        margin-top: 0.5rem;
         }
 
+            .container h1, .container1 h1, .container2 h1 {
+        font-size: 2rem;
+        }
+
+    .container p, .container1 p, .container2 p {
+        font-size: 1.2rem;
+        }
+
+
+            .beholder, .beholder2 {
+                margin-left: -0.2rem;
+                margin-bottom: 2rem;
+                width: 101%;
+            }
+
+
+            .beholder1{
+                   column-count: 4;
+                column-gap: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            .container1 h1, .container2 h1 {
+                margin-top: -1rem;
+            }
 
 /* hover styles */
 .column {
@@ -199,8 +474,8 @@ margin-top: 2rem;
   /*transform: scale(1.1);*/
 }
 
-.overskrift {
-  font-size: 1rem;
+.overskrift_ringe, .overskrift_hals, .overskrift_ore {
+  font-size: 1.2rem;
     font-weight: 300;
   text-decoration: none;
   z-index: 1;
@@ -221,7 +496,15 @@ margin-top: 2rem;
   justify-content: center;
 }
 
-.column:hover .overskrift {
+.column:hover .overskrift_ringe {
+  opacity: 1;
+}
+
+.column:hover .overskrift_hals {
+  opacity: 1;
+}
+
+.column:hover .overskrift_ore {
   opacity: 1;
 }
 
@@ -229,89 +512,56 @@ margin-top: 2rem;
   filter: blur(2px);
 }
 
-/*****POP UP NYHEDSBREV*****/
-
-            #popup {
-                margin-top: -80rem;
-            }
-/* nyhedsbrev knap */
-.nyhedsbrev {
-    position: absolute;
-  background-color: transparent;
-    font-size: 1rem;
-  color: white;
-    font-weight: 300;
-  padding: 0.5rem 2rem;
-  border: 0.5px solid white;
-  cursor: pointer;
-    margin-left: 1rem;
-margin-top: -1rem;
-}
-
-/* pop up effekt*/
-.popup {
-  display: none;
-  position: absolute;
-  z-index: 9;
-}
+  /****POP UP NYHEDSBREV****/
 
 /*pop up vindue */
 .popup_form {
-    text-align: center;
-width: 20rem;
-    height: 30rem;
-  padding: 1rem;
-background-color: #ddd8c4;
-    margin-left: 20rem;
-    overflow: hidden;
+width: 25rem;
+height: 35rem;
+padding: 1rem;
+padding-top: 4rem;
+margin-left: 27rem;
+margin-top: 2rem;
+}
+
+.popup_form p {
+font-size: 1.8rem;
+}
+
+p.webshop {
+font-size: 1.1rem;
+padding: 1rem;
 }
 
 /* input felter*/
 .popup_form input[type=text], .popup_form input[type=password] {
-  width: 83%;
-  padding: 1rem;
-  margin: 1rem 0 1rem 0;
-  border: 0.5px solid white;
-  background: none;
+  padding: 1.2rem;
 }
     ::placeholder {
-        color: white;
-            font-size: 0.8rem;
+            font-size: 1.1rem;
     }
 
 
 /* ja tak knap*/
 .popup_form .ja {
-  background-color: transparent;
-    font-size: 0.8rem;
-  color: white;
-  padding: 0.5rem 1rem;
-  border: 0.5px solid white;
-  cursor: pointer;
-  width: 40%;
-    margin-right: 0.2rem;
+    background-color: transparent;
+    font-size: 1.1rem;
+    margin-right: 0.5rem;
 
 }
 
 /* nej tak knap */
 .popup_form .nej {
-   background-color: transparent;
-    font-size: 0.8rem;
-  color: white;
-  padding: 0.5rem 2rem;
-  border: 0.5px solid white;
-  cursor: pointer;
-  width: 40%;
-    margin-left: 0.2rem;
-  margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  padding: 1rem 1rem;
+    margin-right: 0.5rem;
+      background-color: transparent;
 }
 
 /* hover effekter*/
 .popup_form .ja:hover, .nej:hover, .nyhedsbrev:hover {
-  background-color: var(--color-orange);
   background-color: var(--color-knap);
 }
-
 
 
     }
@@ -324,7 +574,7 @@ background-color: #ddd8c4;
 
     <header>
         <span class="logo_mobil">
-            <a href="index.html"><img src="img/logo%20f%C3%A6rdig%20hvid.svg"></a>
+            <a href="index.html"><img src="img/logo%20f%C3%A6rdig%20hvid.svg" alt="mindful jewellery logo"></a>
         </span>
         <div class="navigation">
             <nav>
@@ -340,11 +590,12 @@ background-color: #ddd8c4;
                         </li>
 
                         <li>
-                            <a href="smykker.html" style="font-size: 2.5rem;">Smykker</a>
+                            <a href="smykker.html" style=" border-bottom: 0.1px solid white;
+                border-top: 0.1px solid white;">Smykker</a>
                         </li>
 
                         <li class="logo">
-                            <a href="index.html"><img src="img/logo%20f%C3%A6rdig%20hvid.svg" alt="logo"></a>
+                            <a href="index.html"><img src="img/logo%20f%C3%A6rdig%20hvid.svg" alt="mindful jewellery logo"></a>
                         </li>
 
                         <li>
@@ -363,9 +614,8 @@ background-color: #ddd8c4;
 
 
         <picture class="splash">
-            <source media="(min-width: 1024px)" srcset="img/coversmykker.jpg" alt="Mindful Jewellery">
-            <source media="(min-width: 528px)" srcset="">
-            <img src="img/cover-smykker-mobil.jpg">
+            <source media="(min-width: 1024px)" srcset="img/cover-smykke-desktop.jpg">
+            <img src="img/mobil-smykker-cover.jpg" alt="mindful jewellery smykke">
         </picture>
 
         <section id="cover">
@@ -375,23 +625,60 @@ background-color: #ddd8c4;
                 <p></p>
             </section>
             <button class="nyhedsbrev">Vær den første til at få besked</button>
-            <!-- <a href="" class="nyhedsbrev">Vær den første til at få besked </a> -->
         </section>
     </header>
 
     <template class="temp">
         <article class="column">
             <div class="overskrift_billede">
-                <img src="" alt="">
+                <img class="ringe" src="#" alt="">
             </div>
-            <a class="overskrift"></a>
+            <a class="overskrift_ringe"></a>
         </article>
-
     </template>
 
-    <section class="container">
 
-    </section>
+    <template class="temp1">
+        <article class="column">
+            <div class="overskrift_billede">
+                <img class="hals" src="#" alt="">
+            </div>
+            <a class="overskrift_hals"></a>
+        </article>
+    </template>
+
+
+    <template class="temp2">
+        <article class="column">
+            <div class="overskrift_billede">
+                <img class="ore" src="#" alt="">
+            </div>
+            <a class="overskrift_ore"></a>
+        </article>
+    </template>
+
+    <main>
+        <section class="container">
+            <h1>Ringe</h1>
+            <p>Det vigtigste for os i designet af disse ringe er, bla bla bla bla.</p>
+            <div class="beholder">
+            </div>
+        </section>
+
+        <section class="container1">
+            <h1>Halskæder</h1>
+            <p>Det vigtigste for os i designet af disse halskæder er, bla bla bla bla.</p>
+            <div class="beholder1">
+            </div>
+        </section>
+
+        <section class="container2">
+            <h1>Øreringe</h1>
+            <p>Det vigtigste for os i designet af disse øreringe er, bla bla bla bla.</p>
+            <div class="beholder2">
+            </div>
+        </section>
+    </main>
 
     <div class="popup" id="popup">
         <form action="/action_page.php" class="popup_form">
@@ -400,7 +687,6 @@ background-color: #ddd8c4;
             <p class="webshop">Webshoppen åbner efteråret 2019,<br> vær den første til at få besked</p>
 
             <div class="udfyld">
-                <label for="email"></label>
                 <input type="text" placeholder="Email" name="email" required>
 
                 <button type="button" class="btn ja">Tilmeld mig</button>
@@ -416,15 +702,17 @@ background-color: #ddd8c4;
     <footer>
         <div class="kontakt_footer">
             <h1>Mindful Jewellery</h1>
-            <p>Telefon: xxxxxxxx</p>
-            <p>Email: xxxxxxx</p>
-            <p>Man-fre: xxxxxxx</p>
+            <p>Telefon: 77 77 00 78</p>
+            <p>Email: kundeservice@mindfuljewellery.dk</p>
+            <p>Man-fre: kl.9.00 – 15.30</p>
         </div>
 
         <div class="some">
             <h1>Sociale medier</h1>
-            <img src="img/facebook.svg" alt="">
-            <img src="img/instagram.svg" alt="">
+            <div class="ikon">
+                <img src="img/facebook.svg" alt="mindful jewellery facebook">
+                <img src="img/instagram.svg" alt="mindful jewellery instagram">
+            </div>
         </div>
 
         <section class="sog">
@@ -432,16 +720,21 @@ background-color: #ddd8c4;
         </section>
     </footer>
 
+
     <script>
         let indhold = {};
-        let smykker = [];
+        let ringe = [];
+        let halskader = [];
+        let oreringe = [];
+
 
         document.addEventListener("DOMContentLoaded", start);
 
         function start() {
             getJson1();
             getJson2();
-
+            getJson3();
+            getJson4();
         }
 
         async function getJson1() {
@@ -464,26 +757,80 @@ background-color: #ddd8c4;
             document.querySelector("#indhold").innerHTML = indhold.content.rendered;
         }
 
-        async function getJson2() {
-            let url = "http://mariacronehvidberg.dk/kea/eksamen/kode/wordpress/wp-json/wp/v2/jewels?per_page=16"
-            let jsonData = await fetch(url);
-            smykker = await jsonData.json();
-            console.log("smykker");
 
-            visSmykker();
+        //henter indhold af ringe sektion
+        async function getJson2() {
+            let url = "http://mariacronehvidberg.dk/kea/eksamen/kode/wordpress/wp-json/wp/v2/ring?per_page=25"
+            let jsonData = await fetch(url);
+            ringe = await jsonData.json();
+            console.log("ringe");
+
+            visRinge();
+
+        }
+
+        function visRinge() {
+            let temp = document.querySelector(".temp");
+            let dest = document.querySelector(".beholder");
+            ringe.forEach(ring => {
+
+                let klon = temp.cloneNode(true).content;
+                klon.querySelector(".ringe").src = ring.billede.guid;
+                klon.querySelector(".ringe").alt = ring.post_excerpt;
+                klon.querySelector(".overskrift_ringe").textContent = ring.navn;
+                dest.appendChild(klon);
+            });
 
         }
 
 
-        function visSmykker() {
-            let dest = document.querySelector(".container");
-            let temp = document.querySelector(".temp");
-            smykker.forEach(smyk => {
+        //henter indhold af halskæder sektion
+        async function getJson3() {
+            let url = "http://mariacronehvidberg.dk/kea/eksamen/kode/wordpress/wp-json/wp/v2/halskde?per_page=25"
+            let jsonData = await fetch(url);
+            halskader = await jsonData.json();
+            console.log("halskæder");
+
+            visHals();
+
+        }
+
+
+        function visHals() {
+            let temp = document.querySelector(".temp1");
+            let dest = document.querySelector(".beholder1");
+            halskader.forEach(hals => {
 
                 let klon = temp.cloneNode(true).content;
-                klon.querySelector("img").src = smyk.billede.guid;
+                klon.querySelector(".hals").src = hals.billede.guid;
+                klon.querySelector(".hals").alt = hals.post_excerpt;
+                klon.querySelector(".overskrift_hals").textContent = hals.navn;
+                dest.appendChild(klon);
+            });
 
-                klon.querySelector(".overskrift").textContent = smyk.navn;
+        }
+
+        //henter indhold af øreringe sektion
+        async function getJson4() {
+            let url = "http://mariacronehvidberg.dk/kea/eksamen/kode/wordpress/wp-json/wp/v2/rering?per_page=25"
+            let jsonData = await fetch(url);
+            oreringe = await jsonData.json();
+            console.log("ørering");
+
+            visOrering();
+
+        }
+
+
+        function visOrering() {
+            let temp = document.querySelector(".temp2");
+            let dest = document.querySelector(".beholder2");
+            oreringe.forEach(ore => {
+
+                let klon = temp.cloneNode(true).content;
+                klon.querySelector(".ore").src = ore.billede.guid;
+                klon.querySelector(".ore").alt = ore.post_excerpt;
+                klon.querySelector(".overskrift_ore").textContent = ore.navn;
                 dest.appendChild(klon);
             });
 
